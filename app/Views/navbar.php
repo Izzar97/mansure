@@ -11,23 +11,37 @@
 
 </html>
 <style>
-ul {
-    float: end;
+.navbar {
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-text {
+    font-weight: 500;
+    float: right;
+    margin-right: 20px;
+}
+
+hr {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-right: 40px;
 }
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="https://bajo.jumbomark.com/labels/DID2022033363" alt="Logo Toko Mansure" width="130"
-                    height="130" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="#" style="text-align:justify;">
+                <img src="https://d1fdloi71mui9q.cloudfront.net/CkC5B6RQdO4LhYtECNCw_iPJoJ2krt3AvQh2v"
+                    alt="Logo Toko Mansure" width="100" height="100" class="d-inline-block align-text-top">
+                <!-- TOKO MANSURE -->
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarNav">
+            <div class="navbar-text" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="<?= base_url('/') ?>">Home</a>
@@ -45,4 +59,5 @@ ul {
             </div>
         </div>
     </nav>
+    <hr class="garis" />
 </body>
