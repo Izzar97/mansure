@@ -67,9 +67,9 @@ include 'navbar.php';
     <section class="page-menu" id="row_menu_detail">
         <div class="container-page">
             <div class="row gy-3">
-                <div class="col-4 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/jakarta.png'); ?>" class="mb12" alt="KOPI" height="150" width="150">
+                        <img src="<?= base_url('img/jakarta.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Jakarta</b>
@@ -81,10 +81,9 @@ include 'navbar.php';
                     <!--/ .menu-item -->
                 </div>
                 <!--/ .col-xs-12 -->
-                <div class="col-4 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/wanasari.png'); ?>" class="mb12" alt="KOPI" height="150"
-                            width="150">
+                        <img src="<?= base_url('img/wanasari.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Wanasari</b>
@@ -97,7 +96,7 @@ include 'navbar.php';
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/canggu.png'); ?>" class="mb12" alt="KOPI" height="150" width="150">
+                        <img src="<?= base_url('img/canggu.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Canggu</b>
@@ -110,8 +109,7 @@ include 'navbar.php';
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/dotonbori.png'); ?>" class="mb12" alt="KOPI" height="150"
-                            width="150">
+                        <img src="<?= base_url('img/dotonbori.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Dotonbori</b>
@@ -124,8 +122,7 @@ include 'navbar.php';
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/purbaratu.png'); ?>" class="mb12" alt="KOPI" height="150"
-                            width="150">
+                        <img src="<?= base_url('img/purbaratu.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Purbaratu</b>
@@ -138,8 +135,7 @@ include 'navbar.php';
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/surakarta.png'); ?>" class="mb12" alt="KOPI" height="150"
-                            width="150">
+                        <img src="<?= base_url('img/surakarta.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Surakarta</b>
@@ -152,7 +148,7 @@ include 'navbar.php';
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/bunaken.png'); ?>" class="mb12" alt="KOPI" height="150" width="150">
+                        <img src="<?= base_url('img/bunaken.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Bunaken</b>
