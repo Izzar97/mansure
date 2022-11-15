@@ -63,6 +63,7 @@ include 'navbar.php';
             </div>
         </form>
     </div>
+    <br>
     <section class="page-menu" id="row_menu_detail">
         <div class="container-page">
             <div class="row gy-3">
