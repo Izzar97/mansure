@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('menu', 'Home::menu');
 $routes->get('tambahmenu', 'kasir\User_kasir::index');
+$routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
 
 /*
  * --------------------------------------------------------------------
