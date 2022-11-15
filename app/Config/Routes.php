@@ -36,8 +36,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/menu', 'Home::menu');
-$routes->get('/tambahmenu', 'TambahMenu::tambahmenu');
+$routes->get('menu', 'Home::menu');
+$routes->get('tambahmenu', 'kasir\User_kasir::index');
 
 /*
  * --------------------------------------------------------------------
