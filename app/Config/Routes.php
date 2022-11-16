@@ -37,7 +37,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('menu', 'Home::menu');
-$routes->get('tambahmenu', 'kasir\User_kasir::index');
+$routes->get('menu_admin', 'kasir\Tambahmenu::index');
+$routes->get('add_data_menu', 'kasir\Tambahmenu::add_tambah_menu');
+$routes->post('proses_add_menu', 'kasir\Tambahmenu::proses_add_menu');
+$routes->get('edit_data_menu/(:any)', 'kasir\Tambahmenu::edit_data_menu/$1');
+$routes->post('proses_edit_menu', 'kasir\Tambahmenu::proses_edit_menu');
+$routes->get('hapus_data_menu/(:any)', 'kasir\Tambahmenu::hapus_data_menu/$1');
 $routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
 
 /*
