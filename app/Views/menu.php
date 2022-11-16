@@ -96,7 +96,7 @@ include 'navbar.php';
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/canggu.png'); ?>" alt="KOPI" height="150" width="150">
+                        <img src="<?= base_url('img/purbaratu.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Canggu</b>
@@ -135,7 +135,7 @@ include 'navbar.php';
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= base_url('img/surakarta.png'); ?>" alt="KOPI" height="150" width="150">
+                        <img src="<?= base_url('img/purbaratu.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b>Surakarta</b>

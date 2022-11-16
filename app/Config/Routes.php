@@ -35,8 +35,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('menu', 'Home::menu');
+
 $routes->get('menu_admin', 'kasir\Tambahmenu::index');
 $routes->get('add_data_menu', 'kasir\Tambahmenu::add_tambah_menu');
 $routes->post('proses_add_menu', 'kasir\Tambahmenu::proses_add_menu');
@@ -44,7 +43,18 @@ $routes->get('edit_data_menu/(:any)', 'kasir\Tambahmenu::edit_data_menu/$1');
 $routes->post('proses_edit_menu', 'kasir\Tambahmenu::proses_edit_menu');
 $routes->get('hapus_data_menu/(:any)', 'kasir\Tambahmenu::hapus_data_menu/$1');
 $routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
-
+$routes->get('/', 'Home::index');
+$routes->group('menu', function ($routes) {
+    $routes->get('/', 'Home::menu');
+    $routes->get('maincourse', 'Menu::maincourse');
+    $routes->get('uncaanmansure', 'Menu::uncaanmansure');
+    $routes->get('beverages', 'Menu::beverages');
+    $routes->get('pasta', 'Menu::pasta');
+    $routes->get('sweetooth', 'Menu::sweetooth');
+    $routes->get('snacks', 'Menu::snacks');
+});
+$routes->get('aboutus', 'Home::aboutus');
+$routes->get('tambahmenu', 'kasir\User_kasir::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

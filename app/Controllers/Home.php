@@ -11,6 +11,11 @@ class Home extends BaseController
 
     public function menu()
     {
-        return view('nav_menu');
+        return view('menu');
+    }
+
+    public function aboutus()
+    {
+        return view('aboutus');
     }
 }

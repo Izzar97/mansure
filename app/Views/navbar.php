@@ -50,11 +50,11 @@ hr {
                         <a class="nav-link" href="<?= base_url('/menu') ?>">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="<?= base_url('/aboutus') ?>">About Us</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
