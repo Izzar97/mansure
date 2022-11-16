@@ -11,12 +11,14 @@ include 'navbar.php';
 .select {
     /* width: 100%; */
     font-weight: 300;
+    margin-right: 30px;
 }
 
 .label {
     font-weight: 500;
     margin-bottom: auto;
     margin-top: 30;
+
 }
 
 .page-menu {
