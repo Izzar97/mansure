@@ -1,21 +1,27 @@
 <?php
 
 namespace App\Controllers\kasir;
+
 use App\Controllers\BaseController;
 use App\Models\M_menu;
 
-class Tambahmenu extends BaseController{
+class Tambahmenu extends BaseController
+{
     // public function __construct()
     // {
     //     $this->mmenu = new M_menu();
     // }
+    public function dashboard()
+    {
+        return view('layout/dashboard');
+    }
 
     public function index()
     {
         $model_menu = new M_menu();
         $all_data_menu = $model_menu->findAll();
 
-        return view ('menu_admin', ['all_data_menu' => $all_data_menu]);
+        return view('menu_admin', ['all_data_menu' => $all_data_menu]);
     }
 
     public function add_tambah_menu()
@@ -28,7 +34,7 @@ class Tambahmenu extends BaseController{
 
         // // ambil nama file
         // $namagambar = $fileGambar->getName();
-        return view ('add_data_menu');
+        return view('add_data_menu');
     }
 
     public function proses_add_menu()
@@ -36,14 +42,13 @@ class Tambahmenu extends BaseController{
         $model_menu = new M_menu();
         $model_menu->insert($this->request->getPost());
         return redirect()->to(base_url('menu_admin'));
-
     }
 
     public function edit_data_menu($id_menu = false)
     {
         $model_menu = new M_menu();
         $data_menu = $model_menu->find($id_menu);
-        return view ('edit_data_menu', ['data_menu' => $data_menu]);
+        return view('edit_data_menu', ['data_menu' => $data_menu]);
     }
 
     public function proses_edit_menu()

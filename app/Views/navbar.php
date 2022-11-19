@@ -11,6 +11,10 @@
 
 </html>
 <style>
+.navnav {
+    background-color: white;
+}
+
 .navbar {
     padding-top: 20px;
     padding-left: 40px;
@@ -34,30 +38,32 @@ hr {
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="text-align:justify;">
-                <img src="https://d1fdloi71mui9q.cloudfront.net/CkC5B6RQdO4LhYtECNCw_iPJoJ2krt3AvQh2v"
-                    alt="Logo Toko Mansure" width="100" height="100" class="d-inline-block align-text-top">
-                <!-- TOKO MANSURE -->
-            </a>
-            <div class="navbar-text" id="navbarNav">
-                <ul class="navbar-nav ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?= base_url('/') ?>">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/menu') ?>">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/aboutus') ?>">About Us</a>
-                    </li>
-                    <!-- <li class="nav-item">
+    <div class="navnav">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="text-align:justify;">
+                    <img src="https://d1fdloi71mui9q.cloudfront.net/CkC5B6RQdO4LhYtECNCw_iPJoJ2krt3AvQh2v"
+                        alt="Logo Toko Mansure" width="100" height="100" class="d-inline-block align-text-top">
+                    <!-- TOKO MANSURE -->
+                </a>
+                <div class="navbar-text" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= base_url('/') ?>">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('/menu') ?>">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('/aboutus') ?>">About Us</a>
+                        </li>
+                        <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
                     </li> -->
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <hr class="garis" />
+        </nav>
+        <hr class="garis" />
+    </div>
 </body>

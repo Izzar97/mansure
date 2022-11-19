@@ -35,7 +35,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-
+$routes->get('dashboard', 'kasir\Tambahmenu::dashboard');
 $routes->get('menu_admin', 'kasir\Tambahmenu::index');
 $routes->get('add_data_menu', 'kasir\Tambahmenu::add_tambah_menu');
 $routes->post('proses_add_menu', 'kasir\Tambahmenu::proses_add_menu');
