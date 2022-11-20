@@ -36,6 +36,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+
 // $routes->get('menu_admin', 'kasir\Tambahmenu::index');
 // $routes->get('add_data_menu', 'kasir\Tambahmenu::add_tambah_menu');
 // $routes->post('proses_add_menu', 'kasir\Tambahmenu::proses_add_menu');
@@ -52,7 +53,7 @@ $routes->get('edit-menu/(:num)', 'kasir\Menukasir::edit/$1');
 $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1');
 $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1');
 
-// ini pelanggan ya
+
 $routes->get('/', 'Home::index');
 $routes->group('menu', function ($routes) {
     $routes->get('/', 'Home::menu');

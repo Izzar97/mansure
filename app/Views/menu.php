@@ -78,6 +78,7 @@ include 'navbar.php';
                             </div>
                             <p class="menu-deskripsi">Nasi Goreng Pedas Manis, Karage, Telur, Sayuran</p>
                             <p class="menu-harga">Rp. 35.000</p>
+                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
                     </div>
                     <!--/ .menu-item -->
@@ -92,6 +93,7 @@ include 'navbar.php';
                             </div>
                             <p class="menu-deskripsi">Nasi Ayam Crispy, Salted Egg, Telur, Sayuran</p>
                             <p class="menu-harga">Rp. 33.000</p>
+                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
                     </div>
                     <!--/ .menu-item -->
@@ -105,6 +107,7 @@ include 'navbar.php';
                             </div>
                             <p class="menu-deskripsi">Nasi Ayam Crispy, Sambal Matah, Telur, Sayuran</p>
                             <p class="menu-harga">Rp. 30.000</p>
+                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
                     </div>
                     <!--/ .menu-item -->
@@ -118,6 +121,7 @@ include 'navbar.php';
                             </div>
                             <p class="menu-deskripsi">Nasi, Beef Teriyaki, Sayuran</p>
                             <p class="menu-harga">Rp. 36.000</p>
+                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
                     </div>
                     <!--/ .menu-item -->
@@ -131,6 +135,7 @@ include 'navbar.php';
                             </div>
                             <p class="menu-deskripsi">Nasi Ayam, Sambal Goreng, Tahu, Tempe</p>
                             <p class="menu-harga">Rp. 32.000</p>
+                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
                     </div>
                     <!--/ .menu-item -->
@@ -144,6 +149,7 @@ include 'navbar.php';
                             </div>
                             <p class="menu-deskripsi">Nasi Ayam Pedas Manis, Telur</p>
                             <p class="menu-harga">Rp. 32.000</p>
+                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
                     </div>
                     <!--/ .menu-item -->
@@ -157,6 +163,7 @@ include 'navbar.php';
                             </div>
                             <p class="menu-deskripsi">Nasi Ayam Woku, Telur, Sayuran</p>
                             <p class="menu-harga">Rp. 30.000</p>
+                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
                     </div>
                     <!--/ .menu-item -->

@@ -1,38 +1,35 @@
 <?php
 include 'navbar.php';
 ?>
+<style>
+body {
+    background-image: url(img/bg3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 100pt;
+    background-size: 100%;
+    /* background-position-x: 40px; */
+    background-attachment: fixed;
+}
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+.container {
+    padding-left: 50px;
+    padding-top: 100px;
+    color: white;
+}
+
+h1 {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 0px;">Toko Mansure</h1>
+        <h6>Bukan Toko Bangunan </h6>
+        <a class="btn btn-dark" href="<?= base_url('/menu') ?>">Order Now</a>
+        <!-- <h6>Open 09.00 - 22.00</h6> -->
+
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://liburanyuk.co.id/wp-content/uploads/2022/04/toko-mansure-bandar-lampung.jpg"
-                class="d-block w-100" alt="#">
-        </div>
-        <div class="carousel-item">
-            <img src="https://liburanyuk.co.id/wp-content/uploads/2022/04/toko-mansure-bandar-lampung.jpg"
-                class="d-block w-100" alt="#">
-        </div>
-        <div class="carousel-item">
-            <img src="https://liburanyuk.co.id/wp-content/uploads/2022/04/toko-mansure-bandar-lampung.jpg"
-                class="d-block w-100" alt="#">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+</body>
