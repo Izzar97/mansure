@@ -36,13 +36,23 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->get('menu_admin', 'kasir\Tambahmenu::index');
-$routes->get('add_data_menu', 'kasir\Tambahmenu::add_tambah_menu');
-$routes->post('proses_add_menu', 'kasir\Tambahmenu::proses_add_menu');
-$routes->get('edit_data_menu/(:any)', 'kasir\Tambahmenu::edit_data_menu/$1');
-$routes->post('proses_edit_menu', 'kasir\Tambahmenu::proses_edit_menu');
-$routes->get('hapus_data_menu/(:any)', 'kasir\Tambahmenu::hapus_data_menu/$1');
-$routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
+// $routes->get('menu_admin', 'kasir\Tambahmenu::index');
+// $routes->get('add_data_menu', 'kasir\Tambahmenu::add_tambah_menu');
+// $routes->post('proses_add_menu', 'kasir\Tambahmenu::proses_add_menu');
+// $routes->get('edit_data_menu/(:any)', 'kasir\Tambahmenu::edit_data_menu/$1');
+// $routes->post('proses_edit_menu', 'kasir\Tambahmenu::proses_edit_menu');
+// $routes->get('hapus_data_menu/(:any)', 'kasir\Tambahmenu::hapus_data_menu/$1');
+// $routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
+
+// ini kasir ya
+$routes->get('home-kasir', 'kasir\Menukasir::index');
+$routes->get('tambah-menu', 'kasir\Menukasir::create');
+$routes->post('daftarmenu', 'kasir\Menukasir::daftar');
+$routes->get('edit-menu/(:num)', 'kasir\Menukasir::edit/$1');
+$routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1');
+$routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1');
+
+// ini pelanggan ya
 $routes->get('/', 'Home::index');
 $routes->group('menu', function ($routes) {
     $routes->get('/', 'Home::menu');
@@ -54,7 +64,8 @@ $routes->group('menu', function ($routes) {
     $routes->get('snacks', 'Menu::snacks');
 });
 $routes->get('aboutus', 'Home::aboutus');
-$routes->get('tambahmenu', 'kasir\User_kasir::index');
+// $routes->get('tambahmenu', 'kasir\User_kasir::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
