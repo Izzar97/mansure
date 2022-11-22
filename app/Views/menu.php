@@ -49,6 +49,10 @@ include 'navbar.php';
 }
 </style>
 
+<head>
+    <title>Toko Mansure | Menu</title>
+</head>
+
 <body>
     <div class="form">
         <form class="form-inline" role="form" method="post" action="">

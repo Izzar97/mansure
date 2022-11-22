@@ -6,7 +6,8 @@ use App\Controllers\BaseController;
 
 class User_koki extends BaseController
 {
-    public function index(){
-        return view('lihatdaftarpesanan');
+    public function index()
+    {
+        return view('layout/lihatdaftarpesanan');
     }
 }

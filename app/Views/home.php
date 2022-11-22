@@ -24,6 +24,10 @@ h1 {
 }
 </style>
 
+<head>
+    <title>Toko Mansure | Home</title>
+</head>
+
 <body>
     <div class="container">
         <h1 style="margin-bottom: 0px;">Toko Mansure</h1>

@@ -46,13 +46,15 @@ $routes->set404Override();
 // $routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
 
 // ini kasir ya
-$routes->get('home-kasir', 'kasir\Menukasir::index');
-$routes->get('tambah-menu', 'kasir\Menukasir::create');
-$routes->post('daftarmenu', 'kasir\Menukasir::daftar');
-$routes->get('edit-menu/(:num)', 'kasir\Menukasir::edit/$1');
-$routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1');
-$routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1');
-
+$routes->group('dashboard', function ($routes) {
+    $routes->get('/', 'kasir\Menukasir::dashboard');
+    $routes->get('home-kasir', 'kasir\Menukasir::index');
+    $routes->get('tambah-menu', 'kasir\Menukasir::create');
+    $routes->post('daftarmenu', 'kasir\Menukasir::daftar');
+    $routes->get('edit-menu/(:num)', 'kasir\Menukasir::edit/$1');
+    $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1');
+    $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1');
+});
 
 $routes->get('/', 'Home::index');
 $routes->group('menu', function ($routes) {
@@ -65,7 +67,7 @@ $routes->group('menu', function ($routes) {
     $routes->get('snacks', 'Menu::snacks');
 });
 $routes->get('aboutus', 'Home::aboutus');
-// $routes->get('tambahmenu', 'kasir\User_kasir::index');
+// $routes->get('koki', 'kasir\User_kasir::index');
 
 /*
  * --------------------------------------------------------------------

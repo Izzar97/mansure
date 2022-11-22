@@ -23,6 +23,11 @@ img {
     margin-right: 40px;
 }
 </style>
+
+<head>
+    <title>Toko Mansure | About Us</title>
+</head>
+
 <section>
     <div class="text">
         <h2><b>Toko Mansure <br>Bukan Toko Bangunan.</b></h2>
