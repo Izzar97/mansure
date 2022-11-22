@@ -58,9 +58,10 @@ include 'navbar.php';
         <form class="form-inline" role="form" method="post" action="">
             <div class="form-group">
                 <label class="label">Sort by:</label>
-                <select class="select" required tabindex="1">
-                    <option value="#" selected="selected">Main Course</option>
-                    <option value="#">Unca'an Mansure</option>
+                <select class="select-menu" required tabindex="1">
+                    <option value="0">Pilih</option>
+                    <option value="#">Main Course</option>
+                    <option value=#>Unca'an Mansure</option>
                     <option value="#">Pasta</option>
                     <option value="#">Snacks</option>
                     <option value="#">Sweet Tooth</option>
@@ -69,6 +70,7 @@ include 'navbar.php';
             </div>
         </form>
     </div>
+
     <br>
     <section class="page-menu" id="row_menu_detail">
         <div class="container-page">

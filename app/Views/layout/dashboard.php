@@ -120,13 +120,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="<?= base_url('dashboard/kasir') ?>" class="nav-link">
                                         <i class="nav-icon fas fa-cash-register"></i>
                                         <p>Kasir</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="<?= base_url('dashboard/koki') ?>" class="nav-link">
                                         <i class="nav-icon fas fa-user"></i>
                                         <p>Koki</p>
                                     </a>

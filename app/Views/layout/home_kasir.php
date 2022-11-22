@@ -22,7 +22,7 @@ include 'dashboard.php';
                     <!-- /.card-header -->
 
                     <div class="card-body">
-                        <a href="<?= base_url('dashboard/tambah-menu') ?>" class="btn btn-dark">Tambah</a>
+                        <a href="<?= base_url('dashboard/tambah-menu') ?>" class="btn btn-dark">Tambah Menu</a><br><br>
                         <div class="tab-content p-0">
                             <table class="table">
                                 <thead>
@@ -31,29 +31,30 @@ include 'dashboard.php';
                                         <th scope="col">Nama</th>
                                         <th scope="col">Jenis Menu</th>
                                         <th scope="col">Harga</th>
-                                        <th scope="col">Gambar</th>
                                         <th scope="col">Status Menu</th>
                                         <th scope="col">Deskripsi</th>
+                                        <th scope="col">Gambar</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $i = 1;
-                  foreach ($products as $item) : ?>
+                                    foreach ($products as $item) : ?>
                                     <tr>
                                         <td><?= $i ?></td>
                                         <td><?= $item['nama_menu'] ?></td>
                                         <td><?= $item['jenis_menu'] ?></td>
                                         <td>Rp. <?= $item['harga'] ?></td>
+                                        <td><?= $item['status_stok_menu'] ?></td>
+                                        <td><?= $item['deskripsi'] ?></td>
                                         <td>
                                             <img src="<?= "/uploads/" . $item['gambar']; ?>" height="50px" width="50px"
                                                 alt="Image">
                                         </td>
-                                        <td><?= $item['status_stok_menu'] ?></td>
-                                        <td><?= $item['deskripsi'] ?></td>
                                         <td>
-                                            <a href="<?= base_url('dashboard/edit-menu/' . $item['id_menu']) ?>"
-                                                class="btn btn-warning fas fa-pencil-alt"></a>
+                                            <a class="btn btn-warning"
+                                                href="<?= base_url('dashboard/edit-menu/' . $item['id_menu']) ?>"><i
+                                                    class="fas fa-pen"></i></a>
                                             <button type="button" class="btn btn-danger fas fa-trash-alt"
                                                 data-bs-toggle="modal" data-bs-target="#hapus"> </button>
 
@@ -77,7 +78,7 @@ include 'dashboard.php';
                                         </td>
                                     </tr>
                                     <?php $i++;
-                  endforeach ?>
+                                    endforeach ?>
                                 </tbody>
                             </table>
                         </div>

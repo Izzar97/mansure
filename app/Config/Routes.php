@@ -54,6 +54,8 @@ $routes->group('dashboard', function ($routes) {
     $routes->get('edit-menu/(:num)', 'kasir\Menukasir::edit/$1');
     $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1');
     $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1');
+    $routes->get('koki', 'koki\User_koki::index');
+    $routes->get('kasir', 'koki\User_kasir::index');
 });
 
 $routes->get('/', 'Home::index');

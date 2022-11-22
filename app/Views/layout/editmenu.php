@@ -19,7 +19,7 @@ include 'dashboard.php';
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <i class="fas fa-store mr-1"></i>
+                                <i class="fas fa-pen mr-1"></i>
                                 <b>Edit Menu Toko Mansure</b>
                             </h3>
                         </div>
@@ -32,14 +32,14 @@ include 'dashboard.php';
                                     <label for="exampleFormControlInput1" class="col-sm-2">Nama Menu</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" value="<?= $product['nama_menu'] ?>"
-                                            id="nama_menu" name="nama_menu" placeholder="Silahkan masukkan nama">
+                                            id="nama_menu" name="nama_menu">
                                     </div>
                                 </div>
 
                                 <div class="mb-1 row">
                                     <label for="exampleFormControlInput1" class="col-sm-2">Jenis Menu</label>
                                     <div class="col-sm-10">
-                                        <select class="form-select" aria-label="Default select example" id="jenis_menu"
+                                        <select class="form-control" aria-label="Default select example" id="jenis_menu"
                                             name="jenis_menu">
                                             <option value="Main course" <?php if ($product['jenis_menu'] == 'Main course') : echo 'selected';
                                                                         endif; ?>>Main Course</option>
@@ -66,20 +66,9 @@ include 'dashboard.php';
                                 </div>
 
                                 <div class="mb-1 row">
-                                    <label for="exampleFormControlInput1" class="col-sm-2">Upload
-                                        Gambar</label>
-                                    <div class="col-sm-10">
-                                        <img src="<?= base_url('uploads/' . $product['gambar']) ?>" width="100"
-                                            height="100" alt="Product Image">
-                                        <input type="file" class="upload" id="gambar" name="gambar"
-                                            value="<?= $product['gambar'] ?>">
-                                    </div>
-                                </div>
-
-                                <div class="mb-1 row">
                                     <label for="exampleFormControlInput1" class="col-sm-2">Status Menu</label>
                                     <div class="col-sm-10">
-                                        <select class="form-select" aria-label="Default select example"
+                                        <select class="form-control" aria-label="Default select example"
                                             id="status_stok_menu" name="status_stok_menu">
                                             <option value="tersedia" <?php if ($product['status_stok_menu'] == 'tersedia') : echo 'selected';
                                                                         endif; ?>>Tersedia</option>
@@ -90,11 +79,21 @@ include 'dashboard.php';
                                 </div>
 
                                 <div class="mb-1 row">
-                                    <label for="exampleFormControlInput1" class="col-sm-2">Deskripsi</label>
+                                    <label for="exampleFormControlInput1" class="col-sm-2">Deskripsi Menu</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="deskripsi" name="deskripsi"
-                                            placeholder="Silahkan masukkan deskripsi"
                                             value="<?= $product['deskripsi'] ?>">
+                                    </div>
+                                </div>
+
+                                <div class="mb-1 row">
+                                    <label for="exampleFormControlInput1" class="col-sm-2">Upload
+                                        Gambar</label>
+                                    <div class="col-sm-10">
+                                        <img src="<?= base_url('uploads/' . $product['gambar']) ?>" width="100"
+                                            height="100" alt="Product Image">
+                                        <input type="file" class="upload" id="gambar" name="gambar"
+                                            value="<?= $product['gambar'] ?>">
                                     </div>
                                 </div>
 

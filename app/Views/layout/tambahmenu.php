@@ -14,7 +14,7 @@ include 'dashboard.php';
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            <i class="fas fa-store mr-1"></i>
+                            <i class="fas fa-plus mr-1"></i>
                             <b>Tambah Menu Toko Mansure</b>
                         </h3>
                     </div>
@@ -34,8 +34,7 @@ include 'dashboard.php';
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Jenis Menu</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select" aria-label="Default select example" id="jenis_menu"
-                                        name="jenis_menu">
+                                    <select class="form-control" id="jenis_menu" name="jenis_menu">
                                         <option selected>Pilih Jenis Menu</option>
                                         <option value="Main course">Main Course</option>
                                         <option value="Unca'an">Unca'an Mansure</option>
@@ -58,7 +57,7 @@ include 'dashboard.php';
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Status Menu</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select" aria-label="Default select example"
+                                    <select class="form-control" aria-label="Default select example"
                                         id="status_stok_menu" name="status_stok_menu">
                                         <option selected>Pilih Status Menu</option>
                                         <option value="tersedia">Tersedia</option>
@@ -68,7 +67,7 @@ include 'dashboard.php';
                             </div>
 
                             <div class="mb-1 row">
-                                <label for="exampleFormControlInput1" class="col-sm-2">Deskripsi</label>
+                                <label for="exampleFormControlInput1" class="col-sm-2">Deskripsi Menu</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="deskripsi" name="deskripsi"
                                         placeholder="Silahkan Masukkan Deskripsi Menu">
