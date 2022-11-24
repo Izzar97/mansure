@@ -75,22 +75,26 @@ include 'navbar.php';
     <section class="page-menu" id="row_menu_detail">
         <div class="container-page">
             <div class="row gy-3">
+                <?php foreach($products as $item) : ?>
                 <div class="col-12 col-lg-4">
-                    <div class="menu-item">
-                        <img src="<?= base_url('img/jakarta.png'); ?>" alt="KOPI" height="150" width="150">
-                        <div class="menu-header" id="text_our_menu">
-                            <div class="h2">
-                                <b>Jakarta</b>
+                    <form action="" method="">
+                        <div class="menu-item">
+                            <img src="<?= "/uploads/" . $item['gambar']; ?>" height="150" width="150">
+                            <div class="menu-header" id="text_our_menu">
+                                <div class="h2">
+                                    <b><?= $item['nama_menu'] ?></b>
+                                </div>
+                                <p class="menu-deskripsi"><?= $item['deskripsi'] ?></p>
+                                <p class="menu-harga">Rp. <?= $item['harga'] ?></p>
+                                <button type="button" class="btn btn-secondary">Pilih</button>
                             </div>
-                            <p class="menu-deskripsi">Nasi Goreng Pedas Manis, Karage, Telur, Sayuran</p>
-                            <p class="menu-harga">Rp. 35.000</p>
-                            <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
-                    </div>
+                    </form>
                     <!--/ .menu-item -->
                 </div>
+                <?php endforeach ?>
                 <!--/ .col-xs-12 -->
-                <div class="col-12 col-lg-4">
+                <!-- <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= base_url('img/wanasari.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
@@ -101,10 +105,10 @@ include 'navbar.php';
                             <p class="menu-harga">Rp. 33.000</p>
                             <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/ .menu-item -->
-                </div>
-                <div class="col-12 col-lg-4">
+                <!-- </div> -->
+                <!-- <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= base_url('img/purbaratu.png'); ?>" alt="KOPI" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
@@ -115,9 +119,9 @@ include 'navbar.php';
                             <p class="menu-harga">Rp. 30.000</p>
                             <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/ .menu-item -->
-                </div>
+                <!-- </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= base_url('img/dotonbori.png'); ?>" alt="KOPI" height="150" width="150">
@@ -129,9 +133,9 @@ include 'navbar.php';
                             <p class="menu-harga">Rp. 36.000</p>
                             <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/ .menu-item -->
-                </div>
+                <!-- </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= base_url('img/purbaratu.png'); ?>" alt="KOPI" height="150" width="150">
@@ -143,9 +147,9 @@ include 'navbar.php';
                             <p class="menu-harga">Rp. 32.000</p>
                             <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/ .menu-item -->
-                </div>
+                <!-- </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= base_url('img/purbaratu.png'); ?>" alt="KOPI" height="150" width="150">
@@ -157,9 +161,9 @@ include 'navbar.php';
                             <p class="menu-harga">Rp. 32.000</p>
                             <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/ .menu-item -->
-                </div>
+                <!-- </div>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= base_url('img/bunaken.png'); ?>" alt="KOPI" height="150" width="150">
@@ -171,9 +175,9 @@ include 'navbar.php';
                             <p class="menu-harga">Rp. 30.000</p>
                             <button type="button" class="btn btn-secondary">Pilih</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!--/ .menu-item -->
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </section>

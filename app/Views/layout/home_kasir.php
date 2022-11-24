@@ -56,15 +56,16 @@ include 'dashboard.php';
                                                 href="<?= base_url('dashboard/edit-menu/' . $item['id_menu']) ?>"><i
                                                     class="fas fa-pen"></i></a>
                                             <button type="button" class="btn btn-danger fas fa-trash-alt"
-                                                data-bs-toggle="modal" data-bs-target="#hapus"> </button>
+                                                data-bs-toggle="modal" data-bs-target="#hapus_<?= $item['id_menu'] ?>"> 
+                                            </button>
 
                                             <!-- modal hapus -->
-                                            <div class="modal fade" id="hapus" tabindex="-1"
+                                            <div class="modal fade" id="hapus_<?= $item['id_menu'] ?>" tabindex="-1"
                                                 aria-labelledby="hapusmodal" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-body">
-                                                            <?php echo "Apakah Anda Ingin Menghapus " . $item['nama_menu'] . "?"; ?>
+                                                            <?php echo "Apakah Anda Yakin Ingin Menghapus " . $item['nama_menu'] . "?"; ?>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <a href="<?= base_url('dashboard/home-kasir'); ?> "
@@ -82,7 +83,8 @@ include 'dashboard.php';
                                 </tbody>
                             </table>
                         </div>
-                    </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
 
