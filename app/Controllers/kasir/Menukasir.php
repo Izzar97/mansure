@@ -7,10 +7,24 @@ use App\Models\M_menu;
 
 class Menukasir extends BaseController
 {
+    public function __construct()
+    {
+        $this->M_menu = new M_menu();
+    }
+
     public function dashboard()
     {
-        return view('layout/index');
+        $data = array(
+            // 'total_pesanan_baru' => $this->M_menu->total_pesanan_baru(),
+            // 'total_pesanan_Selesai' => $this->M_menu->total_pesanan_Selesai(),
+            'total_daftar_menu' => $this->M_menu->total_daftar_menu(),
+        );
+        return view('layout/index', $data);
     }
+    // public function dashboard()
+    // {
+    //     return view('layout/index');
+    // }
 
     public function index()
     {

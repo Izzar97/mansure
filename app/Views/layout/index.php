@@ -12,7 +12,7 @@ include 'dashboard.php';
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>3</h3>
+                            <h3> 0</h3>
                             <p>Pesanan Baru</p>
                         </div>
                         <div class="icon">
@@ -27,7 +27,7 @@ include 'dashboard.php';
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>20</h3>
+                            <h3>0</h3>
                             <p>Pesanan Selesai</p>
                         </div>
                         <div class="icon">
@@ -42,13 +42,14 @@ include 'dashboard.php';
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>2</h3>
-                            <p>User Registrations</p>
+                            <h3><?= $total_daftar_menu; ?></h3>
+                            <p>Daftar Menu</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('dashboard/home-kasir') ?>" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
