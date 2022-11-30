@@ -194,7 +194,7 @@ form .btn:hover .btn-layer {
     padding-top: 0px;
 }
 
-form .btn input[type="submit"] {
+form .btn input[type="submit"]  {
     height: 100%;
     width: 100%;
     z-index: 1;
@@ -208,6 +208,8 @@ form .btn input[type="submit"] {
     font-weight: 500;
     cursor: pointer;
 }
+
+
 </style>
 
 <body>
@@ -230,15 +232,9 @@ form .btn input[type="submit"] {
             </div>
             <div class="form-inner">
                 <form action="#" class="cust">
-
-                    <div class="field btn" style="margin-top: 70px;">
-                        <div class=" btn-layer"></div>
-                        <!-- <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/768px-Google_%22G%22_Logo.svg.png"> -->
-                        <input type="submit" value="Login with Google">
-                    </div>
-
+                    <div class="google" style="text-align:center;"><?= $googleButton; ?></div>           
                 </form>
+          
                 <form action="#" class="admin">
                     <div class="field">
                         <input type="text" placeholder="Username" required>

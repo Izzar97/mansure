@@ -48,6 +48,9 @@ $routes->group('login', function ($routes) {
     $routes->get('/', 'Home::login');
     $routes->get('admin', 'Home::login_admin');
 });
+$routes->get('login/loginWithGoogle', 'Home::loginWithGoogle');
+$routes->get('logout', 'Home::logout');
+
 // ini kasir ya
 $routes->group('dashboard', function ($routes) {
     $routes->get('/', 'kasir\Menukasir::dashboard');
