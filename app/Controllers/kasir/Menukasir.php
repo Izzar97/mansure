@@ -45,18 +45,60 @@ class Menukasir extends BaseController
         $product = new M_menu();
         $file = $this->request->getFile('gambar');
         if ($file->isValid() && !$file->hasMoved()) {
-
             $imageName = $file->getRandomName();
             $file->move('uploads/', $imageName);
         }
+
+        if (!$this->validate([
+            'nama_menu' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+            'jenis_menu' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+            'harga' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi',
+                    'numeric' => '{field} Harus diisi angka'
+                ]
+            ],
+            // 'status_stok_menu' => [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => '{field} Harus diisi'
+            //     ]
+            // ],
+            'deskripsi' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+            // 'gambar' => [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => '{field} Harus diisi'
+            //     ]
+            // ],
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+
         $data = [
             'nama_menu' => $this->request->getPost('nama_menu'),
             'jenis_menu' => $this->request->getPost('jenis_menu'),
             'harga' => $this->request->getPost('harga'),
-            'gambar' => $imageName,
             'status_stok_menu' => $this->request->getPost('status_stok_menu'),
             'deskripsi' => $this->request->getPost('deskripsi'),
-
+            'gambar' => $imageName,
         ];
         $product->save($data);
         return redirect()->to('/dashboard/home-kasir')->with('status', 'berhasil');
@@ -91,10 +133,9 @@ class Menukasir extends BaseController
             'nama_menu' => $this->request->getPost('nama_menu'),
             'jenis_menu' => $this->request->getPost('jenis_menu'),
             'harga' => $this->request->getPost('harga'),
-            'gambar' => $imageName,
             'status_stok_menu' => $this->request->getPost('status_stok_menu'),
             'deskripsi' => $this->request->getPost('deskripsi'),
-
+            'gambar' => $imageName,
         ];
         $products->update($id_menu, $data);
         return redirect()->to('/dashboard/home-kasir')->with('status', 'berhasil update');

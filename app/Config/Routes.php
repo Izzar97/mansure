@@ -44,7 +44,10 @@ $routes->set404Override();
 // $routes->post('proses_edit_menu', 'kasir\Tambahmenu::proses_edit_menu');
 // $routes->get('hapus_data_menu/(:any)', 'kasir\Tambahmenu::hapus_data_menu/$1');
 // $routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
-
+$routes->group('login', function ($routes) {
+    $routes->get('/', 'Home::login');
+    $routes->get('admin', 'Home::login_admin');
+});
 // ini kasir ya
 $routes->group('dashboard', function ($routes) {
     $routes->get('/', 'kasir\Menukasir::dashboard');
@@ -69,6 +72,7 @@ $routes->group('menu', function ($routes) {
     $routes->get('snacks', 'Menu::snacks');
 });
 $routes->get('aboutus', 'Home::aboutus');
+
 // $routes->get('koki', 'kasir\User_kasir::index');
 
 /*

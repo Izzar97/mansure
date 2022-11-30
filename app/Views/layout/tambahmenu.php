@@ -21,13 +21,20 @@ include 'dashboard.php';
                     <!-- /.card-header -->
 
                     <div class="card-body">
-                        <form action="<?= base_url('/dashboard/daftarmenu') ?>" method="post"
+                        <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <h4>Notes</h4>
+                            </hr />
+                            <?php echo session()->getFlashdata('error'); ?>
+                        </div>
+                        <?php endif; ?>
+                        <form method="POST" action="<?= base_url('/dashboard/daftarmenu') ?>" method="post"
                             enctype="multipart/form-data">
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Nama Menu</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="nama_menu" name="nama_menu"
-                                        placeholder="Silahkan Masukkan Nama Menu">
+                                        placeholder="Silahkan Masukkan Nama Menu" required>
                                 </div>
                             </div>
 
@@ -49,8 +56,8 @@ include 'dashboard.php';
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Harga</label>
                                 <div class="col-sm-10">
-                                    <input type="int" class="form-control" id="harga" name="harga"
-                                        placeholder="Silahkan Masukkan Harga Menu">
+                                    <input type="text" class="form-control" id="harga" name="harga"
+                                        placeholder="Silahkan Masukkan Harga Menu" required>
                                 </div>
                             </div>
 
@@ -70,7 +77,7 @@ include 'dashboard.php';
                                 <label for="exampleFormControlInput1" class="col-sm-2">Deskripsi Menu</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="deskripsi" name="deskripsi"
-                                        placeholder="Silahkan Masukkan Deskripsi Menu">
+                                        placeholder="Silahkan Masukkan Deskripsi Menu" required>
                                 </div>
                             </div>
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\BaseController;
 use App\Models\M_menu;
 
@@ -21,5 +22,15 @@ class Home extends BaseController
     public function aboutus()
     {
         return view('aboutus');
+    }
+
+    public function login()
+    {
+        return view('v_login');
+    }
+
+    public function login_admin()
+    {
+        return view('v_login_admin');
     }
 }
