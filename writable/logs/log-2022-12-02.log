@@ -1,0 +1,106 @@
+ERROR - 2022-12-02 01:12:51 --> Error connecting to the database: Unknown database 'dbmansure'
+CRITICAL - 2022-12-02 01:12:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'dbmansure'
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `oauth_id` = :oauth_id:', [...], false)
+ 3 APPPATH\Models\M_login.php(19): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Home.php(65): App\Models\M_login->isAlreadyRegister('112663895406523732669')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->loginWithGoogle()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:15:43 --> Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 APPPATH\Libraries\vendor\guzzlehttp\promises\src\TaskQueue.php(48): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(248): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(224): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(269): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(226): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+10 APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Client.php(123): GuzzleHttp\Promise\Promise->wait()
+11 APPPATH\Libraries\vendor\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 APPPATH\Libraries\vendor\google\auth\src\OAuth2.php(544): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 APPPATH\Libraries\vendor\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\Home.php(54): Google_Client->fetchAccessTokenWithAuthCode('4/0AfgeXvvH_woIhTZkduw8zRmHFTjKGZkbv1iWJLxXqdyBt4xovMUQ3kf4KpSTMlqXR4aasg')
+15 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->loginWithGoogle()
+16 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+17 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:29:23 --> Undefined variable: products
+in APPPATH\Views\menu.php on line 139.
+ 1 APPPATH\Views\menu.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: products', 'APPPATH\\Views\\menu.php', 139, [])
+ 2 APPPATH\Views\uncaanmansure.php(2): include('APPPATH\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\uncaanmansure.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('uncaanmansure', [], true)
+ 6 APPPATH\Controllers\Menu.php(14): view('uncaanmansure')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Menu->uncaanmansure()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:29:38 --> Undefined variable: products
+in APPPATH\Views\menu.php on line 139.
+ 1 APPPATH\Views\menu.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: products', 'APPPATH\\Views\\menu.php', 139, [])
+ 2 APPPATH\Views\snacks.php(2): include('APPPATH\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\snacks.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('snacks', [], true)
+ 6 APPPATH\Controllers\Menu.php(34): view('snacks')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Menu->snacks()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:34:07 --> Invalid argument supplied for foreach()
+in APPPATH\Views\menu.php on line 139.
+ 1 APPPATH\Views\menu.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\menu.php', 139, [...])
+ 2 APPPATH\Views\snacks.php(2): include('APPPATH\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\snacks.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('snacks', [], true)
+ 6 APPPATH\Controllers\Menu.php(35): view('snacks', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Menu->snacks()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:37:58 --> Undefined index: nama_menu
+in APPPATH\Views\menu.php on line 146.
+ 1 APPPATH\Views\menu.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_menu', 'APPPATH\\Views\\menu.php', 146, [...])
+ 2 APPPATH\Views\snacks.php(2): include('APPPATH\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\snacks.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('snacks', [], true)
+ 6 APPPATH\Controllers\Menu.php(37): view('snacks', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Menu->snacks()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:42:55 --> Undefined variable: products
+in APPPATH\Views\menu.php on line 139.
+ 1 APPPATH\Views\menu.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: products', 'APPPATH\\Views\\menu.php', 139, [])
+ 2 APPPATH\Views\uncaanmansure.php(2): include('APPPATH\\Views\\menu.php')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\uncaanmansure.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('uncaanmansure', [], true)
+ 6 APPPATH\Controllers\Menu.php(17): view('uncaanmansure')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Menu->uncaanmansure()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

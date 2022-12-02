@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\M_menu;
+
+
 class Menu extends BaseController
 {
     public function maincourse()
@@ -31,6 +34,8 @@ class Menu extends BaseController
 
     public function snacks()
     {
-        return view('snacks');
+        $products = new M_menu();
+        $data['products'] = $products->orderby('id_menu', 'DESC')->findAll();
+        return view('snacks', $data);
     }
 }

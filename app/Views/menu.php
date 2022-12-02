@@ -57,7 +57,8 @@ include 'navbar.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <button type="button" style="float: right;" class="btn btn-dark fas fa-trash-alt" data-bs-toggle="modal"
         data-bs-target="#modalKeranjang">Keranjang
     </button>
@@ -107,18 +108,30 @@ include 'navbar.php';
         <form class="form-inline" role="form" method="post" action="">
             <div class="form-group">
                 <label class="label">Sort by:</label>
-                <select class="select-menu" required tabindex="1">
-                    <option value="0">Pilih</option>
-                    <option value="#">Main Course</option>
-                    <option value=#>Unca'an Mansure</option>
-                    <option value="#">Pasta</option>
-                    <option value="#">Snacks</option>
-                    <option value="#">Sweet Tooth</option>
-                    <option value="#">Beverages</option>
+                <select id="filter" class="select-menu" required tabindex="1">
+                    <option value="<?= base_url('menu') ?>">Main Course</option>
+                    <option value="<?= base_url('menu/uncaanmansure') ?>">Unca'an Mansure</option>
+                    <option value="<?= base_url('menu/pasta') ?>">Pasta</option>
+                    <option value="<?= base_url('menu/snacks') ?>">Snacks</option>
+                    <option value="<?= base_url('menu/sweetooth') ?>">Sweet Tooth</option>
+                    <option value="<?= base_url('menu/beverages') ?>">Beverages</option>
                 </select>
             </div>
         </form>
     </div>
+
+    <script>
+    $(document).ready(function() {
+        $('#filter').on('change', function() {
+            var url = $(this).val(); // get selected value
+            if (url) { // require a URL
+                window.location = url; // redirect
+            }
+            return false;
+        });
+    });
+    </script>
+
     <br>
     <section class="page-menu" id="row_menu_detail">
         <div class="container-page">
@@ -230,3 +243,6 @@ include 'navbar.php';
         </div>
     </section>
 </body>
+<script>
+
+</script>

@@ -9,11 +9,11 @@ use App\Models\M_login;
 
 class Home extends BaseController
 {
-    private $mLogin=NULL;
-    private $googleClient=NULL;
+    private $mLogin = NULL;
+    private $googleClient = NULL;
     function __construct()
     {
-        require_once APPPATH. "libraries/vendor/autoload.php";
+        require_once APPPATH . "libraries/vendor/autoload.php";
         $this->mLogin = new M_login();
         $this->googleClient = new \Google_Client();
         $this->googleClient->setClientId("880910608760-q60fcjtnq61ivur2lfvp7p7rni8mjip0.apps.googleusercontent.com");
@@ -41,18 +41,18 @@ class Home extends BaseController
 
     public function login()
     {
-        if(session()->get("LoggedUserData")){
+        if (session()->get("LoggedUserData")) {
             session()->setFlashdata("Error", "udh login nih");
-            return redirect()->to(base_url()."/login");
+            return redirect()->to(base_url('/'));
         }
-        $data['googleButton'] = '<a href="'.$this->googleClient->createAuthUrl().'" style: "background-color: black"><img src="public/uploads/google.png" alt="Login With Google"></a>';
+        $data['googleButton'] = '<a href="' . $this->googleClient->createAuthUrl() . '" style: "background-color: black"><img src="public/uploads/google.png" alt="Login With Google"></a>';
         return view('v_login', $data);
     }
 
     public function loginWithGoogle()
     {
         $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getVar('code'));
-        if(!isset($token['error'])){
+        if (!isset($token['error'])) {
             $this->googleClient->setAccessToken($token['access_token']);
             session()->set("AccessToken", $token['access_token']);
 
@@ -61,30 +61,29 @@ class Home extends BaseController
             $currentDateTime = date("Y-m-d H:i:s");
             // echo "<pre>"; print_r($data); die;
 
-            $userdata=array();
-            if($this->mLogin->isAlreadyRegister($data['id'])){
+            $userdata = array();
+            if ($this->mLogin->isAlreadyRegister($data['id'])) {
                 // bisa login dan mau login lagi
                 $userdata = [
-                    'nama_user'=>$data['givenName']. " ".$data['familyName'],
-                    'email'=>$data['email'],
-                    'updated_at'=>$currentDateTime
+                    'nama_user' => $data['givenName'] . " " . $data['familyName'],
+                    'email' => $data['email'],
+                    'updated_at' => $currentDateTime
                 ];
                 $this->mLogin->updateUserData($userdata, $data['id']);
             } else {
                 // pengguna baru mau login 
                 $userdata = [
-                    'oauth_id'=>$data['id'],
-                    'nama_user'=>$data['givenName']. " ".$data['familyName'],
-                    'email'=>$data['email'],
-                    'created_at'=>$currentDateTime
+                    'oauth_id' => $data['id'],
+                    'nama_user' => $data['givenName'] . " " . $data['familyName'],
+                    'email' => $data['email'],
+                    'created_at' => $currentDateTime
                 ];
                 $this->mLogin->insertUserData($userdata);
             }
             session()->set("LoggedUserData", $userdata);
-
         } else {
             session()->setFlashdata("Error", "Ada yang salah nih");
-            return redirect()->to(base_url()."/login");
+            return redirect()->to(base_url() . "/login");
         }
         // login sukses
         return redirect()->to(base_url());
@@ -93,15 +92,15 @@ class Home extends BaseController
     {
         session()->remove('LoggedUserData');
         session()->remove('AccessToken');
-        if(!(session()->get('LoggedUserData') && session()->get('AccessToken'))){
+        if (!(session()->get('LoggedUserData') && session()->get('AccessToken'))) {
             session()->setFlashdata("Success", "logout berhasil");
-            return redirect()->to(base_url()."/login");
+            return redirect()->to(base_url() . "/login");
         } else {
             session()->setFlashdata("Error", "logout gagal");
             return redirect()->to(base_url());
         }
     }
-    
+
     public function login_admin()
     {
         return view('v_login_admin');
