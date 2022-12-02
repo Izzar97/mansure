@@ -76,6 +76,11 @@ $routes->group('menu', function ($routes) {
 });
 $routes->get('aboutus', 'Home::aboutus');
 
+// bagian tambah user kasir&chef
+$routes->get('tambahuser', 'Login::tambahuser');
+$routes->post('daftaruser', 'Login::daftaruser');
+$routes->get('hapus_user/(:any)', 'Login::hapus_user/$1');
+
 // $routes->get('koki', 'kasir\User_kasir::index');
 
 /*
