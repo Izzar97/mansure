@@ -25,13 +25,11 @@ body {
     background: -webkit-linear-gradient(left, #ffeaa7, #e17055);
 }
 
-
-
 .wrapper {
     overflow: hidden;
-    max-width: 390px;
-    background: #c23616;
-    padding: 20px;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
     border-radius: 5px;
     /* box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1); */
 }
@@ -62,7 +60,7 @@ body {
 .slide-controls .slide {
     height: 100%;
     width: 100%;
-    color: #fff;
+    color: black;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -92,7 +90,7 @@ input[type="radio"] {
 }
 
 #admin:checked~label.admin {
-    color: #fff;
+    color: black;
     cursor: default;
     user-select: none;
 }
@@ -129,15 +127,14 @@ input[type="radio"] {
     width: 100%;
     outline: none;
     padding-left: 15px;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
+    border: 1px solid black;
     border-bottom-width: 2px;
     font-size: 17px;
     transition: all 0.3s ease;
 }
 
 .form-inner form .field input:focus {
-    border-color: #fc83bb;
+    border-color: #999;
     /* box-shadow: inset 0 0 3px #fb6aae; */
 }
 
@@ -173,7 +170,6 @@ form .field input:focus::placeholder {
 form .btn {
     height: 50px;
     width: 100%;
-    border-radius: 5px;
     position: relative;
     overflow: hidden;
 }
@@ -194,7 +190,7 @@ form .btn:hover .btn-layer {
     padding-top: 0px;
 }
 
-form .btn input[type="submit"]  {
+form .btn input[type="submit"] {
     height: 100%;
     width: 100%;
     z-index: 1;
@@ -208,8 +204,6 @@ form .btn input[type="submit"]  {
     font-weight: 500;
     cursor: pointer;
 }
-
-
 </style>
 
 <body>
@@ -232,9 +226,9 @@ form .btn input[type="submit"]  {
             </div>
             <div class="form-inner">
                 <form action="#" class="cust">
-                    <div class="google" style="text-align:center;"><?= $googleButton; ?></div>           
+                    <div class="google" style="text-align:center;"><?= $googleButton; ?></div>
                 </form>
-          
+
                 <form action="#" class="admin">
                     <div class="field">
                         <input type="text" placeholder="Username" required>

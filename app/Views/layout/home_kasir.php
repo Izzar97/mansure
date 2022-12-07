@@ -2,7 +2,6 @@
 include 'dashboard.php';
 ?>
 
-
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
@@ -28,7 +27,7 @@ include 'dashboard.php';
                                 <thead>
                                     <tr>
                                         <th scope="col">No.</th>
-                                        <th scope="col">Nama</th>
+                                        <th scope="col">Nama Menu</th>
                                         <th scope="col">Jenis Menu</th>
                                         <th scope="col">Harga</th>
                                         <th scope="col">Status Menu</th>
@@ -56,7 +55,7 @@ include 'dashboard.php';
                                                 href="<?= base_url('dashboard/edit-menu/' . $item['id_menu']) ?>"><i
                                                     class="fas fa-pen"></i></a>
                                             <button type="button" class="btn btn-danger fas fa-trash-alt"
-                                                data-bs-toggle="modal" data-bs-target="#hapus_<?= $item['id_menu'] ?>"> 
+                                                data-bs-toggle="modal" data-bs-target="#hapus_<?= $item['id_menu'] ?>">
                                             </button>
 
                                             <!-- modal hapus -->

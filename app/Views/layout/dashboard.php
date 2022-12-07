@@ -103,44 +103,54 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('dashboard/home-kasir') ?>" class="nav-link">
+                            <a href="<?= base_url('dashboard/koki') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-utensils"></i>
                                 <p>
-                                    Daftar Menu
+                                    Koki
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
+                                <i class="nav-icon fas fa-cash-register"></i>
                                 <p>
-                                    Users
+                                    Kasir
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="<?= base_url('dashboard/kasir') ?>" class="nav-link">
-                                        <i class="nav-icon fas fa-cash-register"></i>
-                                        <p>Kasir</p>
+                                    <a href="<?= base_url('dashboard/home-kasir') ?>" class="nav-link">
+                                        <i class="nav-icon fas fa-list"></i>
+                                        <p>Daftar Menu</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('dashboard/koki') ?>" class="nav-link">
-                                        <i class="nav-icon fas fa-user"></i>
-                                        <p>Koki</p>
+                                    <a href="<?= base_url('dashboard/transaksi') ?>" class="nav-link">
+                                        <i class="nav-icon fas fa-credit-card"></i>
+                                        <p>Transaksi</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="nav-header">EXPORT</li>
+                        <li class="nav-header">OTHERS</li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-file-alt"></i>
+                            <a href="<?= base_url('dashboard/laporan') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-file-alt"></i>
                                 <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
                                 <p>
                                     Laporan
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('dashboard/tambah-user') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
+                                <p>
+                                    Users
                                     <!-- <span class="badge badge-info right">2</span> -->
                                 </p>
                             </a>

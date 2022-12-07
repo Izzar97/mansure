@@ -10,4 +10,9 @@ class User_kasir extends BaseController
     {
         return view('layout/v_kasir');
     }
+
+    public function laporan()
+    {
+        return view('layout/v_laporan');
+    }
 }

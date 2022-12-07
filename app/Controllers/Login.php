@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\BaseController;
 use App\Models\M_login;
 
@@ -10,14 +11,15 @@ class Login extends BaseController
 
     public function tambahuser()
     {
-        $users = new M_login(); 
+        $users = new M_login();
         $data['users'] = $users->orderby('id')->findAll();
-        return view('tambahuser_kasir', $data);
+        return view('layout/tambah_user', $data);
         $nama_user = 'nama_user';
     }
+
     public function daftaruser()
     {
-        $user = new M_login();        
+        $user = new M_login();
         $data = [
             'nama_user' => $this->request->getPost('nama_user'),
             'username' => $this->request->getPost('username'),
@@ -26,7 +28,7 @@ class Login extends BaseController
 
         ];
         $user->save($data);
-        return redirect()->to('tambahuser')->with('status', 'berhasil');
+        return redirect()->to('dashboard/tambah-user')->with('status', 'berhasil');
     }
 
     public function hapus_user($id = false)
@@ -34,6 +36,6 @@ class Login extends BaseController
         $users = new M_login();
         $data['user'] = $users->delete($id);
 
-        return redirect()->to('tambahuser');
+        return redirect()->to('dashboard/tambah-user');
     }
 }
