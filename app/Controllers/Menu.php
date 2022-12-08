@@ -9,33 +9,41 @@ class Menu extends BaseController
 {
     public function maincourse()
     {
-        return view('maincourse');
+        
     }
 
     public function uncaanmansure()
     {
-        return view('uncaanmansure');
+        $products = new M_menu();
+        $data['products'] = $products->where('jenis_menu', "Unca'an")->findAll();
+        return view('uncaanmansure', $data);
     }
 
     public function pasta()
     {
-        return view('pasta');
+        $products = new M_menu();
+        $data['products'] = $products->where('jenis_menu', 'Pasta')->findAll();
+        return view('pasta', $data);
     }
 
     public function beverages()
     {
-        return view('beverages');
+        $products = new M_menu();
+        $data['products'] = $products->where('jenis_menu', 'Beverages')->findAll();
+        return view('beverages', $data);
     }
 
     public function sweetooth()
     {
-        return view('sweetooth');
+        $products = new M_menu();
+        $data['products'] = $products->where('jenis_menu', 'Sweet Tooth')->findAll();
+        return view('sweetooth', $data);
     }
 
     public function snacks()
     {
         $products = new M_menu();
-        $data['products'] = $products->orderby('id_menu', 'DESC')->findAll();
+        $data['products'] = $products->where('jenis_menu', 'Snacks')->findAll();
         return view('snacks', $data);
     }
 }

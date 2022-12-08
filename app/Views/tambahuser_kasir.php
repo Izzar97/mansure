@@ -63,7 +63,7 @@
                 </thead>
                 <tbody>
                     <?php foreach ($users as $item) : ?>
-                        <?php if($item['jabatan']): ?>
+                        <?php if($item['jabatan'] == 'kasir'): ?>
                             <tr>
                                 <td><?= $item['nama_user'] ?></td>
                                 <td><?= $item['username'] ?></td>

@@ -30,7 +30,7 @@ class Home extends BaseController
     public function menu()
     {
         $products = new M_menu();
-        $data['products'] = $products->orderby('id_menu', 'DESC')->findAll();
+        $data['products'] = $products->where('jenis_menu', 'Main course')->findAll();
         return view('menu', $data);
     }
 

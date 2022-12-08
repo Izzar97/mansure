@@ -12,7 +12,7 @@ class M_menu extends model
     protected $primaryKey = 'id_menu';
     // protected $returnType = 'object';
     protected $allowedFields = [
-        'nama_menu', 'jenis_menu', 'harga', 'gambar', 'status_stok_menu', 'deskripsi'
+        'nama_menu', 'jenis_menu', 'harga', 'gambar', 'status_stok_menu', 'deskripsi', 'jenis_beverages'
     ];
 
     // public function total_pesanan_baru()

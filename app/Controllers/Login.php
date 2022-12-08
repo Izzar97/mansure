@@ -6,7 +6,7 @@ use App\Models\M_login;
 
 class Login extends BaseController
 {
-    // bagian login kasir&chef
+    // bagian tambah user (kasir&chef)
 
     public function tambahuser()
     {
@@ -36,4 +36,5 @@ class Login extends BaseController
 
         return redirect()->to('tambahuser');
     }
+    
 }

@@ -1,7 +1,14 @@
 <?php
 include 'dashboard.php';
 ?>
-
+<script type="text/javascript">
+    function text(Beverages){
+        if(Beverages == 1)
+        document.getElementById('myjenis').style.display='block';
+        else
+        document.getElementById('myjenis').style.display='none';
+    }
+</script>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
@@ -43,12 +50,27 @@ include 'dashboard.php';
                                 <div class="col-sm-10">
                                     <select class="form-control" id="jenis_menu" name="jenis_menu">
                                         <option selected>Pilih Jenis Menu</option>
-                                        <option value="Main course">Main Course</option>
-                                        <option value="Unca'an">Unca'an Mansure</option>
-                                        <option value="Pasta">Pasta</option>
-                                        <option value="Snacks">Snacks</option>
-                                        <option value="Sweet Tooth">Sweet Tooth</option>
-                                        <option value="Beverages">Beverages</option>
+                                        <option value="Main course" onclick="text(6)">Main Course</option>
+                                        <option value="Unca'an" onclick="text(5)">Unca'an Mansure</option>
+                                        <option value="Pasta" onclick="text(4)">Pasta</option>
+                                        <option value="Snacks" onclick="text(3)">Snacks</option>
+                                        <option value="Sweet Tooth" onclick="text(2)">Sweet Tooth</option>
+                                        <option value="Beverages" onclick="text(1)" cheked>Beverages</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-1 row">
+                                <label for="exampleFormControlInput1" class="col-sm-2">Jenis Beverages</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="jenis_beverages" name="jenis_beverages">
+                                        <option selected>Pilih Jenis Beverages</option>
+                                        <option value="Coffee" >Coffee</option>
+                                        <option value="Coffee Milk" >Coffee Milk</option>
+                                        <option value="Mansure Signature" >Mansure Signature</option>
+                                        <option value="Tea" >Tea</option>
+                                        <option value="Mojito" >Mojito</option>
+                                        <option value="Mineral" >Mineral</option>
                                     </select>
                                 </div>
                             </div>

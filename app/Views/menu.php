@@ -58,7 +58,8 @@ include 'navbar.php';
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+    </script>
     <button type="button" style="float: right;" class="btn btn-dark fas fa-trash-alt" data-bs-toggle="modal"
         data-bs-target="#modalKeranjang">Keranjang
     </button>
@@ -108,8 +109,8 @@ include 'navbar.php';
         <form class="form-inline" role="form" method="post" action="">
             <div class="form-group">
                 <label class="label">Sort by:</label>
-                <select id="filter" class="select-menu" required tabindex="1">
-                    <option value="<?= base_url('menu') ?>">Main Course</option>
+                <select id="filter" class="select-menu">
+                    <option value="<?= base_url('menu') ?>" selected>Main Course</option>
                     <option value="<?= base_url('menu/uncaanmansure') ?>">Unca'an Mansure</option>
                     <option value="<?= base_url('menu/pasta') ?>">Pasta</option>
                     <option value="<?= base_url('menu/snacks') ?>">Snacks</option>
@@ -147,7 +148,7 @@ include 'navbar.php';
                                 </div>
                                 <p class="menu-deskripsi"><?= $item['deskripsi'] ?></p>
                                 <p class="menu-harga">Rp. <?= $item['harga'] ?></p>
-                                <button type="button" class="btn btn-secondary">Pilih</button>
+                                <a href="<?= base_url('beli'. $item['id_menu']) ?>" class="btn btn-secondary">Pilih</a>
                             </div>
                         </div>
                     </form>
