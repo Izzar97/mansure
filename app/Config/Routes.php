@@ -61,7 +61,12 @@ $routes->group('dashboard', function ($routes) {
     $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1');
     $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1');
     $routes->get('koki', 'koki\User_koki::index');
-    $routes->get('kasir', 'koki\User_kasir::index');
+    $routes->get('transaksi', 'koki\User_kasir::index');
+    $routes->get('laporan', 'koki\User_kasir::laporan');
+    // bagian tambah user kasir&chef
+    $routes->get('tambah-user', 'Login::tambahuser');
+    $routes->post('daftaruser', 'Login::daftaruser');
+    $routes->get('hapus_user/(:any)', 'Login::hapus_user/$1');
 });
 
 $routes->get('/', 'Home::index');
@@ -76,10 +81,6 @@ $routes->group('menu', function ($routes) {
 });
 $routes->get('aboutus', 'Home::aboutus');
 
-// bagian tambah user kasir&chef
-$routes->get('tambahuser', 'Login::tambahuser');
-$routes->post('daftaruser', 'Login::daftaruser');
-$routes->get('hapus_user/(:any)', 'Login::hapus_user/$1');
 
 // $routes->get('koki', 'kasir\User_kasir::index');
 

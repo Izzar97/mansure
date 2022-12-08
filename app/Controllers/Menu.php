@@ -43,7 +43,7 @@ class Menu extends BaseController
     public function snacks()
     {
         $products = new M_menu();
-        $data['products'] = $products->where('jenis_menu', 'Snacks')->findAll();
+        $data['products'] = $products->where('jenis_menu', 'snacks')->findAll();
         return view('snacks', $data);
     }
 }
