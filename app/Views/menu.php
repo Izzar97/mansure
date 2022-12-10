@@ -4,8 +4,6 @@ include 'navbar.php';
 <style>
 .form-inline {
     float: right;
-    padding-top: 10px;
-    padding-right: 10px;
 }
 
 .select {
@@ -26,8 +24,11 @@ include 'navbar.php';
     margin-right: 40px;
 }
 
-.container-page {
-    margin-top: 50px;
+.container {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .h2 {
@@ -60,54 +61,11 @@ include 'navbar.php';
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
     </script>
-    <button type="button" style="float: right;" class="btn btn-dark fas fa-trash-alt" data-bs-toggle="modal"
-        data-bs-target="#modalKeranjang">Keranjang
-    </button>
 
-    <!-- modal keranjang -->
-    <div class="modal fade" id="modalKeranjang" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <label class="col-sm-1.5">Nama</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="nama_Pemesan" name="nama_Pemesan"
-                            placeholder="Masukkan Nama Anda">
-                    </div>
+    <div class="container">
+        <div class="form-group">
+            <form class="form-inline" role="form" method="post" action="">
 
-                    <label class="col-sm-1.5">No. Meja</label>
-                    <div class="col-sm-1">
-                        <input type="text" class="form-control" id="no_meja" name="no_meja" required>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="table">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">No.</th>
-                                    <th scope="col">Nama Menu</th>
-                                    <th scope="col">Jumlah</th>
-                                    <th scope="col">Harga</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col">Aksi</th>
-                                </tr>
-                            </thead>
-                        </table>
-
-                        <div class="modal-footer">
-                            <a href="<?= base_url('/menu'); ?>" class="btn btn-secondary">Kembali</a>
-                            <a href="#" class="btn btn-success">Pesan</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="form">
-        <form class="form-inline" role="form" method="post" action="">
-            <div class="form-group">
                 <label class="label">Sort by:</label>
                 <select id="filter" class="select-menu">
                     <option value="<?= base_url('menu') ?>" selected>Main Course</option>
@@ -117,10 +75,9 @@ include 'navbar.php';
                     <option value="<?= base_url('menu/sweetooth') ?>">Sweet Tooth</option>
                     <option value="<?= base_url('menu/beverages') ?>">Beverages</option>
                 </select>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-
     <script>
     $(document).ready(function() {
         $('#filter').on('change', function() {
@@ -133,6 +90,7 @@ include 'navbar.php';
     });
     </script>
 
+    <br>
     <br>
     <section class="page-menu" id="row_menu_detail">
         <div class="container-page">
@@ -148,7 +106,7 @@ include 'navbar.php';
                                 </div>
                                 <p class="menu-deskripsi"><?= $item['deskripsi'] ?></p>
                                 <p class="menu-harga">Rp. <?= $item['harga'] ?></p>
-                                <a href="<?= base_url('beli'. $item['id_menu']) ?>" class="btn btn-secondary">Pilih</a>
+                                <a href="<?= base_url('beli' . $item['id_menu']) ?>" class="btn btn-secondary">Pilih</a>
                             </div>
                         </div>
                     </form>

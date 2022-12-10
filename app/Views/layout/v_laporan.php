@@ -8,22 +8,20 @@ include 'dashboard.php';
             <section class="mt-2 connectedSortable">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">
+                        <h2 class="card-title">
                             <i class="fas fa-file mr-1"></i>
                             <b>Cetak Laporan</b>
-                        </h3>
+                            </h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <h4>Periode Tanggal <b>
-                            </b>sd <b>
-
-                            </b></h4>
-
                         <form action="" method="post" class="form-inline">
-                            <input type="date" name="tgl_awal" class="form-control mr-3" value="?= $tgl_awal; ?>">
-                            <input type="date" name="tgl_akhir" class="form-control mr-3" value="?= $tgl_akhir; ?>">
-                            <button type="submit" name="filter_tgl" class="btn btn-dark">View</button>
+                            <h4>Periode Tanggal
+                                <input type="date" name="tgl_awal" class="form-control ml-2" value="?= $tgl_awal; ?>">
+                                sd
+                                <input type="date" name="tgl_akhir" class="form-control mr-2" value="?= $tgl_akhir; ?>">
+                                <button type="submit" name="filter_tgl" class="btn btn-dark">View</button>
+                            </h4>
                         </form>
 
                         <div class="tab-content p-0">

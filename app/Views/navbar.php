@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
 </head>
 
@@ -67,6 +71,53 @@ hr {
                 </div>
             </div>
         </nav>
+        <br>
+
+        <button type="button" style="float: right;" class="btn fas fa-shopping-cart" data-bs-toggle="modal"
+            data-bs-target="#modalKeranjang">
+        </button>
+
+        <!-- modal keranjang -->
+        <div class="modal fade" id="modalKeranjang" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <label class="col-sm-1.5">Nama</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="nama_Pemesan" name="nama_Pemesan"
+                                placeholder="Masukkan Nama Anda">
+                        </div>
+
+                        <label class="col-sm-1.5">No. Meja</label>
+                        <div class="col-sm-1">
+                            <input type="text" class="form-control" id="no_meja" name="no_meja" required>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Nama Menu</th>
+                                        <th scope="col">Jumlah</th>
+                                        <th scope="col">Harga</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Aksi</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                            <div class="modal-footer">
+                                <a href="<?= base_url('/menu'); ?>" class="btn btn-secondary">Kembali</a>
+                                <a href="#" class="btn btn-success">Pesan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <hr class="garis" />
     </div>
 </body>
