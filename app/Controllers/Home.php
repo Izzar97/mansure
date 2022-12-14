@@ -27,12 +27,6 @@ class Home extends BaseController
         return view('home');
     }
 
-    public function menu()
-    {
-        $products = new M_menu();
-        $data['products'] = $products->where('jenis_menu', 'Main course')->findAll();
-        return view('menu', $data);
-    }
 
     public function aboutus()
     {
@@ -99,10 +93,5 @@ class Home extends BaseController
             session()->setFlashdata("Error", "logout gagal");
             return redirect()->to(base_url());
         }
-    }
-
-    public function login_admin()
-    {
-        return view('v_login_admin');
     }
 }

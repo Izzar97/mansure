@@ -7,43 +7,45 @@ use App\Models\M_menu;
 
 class Menu extends BaseController
 {
-    public function maincourse()
+    public function index()
     {
-        
+        $products = new M_menu();
+        $data['products'] = $products->where('jenis_menu', 'Main course')->findAll();
+        return view('menu/maincourse', $data);
     }
 
     public function uncaanmansure()
     {
         $products = new M_menu();
         $data['products'] = $products->where('jenis_menu', "Unca'an")->findAll();
-        return view('uncaanmansure', $data);
+        return view('menu/uncaanmansure', $data);
     }
 
     public function pasta()
     {
         $products = new M_menu();
         $data['products'] = $products->where('jenis_menu', 'Pasta')->findAll();
-        return view('pasta', $data);
+        return view('menu/pasta', $data);
     }
 
     public function beverages()
     {
         $products = new M_menu();
         $data['products'] = $products->where('jenis_menu', 'Beverages')->findAll();
-        return view('beverages', $data);
+        return view('menu/beverages', $data);
     }
 
     public function sweetooth()
     {
         $products = new M_menu();
         $data['products'] = $products->where('jenis_menu', 'Sweet Tooth')->findAll();
-        return view('sweetooth', $data);
+        return view('menu/sweetooth', $data);
     }
 
     public function snacks()
     {
         $products = new M_menu();
         $data['products'] = $products->where('jenis_menu', 'snacks')->findAll();
-        return view('snacks', $data);
+        return view('menu/snacks', $data);
     }
 }

@@ -6,7 +6,7 @@ include 'dashboard.php';
     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="row">
-                <section class="col-lg-6 mt-2 connectedSortable">
+                <section class="col-lg-6 connectedSortable">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
@@ -57,7 +57,7 @@ include 'dashboard.php';
                         </div>
                 </section>
 
-                <section class="col-lg-6 mt-2 connectedSortable">
+                <section class="col-lg-6 connectedSortable">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
@@ -65,7 +65,7 @@ include 'dashboard.php';
                                 <b>Users</b>
                             </h3>
                         </div><!-- /.card-header -->
-                        <div class="card-body">
+                        <div class="card-body" style="padding-top: 10px;">
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -84,8 +84,27 @@ include 'dashboard.php';
                                         <td><?= $item['jabatan'] ?></td>
                                         <td>
                                             <!-- <button type="button" class="btn btn-danger fas fa-trash-alt"></button> -->
-                                            <a href="<?= base_url('dashboard/hapus_user')  . '/' . $item['id'] ?>"
-                                                class="btn btn-danger fas fa-trash-alt"></a>
+                                            <button type="button" class="btn btn-danger fas fa-trash-alt"
+                                                data-bs-toggle="modal" data-bs-target="#hapus_<?= $item['id'] ?>">
+                                            </button>
+
+                                            <!-- modal hapus -->
+                                            <div class="modal fade" id="hapus_<?= $item['id'] ?>" tabindex="-1"
+                                                aria-labelledby="hapusmodal" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <?php echo "Apakah Anda Yakin Ingin Menghapus " . $item['nama_user'] . "?"; ?>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a href="<?= base_url('dashboard/tambah-user'); ?> "
+                                                                class="btn btn-secondary">Kembali</a>
+                                                            <a href="<?= base_url('dashboard/hapus_user')  . '/' . $item['id'] ?> "
+                                                                class="btn btn-danger">Hapus</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     <?php endif; ?>

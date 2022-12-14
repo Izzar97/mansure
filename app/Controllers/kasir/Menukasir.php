@@ -4,6 +4,7 @@ namespace App\Controllers\kasir;
 
 use App\Controllers\BaseController;
 use App\Models\M_menu;
+use CodeIgniter\Database\Database;
 
 class Menukasir extends BaseController
 {
@@ -150,5 +151,12 @@ class Menukasir extends BaseController
         $data['product'] = $products->delete($id_menu);
 
         return redirect()->to('/dashboard/home-kasir');
+    }
+
+    public function selectBeverages()
+    {
+        $db = \config\Database::connect();
+        $qry = "SELECT * FROM menu WHERE jenis_menu=jenis_beverages";
+        $res = $db->query($qry);
     }
 }

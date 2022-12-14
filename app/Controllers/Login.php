@@ -38,5 +38,4 @@ class Login extends BaseController
 
         return redirect()->to('dashboard/tambah-user');
     }
-    
 }

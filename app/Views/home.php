@@ -1,5 +1,5 @@
 <?php
-include 'navbar.php';
+include 'menu/navbar.php';
 ?>
 <style>
 body {

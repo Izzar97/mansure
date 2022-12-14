@@ -1,18 +1,11 @@
 <?php
 include 'dashboard.php';
 ?>
-<script type="text/javascript">
-    function text(Beverages){
-        if(Beverages == 1)
-        document.getElementById('myjenis').style.display='block';
-        else
-        document.getElementById('myjenis').style.display='none';
-    }
-</script>
+
+
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <div class="content-wrapper">
         <!-- Main content -->
         <div class="container-fluid">
@@ -35,7 +28,8 @@ include 'dashboard.php';
                             <?php echo session()->getFlashdata('error'); ?>
                         </div>
                         <?php endif; ?>
-                        <form method="POST" action="<?= base_url('/dashboard/daftarmenu') ?>" method="post"
+
+                        <form method="POST" action="<?= base_url('/dashboard/daftarmenu') ?>"
                             enctype="multipart/form-data">
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Nama Menu</label>
@@ -48,7 +42,8 @@ include 'dashboard.php';
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Jenis Menu</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="jenis_menu" name="jenis_menu">
+                                    <select class="form-control" id="jenis_menu" name="jenis_menu"
+                                        onchange="this.form.submit()">
                                         <option selected>Pilih Jenis Menu</option>
                                         <option value="Main course" onclick="text(6)">Main Course</option>
                                         <option value="Unca'an" onclick="text(5)">Unca'an Mansure</option>
@@ -59,21 +54,26 @@ include 'dashboard.php';
                                     </select>
                                 </div>
                             </div>
+                            <?php
+                            // if (isset($_POST['jenis_menu'])) {
+                            //     $qry
 
+                            ?>
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Jenis Beverages</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="jenis_beverages" name="jenis_beverages">
                                         <option selected>Pilih Jenis Beverages</option>
-                                        <option value="Coffee" >Coffee</option>
-                                        <option value="Coffee Milk" >Coffee Milk</option>
-                                        <option value="Mansure Signature" >Mansure Signature</option>
-                                        <option value="Tea" >Tea</option>
-                                        <option value="Mojito" >Mojito</option>
-                                        <option value="Mineral" >Mineral</option>
+                                        <option value="Coffee">Coffee</option>
+                                        <option value="Coffee Milk">Coffee Milk</option>
+                                        <option value="Mansure Signature">Mansure Signature</option>
+                                        <option value="Tea">Tea</option>
+                                        <option value="Mojito">Mojito</option>
+                                        <option value="Mineral">Mineral</option>
                                     </select>
                                 </div>
                             </div>
+                            <?php  ?>
 
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-2">Harga</label>
@@ -116,10 +116,32 @@ include 'dashboard.php';
                                 <a href="<?= base_url('dashboard/home-kasir'); ?>" class="btn btn-secondary">Kembali</a>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </section>
         </div>
     </div>
+
 </body>
+<script type="text/javascript">
+// function text(Beverages) {
+//     if (Beverages == true)
+//         document.getElementById('jenis_beverages').style.display = 'block';
+//     else
+//         document.getElementById('jenis_beverages').style.display = 'none';
+// }
+// function text(Beverages) {
+//     var str = '';
+//     var val = document.getElementById('');
+//     for (i = 0; i < val.length; i++) {
+//         if (val[i].selected) {
+//             str += val[i].value _ ',';
+//         }
+//     }
+//     var str = str.slice(0, str.length -1);
+//      $.ajax({
+//      type="GET",
+// url="ajax_get
+// })
+// }
+</script>

@@ -9,9 +9,6 @@ include 'dashboard.php';
 </style>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
     <div class="content-wrapper">
         <!-- Main content -->
         <div class="container-fluid">
@@ -22,7 +19,8 @@ include 'dashboard.php';
                         <h3 class="card-title">
                             <i class="fas fa-level-down-alt mr-1"></i>
                             <b>Pesanan Baru</b>
-                        </h3>
+                        </h3><br><br>
+                        <h6>Pesanan baru yang belum dihidangkan </h6>
                     </div>
                     <!-- /.card-header -->
 
@@ -46,7 +44,13 @@ include 'dashboard.php';
                                     <td>Okta</td>
                                     <td>Menunggu</td>
                                     <td>
-                                        <button type="button" class="btn btn-warning fas fa-list-alt"
+                                        <button type="button" class="btn btn-success fas fa-pencil-alt"
+                                            data-bs-toggle="modal" data-bs-target="#EditPesanan">
+                                        </button>
+                                        <a class="btn btn-warning" data-bs-toggle="modal"
+                                            data-bs-target="#RincianPesanan"><i class="fas fa-pen"></i></a>
+
+                                        <button type="button" class="btn btn-success fas fa-list-alt"
                                             data-bs-toggle="modal" data-bs-target="#RincianPesanan">
                                         </button>
 
@@ -85,7 +89,7 @@ include 'dashboard.php';
                                                     </div>
                                                     <div class="modal-footer">
                                                         <a href="<?= base_url('dashboard/koki'); ?> "
-                                                            class="btn btn-secondary">kembali</a>
+                                                            class="btn btn-secondary">Kembali</a>
                                                         <a href="#" class="btn btn-success">Pesanan Selesai</a>
                                                     </div>
                                                 </div>

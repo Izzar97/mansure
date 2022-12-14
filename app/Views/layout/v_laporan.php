@@ -29,7 +29,7 @@ include 'dashboard.php';
                                 <thead>
                                     <tr>
                                         <th scope="col">No.</th>
-                                        <th scope="col">No. Pesanan</th>
+                                        <th scope="col">Id Pesanan</th>
                                         <th scope="col">Tgl Pesanan</th>
                                         <th scope="col">Nama Pemesan</th>
                                         <th scope="col">Status Bayar</th>

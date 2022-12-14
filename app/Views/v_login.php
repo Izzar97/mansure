@@ -207,6 +207,7 @@ form .btn input[type="submit"] {
 </style>
 
 <body>
+
     <div class="wrapper">
         <!-- <div class="title-text">
             <div class="title cust">
@@ -229,22 +230,24 @@ form .btn input[type="submit"] {
                     <div class="google" style="text-align:center;"><?= $googleButton; ?></div>
                 </form>
 
-                <form action="#" class="admin">
+                <form action="<?= site_url('login/process') ?>" method="POST" class="admin">
                     <div class="field">
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" name="username" class="form-control" placeholder="Username" required>
+                        <!-- <i class="fas fa-envelope"></i> -->
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required>
                     </div>
 
                     <div class="field btn">
                         <div class="btn-layer"></div>
-                        <input type="submit" value="Login">
+                        <input type="submit" name="login" value="Login">
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
     <script>
     const custText = document.querySelector(".title-text .cust");
     const custForm = document.querySelector("form.cust");

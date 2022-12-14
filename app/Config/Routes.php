@@ -47,6 +47,7 @@ $routes->set404Override();
 $routes->group('login', function ($routes) {
     $routes->get('/', 'Home::login');
     $routes->get('admin', 'Home::login_admin');
+    $routes->post('process', 'Login::process');
 });
 $routes->get('login/loginWithGoogle', 'Home::loginWithGoogle');
 $routes->get('logout', 'Home::logout');
@@ -71,8 +72,8 @@ $routes->group('dashboard', function ($routes) {
 
 $routes->get('/', 'Home::index');
 $routes->group('menu', function ($routes) {
-    $routes->get('/', 'Home::menu');
-    $routes->get('maincourse', 'Menu::maincourse');
+    $routes->get('/', 'Menu::index');
+    $routes->get('maincourse', 'Menu::index');
     $routes->get('uncaanmansure', 'Menu::uncaanmansure');
     $routes->get('beverages', 'Menu::beverages');
     $routes->get('pasta', 'Menu::pasta');
