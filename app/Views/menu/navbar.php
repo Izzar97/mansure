@@ -69,9 +69,9 @@ hr {
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('/logout') ?>">Logout</a>
                         </li>
-                        <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('/keranjang-nih') ?>">Cart</a>
+                        </li>
                     </ul>
                 </div>
             </div>

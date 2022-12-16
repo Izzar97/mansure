@@ -82,6 +82,11 @@ $routes->group('menu', function ($routes) {
 });
 $routes->get('aboutus', 'Home::aboutus');
 
+// keranjang nih
+$routes->get('keranjang-nih', 'Keranjang::keranjang');
+$routes->get('beli/(:num)', 'Keranjang::beli/$1');
+$routes->get('cart/remove/(:any)', 'Keranjang::remove/$1');
+$routes->post('cart/update/', 'Keranjang::update/$1');
 
 // $routes->get('koki', 'kasir\User_kasir::index');
 

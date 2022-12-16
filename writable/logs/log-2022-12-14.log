@@ -1,0 +1,104 @@
+CRITICAL - 2022-12-14 09:16:00 --> Undefined variable: imageName
+in APPPATH\Controllers\kasir\Menukasir.php on line 103.
+ 1 APPPATH\Controllers\kasir\Menukasir.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: imageName', 'APPPATH\\Controllers\\kasir\\Menukasir.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\kasir\Menukasir->daftar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kasir\Menukasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:27:42 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 11, [])
+ 2 APPPATH\Controllers\Keranjang.php(11): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:28:02 --> include(navbar.php): failed to open stream: No such file or directory
+in APPPATH\Views\keranjang.php on line 2.
+ 1 APPPATH\Views\keranjang.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(navbar.php): failed to open stream: No such file or directory', 'APPPATH\\Views\\keranjang.php', 2, [...])
+ 2 APPPATH\Views\keranjang.php(2): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 6 APPPATH\Controllers\Keranjang.php(13): view('keranjang', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:28:36 --> include(../navbar.php): failed to open stream: No such file or directory
+in APPPATH\Views\keranjang.php on line 2.
+ 1 APPPATH\Views\keranjang.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../navbar.php): failed to open stream: No such file or directory', 'APPPATH\\Views\\keranjang.php', 2, [...])
+ 2 APPPATH\Views\keranjang.php(2): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 6 APPPATH\Controllers\Keranjang.php(13): view('keranjang', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:28:46 --> include(./navbar.php): failed to open stream: No such file or directory
+in APPPATH\Views\keranjang.php on line 2.
+ 1 APPPATH\Views\keranjang.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(./navbar.php): failed to open stream: No such file or directory', 'APPPATH\\Views\\keranjang.php', 2, [...])
+ 2 APPPATH\Views\keranjang.php(2): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 6 APPPATH\Controllers\Keranjang.php(13): view('keranjang', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:30:20 --> Uninitialized string offset: 1
+in APPPATH\Controllers\Keranjang.php on line 59.
+ 1 APPPATH\Controllers\Keranjang.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized string offset: 1', 'APPPATH\\Controllers\\Keranjang.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:32:00 --> Uninitialized string offset: 1
+in APPPATH\Controllers\Keranjang.php on line 59.
+ 1 APPPATH\Controllers\Keranjang.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized string offset: 1', 'APPPATH\\Controllers\\Keranjang.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:32:15 --> Uninitialized string offset: 1
+in APPPATH\Controllers\Keranjang.php on line 59.
+ 1 APPPATH\Controllers\Keranjang.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized string offset: 1', 'APPPATH\\Controllers\\Keranjang.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:32:24 --> Uninitialized string offset: 1
+in APPPATH\Controllers\Keranjang.php on line 59.
+ 1 APPPATH\Controllers\Keranjang.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized string offset: 1', 'APPPATH\\Controllers\\Keranjang.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:40:02 --> Uninitialized string offset: 1
+in APPPATH\Controllers\Keranjang.php on line 59.
+ 1 APPPATH\Controllers\Keranjang.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized string offset: 1', 'APPPATH\\Controllers\\Keranjang.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-14 09:40:09 --> Uninitialized string offset: 1
+in APPPATH\Controllers\Keranjang.php on line 59.
+ 1 APPPATH\Controllers\Keranjang.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized string offset: 1', 'APPPATH\\Controllers\\Keranjang.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

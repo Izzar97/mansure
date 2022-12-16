@@ -16,7 +16,11 @@ include('menu.php');
                             </div>
                             <p class="menu-deskripsi"><?= $item['deskripsi'] ?></p>
                             <p class="menu-harga">Rp. <?= $item['harga'] ?></p>
-                            <button type="button" class="btn btn-secondary">Pilih</button>
+                            <?php if($item['status_stok_menu'] == 'kosong'){
+                                echo "<button type='button' class='btn btn-secondary' disabled>Kosong</button>";
+                            } else {
+                                ?> <a href="<?= base_url('beli'.'/'. $item['id_menu']) ?>" class="btn btn-secondary">Pilih</a> <?php 
+                            } ?>                        
                         </div>
                     </div>
                     <!--/ .menu-item -->
