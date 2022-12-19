@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <title>Toko Mansure | Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
 </head>
 <style>
    body { 
@@ -131,20 +128,6 @@ p {
   transition: .5s;
 }
 
-.container-right button {
-  width: 90%;
-  height: 40px;
-  border: none;
-  margin-top: 20px;
-  background-color: #5876F8;
-  color: white;
-  cursor: pointer;
-  border-radius: 10px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  transition: .5s;
-}
-
 .btn {
   width: 90%;
   height: 40px;
@@ -233,16 +216,32 @@ p {
     <div class="container">
         <div class="container-left">
             <img src="/public/foto.jpeg" alt="form-login">
-            <h1>Toko Mansure</h1>
-            <p>Bukan Toko Bangunan</p>
+            <h1>Infokuy - Tutorial Membuat Form Login</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, neque!</p>
         </div>
         <div class="container-right">
-            <h2>Silahkan Login Sebagai</h2>
-            <?php echo $googleButton            ?>
-            <button  onclick="window.location='<?php echo site_url("login-pelayan");?>'">Pelayan</button>            
+            <form action="" method="POST">
+              <?php 
+                if(session()->getFlashdata('error')){ 
+              ?>
+
+              <div class="alert alert-danger">
+                <?php echo session()->getFlashdata('error') ?>
+              </div>
+                <?php } ?>
+
+              <div class="input">
+                <label for="">Username</label>
+                <input type="text" name="username" id="username" value="<?= session()->getFlashdata('username')?>" >
+              </div>        
+              <div class="input">
+                <label for="">Password</label>
+                <input type="password" name="password" id="password" >
+              </div>
+              <input type="submit" name="login" class="btn" value="Login">
+            </form>             
         </div>
     </div>
     
 </body>
-
 </html>

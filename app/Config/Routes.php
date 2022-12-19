@@ -44,17 +44,22 @@ $routes->set404Override();
 // $routes->post('proses_edit_menu', 'kasir\Tambahmenu::proses_edit_menu');
 // $routes->get('hapus_data_menu/(:any)', 'kasir\Tambahmenu::hapus_data_menu/$1');
 // $routes->get('lihatdaftarpesanan', 'koki\User_koki::index');
-$routes->group('login', function ($routes) {
-    $routes->get('/', 'Home::login');
-    $routes->get('admin', 'Home::login_admin');
-    $routes->post('process', 'Login::process');
-});
+// $routes->group('login', function ($routes) {
+//     $routes->get('/', 'Home::login');
+//     $routes->get('admin', 'Home::login_admin');
+//     $routes->post('process', 'Login::process');
+// });
+
+// $routes->get('login-halaman', 'Home::login_halaman');
 $routes->get('login/loginWithGoogle', 'Home::loginWithGoogle');
 $routes->get('logout', 'Home::logout');
+$routes->get('login-pelayan', 'Home::login_pelayan');
+$routes->post('login-pelayan', 'Home::login_pelayan');
+$routes->get('login', 'Home::login');
 
 // ini kasir ya
 $routes->group('dashboard', function ($routes) {
-    $routes->get('/', 'kasir\Menukasir::dashboard');
+    $routes->get('/', 'kasir\Menukasir::dashboard', ['filter'=>'pelayan']);
     $routes->get('home-kasir', 'kasir\Menukasir::index');
     $routes->get('tambah-menu', 'kasir\Menukasir::create');
     $routes->post('daftarmenu', 'kasir\Menukasir::daftar');

@@ -33,13 +33,49 @@ class Home extends BaseController
         return view('aboutus');
     }
 
+    public function login_pelayan()
+    {
+        
+        $ModelUser = new M_login();
+        $login = $this->request->getPost('login');
+        if($login){
+            $username = $this->request->getPost('username');
+            $password = $this->request->getPost('password');
+
+            if($username == '' or $password == ''){
+                $error = "masukin pw n username";
+            }
+            if(empty($error)){
+                $datauser = $ModelUser->where('username', $username)->first();
+                if($datauser['password']!= md5($password)){
+                    $error = "pw salah";
+                }
+            }
+            if(empty($error)){
+                $datasesi = [
+                    'id' => $datauser['id'],
+                    'username' => $datauser['username'],
+                    'password' => $datauser['password'],
+                ];
+                session()->set($datasesi);
+                return redirect()->to(base_url('dashboard'));
+            }
+            if($error){
+                session()->setFlashdata('username', $username);
+                session()->setFlashdata('error', $error);
+                return redirect()->to(base_url('login-pelayan'));
+            }
+        }
+        return view('login_pelayan');
+    }
+
     public function login()
     {
         if (session()->get("LoggedUserData")) {
             session()->setFlashdata("Error", "udh login nih");
             return redirect()->to(base_url('/'));
         }
-        $data['googleButton'] = '<a href="' . $this->googleClient->createAuthUrl() . '" style: "background-color: black"><img src="public/uploads/google.png" alt="Login With Google"></a>';
+        $data['googleButton'] = '<a href="' . $this->googleClient->createAuthUrl() . '" class="btn">Pelanggan</a>';
         return view('v_login', $data);
     }
 
@@ -94,4 +130,5 @@ class Home extends BaseController
             return redirect()->to(base_url());
         }
     }
+
 }

@@ -23,6 +23,9 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'pelayan'       => \App\Filters\Pelayan::class,
+        'pelanggan'       => \App\Filters\Pelanggan::class,
+
     ];
 
     /**
