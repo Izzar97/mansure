@@ -30,6 +30,29 @@
     <link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/summernote/summernote-bs4.min.css">
 </head>
 
+<style>
+span {
+    color: gray;
+}
+
+.modal-header {
+    justify-content: normal;
+}
+
+.form-group {
+    margin: 0px;
+    float: right;
+}
+
+select {
+    border-radius: 5px;
+}
+
+.card-body {
+    padding: 10px;
+}
+</style>
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
@@ -66,7 +89,7 @@
                                     aria-label="Search">
                                 <div class="input-group-append">
                                     <button class="btn btn-navbar" type="submit">
-                                        <i class="fas fa-search"></i>
+                                        <i class="fas fa-search-alt"></i>
                                     </button>
                                     <button class="btn btn-navbar" type="button" data-widget="navbar-search">
                                         <i class="fas fa-times"></i>
@@ -76,12 +99,16 @@
                         </form>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/logout') ?>" role="button" style="padding: 8px;">Logout <i
+                            class="fas fa-sign-out-alt"></i></a>
+                </li>
             </ul>
         </nav>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-light-primary elevation-4">
+        <aside class=" main-sidebar sidebar-light-primary elevation-4">
             <!-- Brand Logo -->
             <a href="#" class="brand-link">
                 <img src="https://d1fdloi71mui9q.cloudfront.net/CkC5B6RQdO4LhYtECNCw_iPJoJ2krt3AvQh2v" alt="Logo"
@@ -150,7 +177,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="<?= base_url('dashboard/tambah-user') ?>" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
+                                <i class="nav-icon fas fa-user-plus"></i>
                                 <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
                                 <p>
                                     Users

@@ -39,6 +39,17 @@ hr {
     margin-top: 10px;
     margin-right: 40px;
 }
+
+.modal {
+    --bs-modal-width: 600px;
+}
+
+.modal-body {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 </style>
 
 <body>
@@ -77,7 +88,8 @@ hr {
             </div>
         </nav>
         <br>
-
+        <hr class="garis" />
+        <!-- <form method="post" action="<?= base_url('cart/update') ?>"> -->
         <button type="button" style="float: right;" class="btn fas fa-shopping-cart" data-bs-toggle="modal"
             data-bs-target="#modalKeranjang">
         </button>
@@ -103,14 +115,20 @@ hr {
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">No.</th>
-                                        <th scope="col">Nama Menu</th>
-                                        <th scope="col">Jumlah</th>
-                                        <th scope="col">Harga</th>
-                                        <th scope="col">Total</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col-sm-3">No</th>
+                                        <th scope="col-sm-3">Nama</th>
+                                        <th scope="col-sm-3">Harga</th>
+                                        <th scope="col-sm-3">Jumlah <input type="submit" value="Update">
+                                        </th>
+                                        <th scope="col-sm-3">Sub total</th>
+                                        <th scope="col-sm-3">Aksi</th>
+                                        <th scope="col-sm-3">Total</th>
                                     </tr>
                                 </thead>
+                                <tbody>
+
+
+                                </tbody>
                             </table>
 
                             <div class="modal-footer">
@@ -123,6 +141,6 @@ hr {
             </div>
         </div>
 
-        <hr class="garis" />
+        </form>
     </div>
 </body>

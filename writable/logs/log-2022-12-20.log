@@ -1,0 +1,21 @@
+CRITICAL - 2022-12-20 00:08:29 --> Undefined variable: googleButton
+in APPPATH\Views\login_pelayan.php on line 22.
+ 1 APPPATH\Views\login_pelayan.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: googleButton', 'APPPATH\\Views\\login_pelayan.php', 22, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\login_pelayan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('login_pelayan', [], true)
+ 5 APPPATH\Controllers\Home.php(69): view('login_pelayan')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->login_pelayan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:33:39 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 12, [])
+ 2 APPPATH\Controllers\Keranjang.php(12): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

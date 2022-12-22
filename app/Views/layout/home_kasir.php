@@ -18,8 +18,21 @@ include 'dashboard.php';
                     <!-- /.card-header -->
 
                     <div class="card-body">
-                        <a href="<?= base_url('dashboard/tambah-menu') ?>" class="btn btn-dark">Tambah Menu</a><br><br>
-                        <div class="tab-content p-0">
+                        <a href="<?= base_url('dashboard/tambah-menu') ?>" class="btn btn-dark">Tambah Menu</a>
+                        <div class="filter">
+                            <form role="form" method="post" action="">
+                                <div class="form-group">
+                                    <label class="label"><i class="fas fa-filter"></i>Filter: </label>
+                                    <select id="filter" class="select-menu">
+                                        <option value="">Semua</option>
+                                        <option value="">Tersedia</option>
+                                        <option value="">Kosong</option>
+
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-content">
                             <table class="table">
                                 <thead>
                                     <tr>

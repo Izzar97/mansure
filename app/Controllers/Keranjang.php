@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\BaseController;
 use App\Models\M_menu;
 
@@ -25,12 +26,12 @@ class Keranjang extends BaseController
             'quantity' => 1
         );
         $session = session();
-        if($session->has('cart')){
+        if ($session->has('cart')) {
             $index = $this->exists($id_menu);
             $cart = array_values(session('cart'));
-            if($index == -1){
+            if ($index == -1) {
                 array_push($cart, $item);
-            } else{
+            } else {
                 $cart[$index]['quantity']++;
             }
             $session->set('cart', $cart);
@@ -49,40 +50,40 @@ class Keranjang extends BaseController
         $session = session();
         $session->set('cart', $cart);
         return $this->response->redirect(site_url('keranjang-nih'));
-
     }
 
     public function update($id_menu)
     {
         $cart = array_values(session('cart'));
-        for($i = 0; $i < count($cart); $i++){
+        for ($i = 0; $i < count($cart); $i++) {
             $cart[$i]['quantity'] = $_POST['quantity'][$i];
         }
         $session = session();
         $session->set('cart', $cart);
         return $this->response->redirect(site_url('keranjang-nih'));
-
     }
 
-    private function exists($id_menu){
+    private function exists($id_menu)
+    {
         $items = array_values(session('cart'));
-        for($i = 0; $i < count($items); $i++){
-            if($items[$i]['id_menu']==$id_menu){
+        for ($i = 0; $i < count($items); $i++) {
+            if ($items[$i]['id_menu'] == $id_menu) {
                 return $i;
             }
         }
         return -1;
     }
 
-    private function total(){
+    private function total()
+    {
         $s = 0;
         $items = array_values(session('cart'));
-        foreach($items as $item_menu){
+        foreach ($items as $item_menu) {
             $s += $item_menu['harga'] * $item_menu['quantity'];
         }
         return $s;
     }
-    
+
     // public function keranjang()
     // {
     //     return view('layout/v_kasir');

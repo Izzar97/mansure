@@ -35,23 +35,23 @@ class Home extends BaseController
 
     public function login_pelayan()
     {
-        
+
         $ModelUser = new M_login();
         $login = $this->request->getPost('login');
-        if($login){
+        if ($login) {
             $username = $this->request->getPost('username');
             $password = $this->request->getPost('password');
 
-            if($username == '' or $password == ''){
-                $error = "masukin pw n username";
+            if ($username == '' or $password == '') {
+                $error = "Silahkan Masukkan Username dan Password!";
             }
-            if(empty($error)){
+            if (empty($error)) {
                 $datauser = $ModelUser->where('username', $username)->first();
-                if($datauser['password']!= md5($password)){
-                    $error = "pw salah";
+                if ($datauser['password'] != md5($password)) {
+                    $error = "Password salah!";
                 }
             }
-            if(empty($error)){
+            if (empty($error)) {
                 $datasesi = [
                     'id' => $datauser['id'],
                     'username' => $datauser['username'],
@@ -60,7 +60,7 @@ class Home extends BaseController
                 session()->set($datasesi);
                 return redirect()->to(base_url('dashboard'));
             }
-            if($error){
+            if ($error) {
                 session()->setFlashdata('username', $username);
                 session()->setFlashdata('error', $error);
                 return redirect()->to(base_url('login-pelayan'));
@@ -75,7 +75,7 @@ class Home extends BaseController
             session()->setFlashdata("Error", "udh login nih");
             return redirect()->to(base_url('/'));
         }
-        $data['googleButton'] = '<a href="' . $this->googleClient->createAuthUrl() . '" class="btn">Pelanggan</a>';
+        $data['googleButton'] = '<a href="' . $this->googleClient->createAuthUrl() . '" class="btn">Customer</a>';
         return view('v_login', $data);
     }
 
@@ -123,12 +123,11 @@ class Home extends BaseController
         session()->remove('LoggedUserData');
         session()->remove('AccessToken');
         if (!(session()->get('LoggedUserData') && session()->get('AccessToken'))) {
-            session()->setFlashdata("Success", "logout berhasil");
+            session()->setFlashdata("Success", "Logout berhasil");
             return redirect()->to(base_url() . "/login");
         } else {
-            session()->setFlashdata("Error", "logout gagal");
+            session()->setFlashdata("Error", "Logout gagal");
             return redirect()->to(base_url());
         }
     }
-
 }
