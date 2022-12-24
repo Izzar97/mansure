@@ -10,9 +10,8 @@ class Pelayan implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if(!session()->get('id')){
-            return redirect()->to(base_url('login-pelayan'));
-            
+        if(session()->get('log') != true){
+            return redirect()->to(base_url('halaman-login-pelayan'));
         }
     }
 

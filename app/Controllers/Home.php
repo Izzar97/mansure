@@ -33,41 +33,41 @@ class Home extends BaseController
         return view('aboutus');
     }
 
-    public function login_pelayan()
-    {
+    // public function login_pelayan()
+    // {
 
-        $ModelUser = new M_login();
-        $login = $this->request->getPost('login');
-        if ($login) {
-            $username = $this->request->getPost('username');
-            $password = $this->request->getPost('password');
+    //     $ModelUser = new M_login();
+    //     $login = $this->request->getPost('login');
+    //     if ($login) {
+    //         $username = $this->request->getPost('username');
+    //         $password = $this->request->getPost('password');
 
-            if ($username == '' or $password == '') {
-                $error = "Silahkan Masukkan Username dan Password!";
-            }
-            if (empty($error)) {
-                $datauser = $ModelUser->where('username', $username)->first();
-                if ($datauser['password'] != md5($password)) {
-                    $error = "Password salah!";
-                }
-            }
-            if (empty($error)) {
-                $datasesi = [
-                    'id' => $datauser['id'],
-                    'username' => $datauser['username'],
-                    'password' => $datauser['password'],
-                ];
-                session()->set($datasesi);
-                return redirect()->to(base_url('dashboard'));
-            }
-            if ($error) {
-                session()->setFlashdata('username', $username);
-                session()->setFlashdata('error', $error);
-                return redirect()->to(base_url('login-pelayan'));
-            }
-        }
-        return view('login_pelayan');
-    }
+    //         if ($username == '' or $password == '') {
+    //             $error = "Silahkan Masukkan Username dan Password!";
+    //         }
+    //         if (empty($error)) {
+    //             $datauser = $ModelUser->where('username', $username)->first();
+    //             if ($datauser['password'] != md5($password)) {
+    //                 $error = "Password salah!";
+    //             }
+    //         }
+    //         if (empty($error)) {
+    //             $datasesi = [
+    //                 'id' => $datauser['id'],
+    //                 'username' => $datauser['username'],
+    //                 'password' => $datauser['password'],
+    //             ];
+    //             session()->set($datasesi);
+    //             return redirect()->to(base_url('dashboard'));
+    //         }
+    //         if ($error) {
+    //             session()->setFlashdata('username', $username);
+    //             session()->setFlashdata('error', $error);
+    //             return redirect()->to(base_url('login-pelayan'));
+    //         }
+    //     }
+    //     return view('login_pelayan');
+    // }
 
     public function login()
     {
@@ -79,6 +79,55 @@ class Home extends BaseController
         return view('v_login', $data);
     }
 
+    public function cek_login_pelayan()
+    {
+        if($this->validate([
+            'username' => [
+                'label' => 'username',
+                'rules' => 'required',
+                'errors' => ['{field} wajib diisi nich']
+            ],
+
+            'password' => [
+                'label' => 'password',
+                'rules' => 'required',
+                'errors' => ['{field} wajib diisi nich']
+            ],
+        ])){
+            //jika valid
+            $username = $this->request->getPost('username');
+            $password = $this->request->getPost('password');
+            $cek = $this->mLogin->login($username, $password);
+            if($cek){
+                //jika data ada
+                session()->set('log', true);
+                session()->set('nama_user', $cek['nama_user']);
+                session()->set('username', $cek['username']);
+                session()->set('password', $cek['password']);
+                session()->set('jabatan', $cek['jabatan']);
+
+                if(session()->get('jabatan') == 'chef'){
+                    return redirect()->to(base_url('dashboard/koki'));
+                }
+                if(session()->get('jabatan') == 'kasir'){
+                    return redirect()->to(base_url('dashboard/transaksi'));
+                }
+                if(session()->get('jabatan') == 'admin'){
+                    return redirect()->to(base_url('dashboard'));
+                }
+                
+            }
+            else{
+                session()->setFlashdata('pesan', 'Username atau Password salah');
+                return redirect()->to(base_url('halaman-login-pelayan'));
+            }
+        }
+        else{
+            //jika tdk valid
+        }
+        return view('login_pelayan');
+    }
+// punya pelanggan
     public function loginWithGoogle()
     {
         $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getVar('code'));
@@ -124,7 +173,7 @@ class Home extends BaseController
         session()->remove('AccessToken');
         if (!(session()->get('LoggedUserData') && session()->get('AccessToken'))) {
             session()->setFlashdata("Success", "Logout berhasil");
-            return redirect()->to(base_url() . "/login");
+            return redirect()->to(base_url('login'));
         } else {
             session()->setFlashdata("Error", "Logout gagal");
             return redirect()->to(base_url());

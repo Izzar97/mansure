@@ -159,4 +159,14 @@ class Menukasir extends BaseController
         $qry = "SELECT * FROM menu WHERE jenis_menu=jenis_beverages";
         $res = $db->query($qry);
     }
+
+    public function logout_pelayan()
+    {
+        session()->remove('log');
+        session()->remove('nama_user');
+        session()->remove('jabatan');
+
+        session()->setFlashdata('pesan', 'berhasil keluar');
+        return redirect()->to(base_url('halaman-login-pelayan'));    
+    }
 }

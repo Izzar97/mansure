@@ -10,7 +10,7 @@ class Pelanggan implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if(!session()->get('id')){
+        if(!session()->get('LoggedUserData')){
             return redirect()->to(base_url('login'));
             
         }

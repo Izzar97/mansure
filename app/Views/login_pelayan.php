@@ -227,15 +227,14 @@ p {
                 class="img-circle elevation-3" style="opacity: .8">
         </div>
         <div class="container-right">
-            <form action="" method="POST">
-                <?php
-        if (session()->getFlashdata('error')) {
-        ?>
-
-                <div class="alert alert-danger">
-                    <?php echo session()->getFlashdata('error') ?>
-                </div>
-                <?php } ?>
+        <?php
+    if(session()->getFlashdata('pesan')){
+        echo '<div class="alert" role="alert">';
+        echo session()->getFlashdata('pesan');
+        echo'</div>';
+    } 
+    ?>
+            <form method="post" action="<?= base_url('login-pelayan') ?>">
 
                 <div class="input">
                     <label for="">Username</label>

@@ -53,39 +53,41 @@ $routes->set404Override();
 // $routes->get('login-halaman', 'Home::login_halaman');
 $routes->get('login/loginWithGoogle', 'Home::loginWithGoogle');
 $routes->get('logout', 'Home::logout');
-$routes->get('login-pelayan', 'Home::login_pelayan');
-$routes->post('login-pelayan', 'Home::login_pelayan');
+$routes->get('halaman-login-pelayan', 'Home::cek_login_pelayan');
+$routes->post('login-pelayan', 'Home::cek_login_pelayan');
 $routes->get('login', 'Home::login');
+$routes->get('logout-pelayan', 'kasir\Menukasir::logout_pelayan');
 
 // ini kasir ya
 $routes->group('dashboard', function ($routes) {
     $routes->get('/', 'kasir\Menukasir::dashboard', ['filter'=>'pelayan']);
-    $routes->get('home-kasir', 'kasir\Menukasir::index');
-    $routes->get('tambah-menu', 'kasir\Menukasir::create');
-    $routes->post('daftarmenu', 'kasir\Menukasir::daftar');
-    $routes->get('edit-menu/(:num)', 'kasir\Menukasir::edit/$1');
-    $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1');
-    $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1');
-    $routes->get('koki', 'koki\User_koki::index');
-    $routes->get('transaksi', 'koki\User_kasir::index');
-    $routes->get('laporan', 'koki\User_kasir::laporan');
+    $routes->get('home-kasir', 'kasir\Menukasir::index', ['filter'=>'pelayan']);
+    $routes->get('tambah-menu', 'kasir\Menukasir::create', ['filter'=>'pelayan']);
+    $routes->post('daftarmenu', 'kasir\Menukasir::daftar', ['filter'=>'pelayan']);
+    $routes->get('edit-menu/(:num)', 'kasir\Menukasir::edit/$1', ['filter'=>'pelayan']);
+    $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1', ['filter'=>'pelayan']);
+    $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1', ['filter'=>'pelayan']);
+    $routes->get('koki', 'koki\User_koki::index', ['filter'=>'pelayan']);
+    $routes->get('transaksi', 'koki\User_kasir::index', ['filter'=>'pelayan']);
+    $routes->get('laporan', 'koki\User_kasir::laporan', ['filter'=>'pelayan']);
     // bagian tambah user kasir&chef
-    $routes->get('tambah-user', 'Login::tambahuser');
-    $routes->post('daftaruser', 'Login::daftaruser');
-    $routes->get('hapus_user/(:any)', 'Login::hapus_user/$1');
+    $routes->get('tambah-user', 'Login::tambahuser', ['filter'=>'pelayan']);
+    $routes->post('daftaruser', 'Login::daftaruser', ['filter'=>'pelayan']);
+    $routes->get('hapus_user/(:any)', 'Login::hapus_user/$1', ['filter'=>'pelayan']);
 });
 
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Home::index' , ['filter'=>'pelanggan']);
+
 $routes->group('menu', function ($routes) {
-    $routes->get('/', 'Menu::index');
-    $routes->get('maincourse', 'Menu::index');
-    $routes->get('uncaanmansure', 'Menu::uncaanmansure');
-    $routes->get('beverages', 'Menu::beverages');
-    $routes->get('pasta', 'Menu::pasta');
-    $routes->get('sweetooth', 'Menu::sweetooth');
-    $routes->get('snacks', 'Menu::snacks');
+    $routes->get('/', 'Menu::index', ['filter'=>'pelanggan']);
+    $routes->get('maincourse', 'Menu::index', ['filter'=>'pelanggan']);
+    $routes->get('uncaanmansure', 'Menu::uncaanmansure', ['filter'=>'pelanggan']);
+    $routes->get('beverages', 'Menu::beverages', ['filter'=>'pelanggan']);
+    $routes->get('pasta', 'Menu::pasta', ['filter'=>'pelanggan']);
+    $routes->get('sweetooth', 'Menu::sweetooth', ['filter'=>'pelanggan']);
+    $routes->get('snacks', 'Menu::snacks', ['filter'=>'pelanggan']);
 });
-$routes->get('aboutus', 'Home::aboutus');
+$routes->get('aboutus', 'Home::aboutus', ['filter'=>'pelanggan']);
 
 // keranjang nih
 $routes->get('keranjang-nih', 'Keranjang::keranjang');
