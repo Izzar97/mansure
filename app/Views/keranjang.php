@@ -84,7 +84,7 @@
                         <td><?= $item_menu['nama_menu'] ?></td>
                         <td>Rp. <?= $item_menu['harga'] ?></td>
                         <td>
-                            <input type="number" value="<?= $item_menu['quantity'] ?>" style="width: 50px;" name="quantity">
+                            <input type="number" min="1" value="<?= $item_menu['quantity'] ?>" style="width: 50px;" name="quantity[]">
                         </td>
                         <td>Rp. <?= $item_menu['harga'] * $item_menu['quantity'] ?></td>
                         <td><a href="<?= base_url('cart/remove').'/'.$item_menu['id_menu'] ?>" class="btn btn-danger">X</a></td>

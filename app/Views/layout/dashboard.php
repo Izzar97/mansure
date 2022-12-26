@@ -217,18 +217,6 @@ select {
                                         </a>
                                     </li>
                                 </ul>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('dashboard/laporan') ?>" class="nav-link">
-                                            <i class="nav-icon fas fa-file-alt"></i>
-                                            <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
-                                            <p>
-                                                Laporan
-                                                <!-- <span class="badge badge-info right">2</span> -->
-                                            </p>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         <?php }?>
 

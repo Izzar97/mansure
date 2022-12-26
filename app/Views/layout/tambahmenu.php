@@ -45,26 +45,21 @@ include 'dashboard.php';
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Jenis Menu</label>
                                 <div class="col-sm-6">
-                                    <select class="form-control" id="jenis_menu" name="jenis_menu"
-                                        onchange="this.form.submit()">
+                                    <select class="form-control" id="jenis_menu" name="jenis_menu" required>
                                         <option selected>Pilih Jenis Menu</option>
-                                        <option value="Main course" onclick="text(6)">Main Course</option>
-                                        <option value="Unca'an" onclick="text(5)">Unca'an Mansure</option>
-                                        <option value="Pasta" onclick="text(4)">Pasta</option>
-                                        <option value="Snacks" onclick="text(3)">Snacks</option>
-                                        <option value="Sweet Tooth" onclick="text(2)">Sweet Tooth</option>
-                                        <option value="Beverages" onclick="text(1)" cheked>Beverages</option>
+                                        <option value="Main course" >Main Course</option>
+                                        <option value="Unca'an" >Unca'an Mansure</option>
+                                        <option value="Pasta" >Pasta</option>
+                                        <option value="Snacks" >Snacks</option>
+                                        <option value="Sweet Tooth" >Sweet Tooth</option>
+                                        <option value="Beverages">Beverages</option>
                                     </select>
                                 </div>
                                 <span class="col-sm-3">
                                     ex: Main Course
                                 </span>
                             </div>
-                            <?php
-                            // if (isset($_POST['jenis_menu'])) {
-                            //     $qry
-
-                            ?>
+                           
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Jenis Beverages</label>
                                 <div class="col-sm-6">
@@ -82,7 +77,6 @@ include 'dashboard.php';
                                     ex: Mojito
                                 </span>
                             </div>
-                            <?php  ?>
 
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Harga</label>
@@ -125,7 +119,7 @@ include 'dashboard.php';
                                 <label for="exampleFormControlInput1" class="col-sm-3">Upload
                                     Gambar</label>
                                 <div class="col-sm-6">
-                                    <input type="file" class="upload" id="gambar" name="gambar">
+                                    <input type="file" class="upload" id="gambar" name="gambar" required>
                                 </div>
                             </div>
 
@@ -141,25 +135,3 @@ include 'dashboard.php';
     </div>
 
 </body>
-<script type="text/javascript">
-// function text(Beverages) {
-//     if (Beverages == true)
-//         document.getElementById('jenis_beverages').style.display = 'block';
-//     else
-//         document.getElementById('jenis_beverages').style.display = 'none';
-// }
-// function text(Beverages) {
-//     var str = '';
-//     var val = document.getElementById('');
-//     for (i = 0; i < val.length; i++) {
-//         if (val[i].selected) {
-//             str += val[i].value _ ',';
-//         }
-//     }
-//     var str = str.slice(0, str.length -1);
-//      $.ajax({
-//      type="GET",
-// url="ajax_get
-// })
-// }
-</script>

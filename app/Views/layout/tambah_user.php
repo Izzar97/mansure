@@ -47,6 +47,7 @@ include 'dashboard.php';
                                             <option selected>Pilih</option>
                                             <option value="kasir">Kasir</option>
                                             <option value="chef">Chef</option>
+                                            <option value="admin">Admin</option>
                                         </select>
                                     </div>
                                 </div>

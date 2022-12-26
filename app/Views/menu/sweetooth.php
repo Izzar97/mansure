@@ -12,7 +12,7 @@ include('menu.php');
                         <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="keju aroma" height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
-                                <b><?= $items['nama_menu']; ?></b>
+                                <b><?= $item['nama_menu']; ?></b>
                             </div>
                             <p class="menu-deskripsi"><?= $item['deskripsi']; ?></p>
                             <p class="menu-harga">Rp. <?= $item['harga']; ?></p>

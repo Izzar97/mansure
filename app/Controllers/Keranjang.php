@@ -55,6 +55,10 @@ class Keranjang extends BaseController
     public function update($id_menu)
     {
         $cart = array_values(session('cart'));
+        // var_dump($cart);
+        // var_dump($_POST);
+        // print_r($cart);
+        // die();
         for ($i = 0; $i < count($cart); $i++) {
             $cart[$i]['quantity'] = $_POST['quantity'][$i];
         }
