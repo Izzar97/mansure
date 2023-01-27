@@ -94,6 +94,7 @@ $routes->get('keranjang-nih', 'Keranjang::keranjang');
 $routes->get('beli/(:num)', 'Keranjang::beli/$1');
 $routes->get('cart/remove/(:any)', 'Keranjang::remove/$1');
 $routes->post('cart/update/', 'Keranjang::update/$1');
+$routes->post('cart/simpan/', 'Keranjang::simpan/$1');
 
 // $routes->get('koki', 'kasir\User_kasir::index');
 

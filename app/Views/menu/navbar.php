@@ -83,6 +83,9 @@ hr {
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('/keranjang-nih') ?>">Cart</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('/tagihan') ?>">Tagihan</a>
+                        </li>
                     </ul>
                 </div>
             </div>

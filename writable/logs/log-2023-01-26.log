@@ -1,0 +1,436 @@
+CRITICAL - 2023-01-26 09:32:19 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 12, [])
+ 2 APPPATH\Controllers\Keranjang.php(12): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 10:25:33 --> Call to undefined method App\Controllers\Keranjang::exists()
+in APPPATH\Controllers\Keranjang.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->beli('71')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 10:39:19 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 63.
+ 1 APPPATH\Controllers\Keranjang.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 63, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 10:46:40 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 64.
+ 1 APPPATH\Controllers\Keranjang.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 64, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('87')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 10:47:17 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 64.
+ 1 APPPATH\Controllers\Keranjang.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 64, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('87')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 10:47:37 --> Undefined variable: item_menu
+in APPPATH\Views\keranjang.php on line 73.
+ 1 APPPATH\Views\keranjang.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: item_menu', 'APPPATH\\Views\\keranjang.php', 73, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(14): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 10:47:40 --> Undefined variable: item_menu
+in APPPATH\Views\keranjang.php on line 73.
+ 1 APPPATH\Views\keranjang.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: item_menu', 'APPPATH\\Views\\keranjang.php', 73, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(14): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 10:48:25 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 64.
+ 1 APPPATH\Controllers\Keranjang.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 64, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:07:21 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 63.
+ 1 APPPATH\Controllers\Keranjang.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 63, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:12:12 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 65.
+ 1 APPPATH\Controllers\Keranjang.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 65, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:12:19 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 65.
+ 1 APPPATH\Controllers\Keranjang.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 65, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:13:05 --> Undefined index: quantity
+in APPPATH\Controllers\Keranjang.php on line 65.
+ 1 APPPATH\Controllers\Keranjang.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: quantity', 'APPPATH\\Controllers\\Keranjang.php', 65, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->update('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:13:29 --> Undefined index: id_menu
+in APPPATH\Controllers\Keranjang.php on line 117.
+ 1 APPPATH\Controllers\Keranjang.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_menu', 'APPPATH\\Controllers\\Keranjang.php', 117, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:16:09 --> Undefined index: id_menu
+in APPPATH\Controllers\Keranjang.php on line 117.
+ 1 APPPATH\Controllers\Keranjang.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_menu', 'APPPATH\\Controllers\\Keranjang.php', 117, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:16:21 --> Undefined index: id_menu
+in APPPATH\Controllers\Keranjang.php on line 117.
+ 1 APPPATH\Controllers\Keranjang.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_menu', 'APPPATH\\Controllers\\Keranjang.php', 117, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:21:51 --> Undefined index: id_menu
+in APPPATH\Controllers\Keranjang.php on line 117.
+ 1 APPPATH\Controllers\Keranjang.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_menu', 'APPPATH\\Controllers\\Keranjang.php', 117, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:22:41 --> Undefined index: id_menu
+in APPPATH\Controllers\Keranjang.php on line 117.
+ 1 APPPATH\Controllers\Keranjang.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_menu', 'APPPATH\\Controllers\\Keranjang.php', 117, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:29:48 --> Undefined index: id_menu
+in APPPATH\Controllers\Keranjang.php on line 117.
+ 1 APPPATH\Controllers\Keranjang.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_menu', 'APPPATH\\Controllers\\Keranjang.php', 117, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:30:36 --> Undefined index: notes_pesanan
+in APPPATH\Controllers\Keranjang.php on line 122.
+ 1 APPPATH\Controllers\Keranjang.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Controllers\\Keranjang.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:37:19 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:38:34 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:38:36 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:38:38 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:38:39 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:38:39 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:38:40 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:38:43 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:39:45 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:39:47 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:41:08 --> Undefined variable: subtotal
+in APPPATH\Views\keranjang.php on line 94.
+ 1 APPPATH\Views\keranjang.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: subtotal', 'APPPATH\\Views\\keranjang.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 11:57:49 --> Undefined index: nama_pelanggan
+in APPPATH\Controllers\Keranjang.php on line 107.
+ 1 APPPATH\Controllers\Keranjang.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_pelanggan', 'APPPATH\\Controllers\\Keranjang.php', 107, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-01-26 11:59:22 --> Column 'nama_pelanggan' cannot be null
+CRITICAL - 2023-01-26 11:59:22 --> Column 'nama_pelanggan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pesanan` (`no_meja`, `nama_pelanggan`, `jml_pesanan`, `status_pesanan`, `tanggal`, `total_harga_seluruh`) VALUES (\'\', NULL, 2, \'menunggu\', \'2023-01-26 11:59:22\', 81)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`no_meja`, `nama_pelanggan`, `jml_pesanan`, `status_pesanan`, `tanggal`, `total_harga_seluruh`) VALUES (\'\', NULL, 2, \'menunggu\', \'2023-01-26 11:59:22\', 81)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`no_meja`, `nama_pelanggan`, `jml_pesanan`, `status_pesanan`, `tanggal`, `total_harga_seluruh`) VALUES (\'\', NULL, 2, \'menunggu\', \'2023-01-26 11:59:22\', 81)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`no_meja`, `nama_pelanggan`, `jml_pesanan`, `status_pesanan`, `tanggal`, `total_harga_seluruh`) VALUES (:no_meja:, :nama_pelanggan:, :jml_pesanan:, :status_pesanan:, :tanggal:, :total_harga_seluruh:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Keranjang.php(114): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:00:04 --> Undefined index: notes_pesanan
+in APPPATH\Controllers\Keranjang.php on line 122.
+ 1 APPPATH\Controllers\Keranjang.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Controllers\\Keranjang.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:02:06 --> Undefined index: notes_pesanan
+in APPPATH\Controllers\Keranjang.php on line 122.
+ 1 APPPATH\Controllers\Keranjang.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Controllers\\Keranjang.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:03:24 --> Undefined index: notes_pesanan
+in APPPATH\Controllers\Keranjang.php on line 122.
+ 1 APPPATH\Controllers\Keranjang.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Controllers\\Keranjang.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->simpan('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:04:28 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 127.
+ 1 APPPATH\Views\keranjang.php(127): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 127, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:04:29 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 127.
+ 1 APPPATH\Views\keranjang.php(127): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 127, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:04:34 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 127.
+ 1 APPPATH\Views\keranjang.php(127): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 127, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:08:08 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 97.
+ 1 APPPATH\Views\keranjang.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:09:19 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 97.
+ 1 APPPATH\Views\keranjang.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:09:21 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 97.
+ 1 APPPATH\Views\keranjang.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:09:27 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 97.
+ 1 APPPATH\Views\keranjang.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 12:09:45 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 97.
+ 1 APPPATH\Views\keranjang.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
