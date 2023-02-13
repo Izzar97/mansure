@@ -68,6 +68,8 @@ $routes->group('dashboard', function ($routes) {
     $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1', ['filter'=>'pelayan']);
     $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1', ['filter'=>'pelayan']);
     $routes->get('koki', 'koki\User_koki::index', ['filter'=>'pelayan']);
+    // ini yg js
+    $routes->get('detail_pesanan', 'koki\User_koki::show', ['filter'=>'pelayan']);
     $routes->get('transaksi', 'koki\User_kasir::index', ['filter'=>'pelayan']);
     $routes->get('laporan', 'koki\User_kasir::laporan', ['filter'=>'pelayan']);
     // bagian tambah user kasir&chef
@@ -91,10 +93,16 @@ $routes->get('aboutus', 'Home::aboutus', ['filter'=>'pelanggan']);
 
 // keranjang nih
 $routes->get('keranjang-nih', 'Keranjang::keranjang');
+$routes->get('cart/tagihan', 'Keranjang::tagihan');
 $routes->get('beli/(:num)', 'Keranjang::beli/$1');
 $routes->get('cart/remove/(:any)', 'Keranjang::remove/$1');
 $routes->post('cart/update/', 'Keranjang::update/$1');
 $routes->post('cart/simpan/', 'Keranjang::simpan/$1');
+$routes->get('pencarian', 'User_koki::pencarian/$1');
+
+$routes->get('index-keranjang', 'Keranjang::indexkeranjang');
+$routes->post('shopping/tambah/(:num)', 'Keranjang::tambah/$1');
+
 
 // $routes->get('koki', 'kasir\User_kasir::index');
 

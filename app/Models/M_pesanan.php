@@ -20,4 +20,8 @@ class M_pesanan extends model
         return $this->db->table('pesanan')->countAllResults();
     }
 
+    public function pencarian($kunci) {
+        return $this->table('pesanan')->like('nama_pelanggan', $kunci);
+    }
+
 }

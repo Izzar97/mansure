@@ -58,7 +58,7 @@ include 'dashboard.php';
                                     <label for="exampleFormControlInput1" class="col-sm-2">Harga</label>
                                     <div class="col-sm-10">
                                         <input type="int" class="form-control" id="harga"
-                                            value="Rp. <?= $product['harga'] ?>" name="harga">
+                                            value="<?= $product['harga'] ?>" name="harga">
                                     </div>
                                 </div>
 

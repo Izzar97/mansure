@@ -1,0 +1,461 @@
+CRITICAL - 2023-02-04 05:00:06 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 14, [])
+ 2 APPPATH\Controllers\Keranjang.php(14): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 07:10:05 --> Call to undefined method App\Models\M_detailpesanan::getSiswa
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\koki\User_koki.php(34): CodeIgniter\Model->__call('getSiswa', [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 07:10:24 --> Unknown column 'nama_menu.id_menu' in 'on clause'
+CRITICAL - 2023-02-04 07:10:24 --> Unknown column 'nama_menu.id_menu' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `nama_menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `nama_menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `nama_menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `nama_menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`', [], false)
+ 5 APPPATH\Models\M_detailpesanan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\koki\User_koki.php(34): App\Models\M_detailpesanan->getRincian()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 07:21:35 --> Unknown column 'detail_siswa.id_pesanan' in 'on clause'
+CRITICAL - 2023-02-04 07:21:35 --> Unknown column 'detail_siswa.id_pesanan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_siswa`.`id_pesanan`', [], false)
+ 5 APPPATH\Models\M_detailpesanan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\koki\User_koki.php(34): App\Models\M_detailpesanan->getRincian()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 07:21:58 --> Undefined variable: detail
+in APPPATH\Views\layout\v_koki.php on line 113.
+ 1 APPPATH\Views\layout\v_koki.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: detail', 'APPPATH\\Views\\layout\\v_koki.php', 113, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(35): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 07:53:17 --> Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 APPPATH\Libraries\vendor\guzzlehttp\promises\src\TaskQueue.php(48): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(248): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(224): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(269): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(226): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+10 APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Client.php(123): GuzzleHttp\Promise\Promise->wait()
+11 APPPATH\Libraries\vendor\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 APPPATH\Libraries\vendor\google\auth\src\OAuth2.php(544): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 APPPATH\Libraries\vendor\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\Home.php(134): Google_Client->fetchAccessTokenWithAuthCode('4/0AWtgzh7dD4ROVdXw6M653hPbZQt6m7vN7fLplEzdepWFaBSn88XbdQHNo71j7RdtbTGYoA')
+15 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->loginWithGoogle()
+16 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+17 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 08:03:35 --> Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 APPPATH\Libraries\vendor\guzzlehttp\promises\src\TaskQueue.php(48): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(248): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(224): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(269): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(226): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 APPPATH\Libraries\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+10 APPPATH\Libraries\vendor\guzzlehttp\guzzle\src\Client.php(123): GuzzleHttp\Promise\Promise->wait()
+11 APPPATH\Libraries\vendor\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 APPPATH\Libraries\vendor\google\auth\src\OAuth2.php(544): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 APPPATH\Libraries\vendor\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\Home.php(134): Google_Client->fetchAccessTokenWithAuthCode('4/0AWtgzh4eeV14cPHdlI7VLsd4qVWGKdsCwo6ZG3u7GmYOkue_ph-Z4f7TJ7HqATikpjkUJw')
+15 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->loginWithGoogle()
+16 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+17 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 08:21:28 --> Unknown column 'id_pesanan.id_pesanan' in 'on clause'
+CRITICAL - 2023-02-04 08:21:28 --> Unknown column 'id_pesanan.id_pesanan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `id_pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`', [], false)
+ 5 APPPATH\Models\M_detailpesanan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\koki\User_koki.php(35): App\Models\M_detailpesanan->getRincian()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:26:22 --> Call to undefined function set_value()
+in APPPATH\Views\keranjang.php on line 97.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 4 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:26:53 --> Call to undefined function set_value()
+in APPPATH\Views\keranjang.php on line 97.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 4 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:26:56 --> Call to undefined function set_value()
+in APPPATH\Views\keranjang.php on line 97.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 4 APPPATH\Controllers\Keranjang.php(16): view('keranjang', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:35:21 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 97.
+ 1 APPPATH\Views\keranjang.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(20): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:36:30 --> Undefined index: notes_pesanan
+in APPPATH\Views\keranjang.php on line 97.
+ 1 APPPATH\Views\keranjang.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: notes_pesanan', 'APPPATH\\Views\\keranjang.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(20): view('keranjang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:42:07 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 18, [])
+ 2 APPPATH\Controllers\Keranjang.php(18): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:42:37 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 18, [])
+ 2 APPPATH\Controllers\Keranjang.php(18): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:56:55 --> Undefined index: note
+in APPPATH\Controllers\Keranjang.php on line 43.
+ 1 APPPATH\Controllers\Keranjang.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: note', 'APPPATH\\Controllers\\Keranjang.php', 43, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->beli('95')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:59:45 --> Undefined index: note
+in APPPATH\Controllers\Keranjang.php on line 43.
+ 1 APPPATH\Controllers\Keranjang.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: note', 'APPPATH\\Controllers\\Keranjang.php', 43, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->beli('96')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:00:25 --> Undefined index: note
+in APPPATH\Controllers\Keranjang.php on line 43.
+ 1 APPPATH\Controllers\Keranjang.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: note', 'APPPATH\\Controllers\\Keranjang.php', 43, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->beli('96')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:11:44 --> Undefined offset: -1
+in APPPATH\Controllers\Keranjang.php on line 45.
+ 1 APPPATH\Controllers\Keranjang.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: -1', 'APPPATH\\Controllers\\Keranjang.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->beli('96')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:22:17 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 18, [])
+ 2 APPPATH\Controllers\Keranjang.php(18): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:26:33 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 18, [])
+ 2 APPPATH\Controllers\Keranjang.php(18): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:28:52 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 18, [])
+ 2 APPPATH\Controllers\Keranjang.php(18): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:29:31 --> array_values() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Keranjang.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_values() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Keranjang.php', 18, [])
+ 2 APPPATH\Controllers\Keranjang.php(18): array_values(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:30:17 --> Undefined variable: items
+in APPPATH\Views\keranjang.php on line 83.
+ 1 APPPATH\Views\keranjang.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: items', 'APPPATH\\Views\\keranjang.php', 83, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(20): view('keranjang')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:30:40 --> Undefined variable: items
+in APPPATH\Views\keranjang.php on line 83.
+ 1 APPPATH\Views\keranjang.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: items', 'APPPATH\\Views\\keranjang.php', 83, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\keranjang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('keranjang', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(20): view('keranjang')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Keranjang->keranjang()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:40:52 --> Undefined index: nama_menu
+in APPPATH\Views\layout\v_koki.php on line 116.
+ 1 APPPATH\Views\layout\v_koki.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_menu', 'APPPATH\\Views\\layout\\v_koki.php', 116, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(36): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 10:51:23 --> Column 'id_pesanan' in where clause is ambiguous
+CRITICAL - 2023-02-04 10:51:23 --> Column 'id_pesanan' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`
+WHERE `id_pesanan` = \'\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`
+WHERE `id_pesanan` = \'\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`
+WHERE `id_pesanan` = \'\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `detail_pesanan`
+JOIN `menu` ON `menu`.`id_menu`=`detail_pesanan`.`id_menu`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`
+WHERE `id_pesanan` = :id_pesanan:', [...], false)
+ 5 APPPATH\Models\M_detailpesanan.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\koki\User_koki.php(36): App\Models\M_detailpesanan->getRincian('ROOTPATH\\public')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:52:00 --> syntax error, unexpected end of file
+in APPPATH\Views\layout\v_koki.php on line 147.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 3 APPPATH\Controllers\koki\User_koki.php(37): view('layout/v_koki', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 10:52:45 --> Undefined variable: detailmenu
+in APPPATH\Views\layout\v_koki.php on line 113.
+ 1 APPPATH\Views\layout\v_koki.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: detailmenu', 'APPPATH\\Views\\layout\\v_koki.php', 113, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(37): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 11:25:19 --> Undefined index: item_pesanan
+in APPPATH\Views\layout\v_koki.php on line 80.
+ 1 APPPATH\Views\layout\v_koki.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: item_pesanan', 'APPPATH\\Views\\layout\\v_koki.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(37): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 12:03:36 --> Undefined variable: detail
+in APPPATH\Controllers\koki\User_koki.php on line 44.
+ 1 APPPATH\Controllers\koki\User_koki.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: detail', 'APPPATH\\Controllers\\koki\\User_koki.php', 44, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->show()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 12:04:14 --> Undefined variable: detail
+in APPPATH\Controllers\koki\User_koki.php on line 44.
+ 1 APPPATH\Controllers\koki\User_koki.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: detail', 'APPPATH\\Controllers\\koki\\User_koki.php', 44, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->show()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 12:31:45 --> Undefined variable: access
+in APPPATH\Controllers\koki\User_koki.php on line 61.
+ 1 APPPATH\Controllers\koki\User_koki.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: access', 'APPPATH\\Controllers\\koki\\User_koki.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->show()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 12:31:50 --> Undefined variable: access
+in APPPATH\Controllers\koki\User_koki.php on line 61.
+ 1 APPPATH\Controllers\koki\User_koki.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: access', 'APPPATH\\Controllers\\koki\\User_koki.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->show()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 12:32:38 --> Undefined variable: response
+in APPPATH\Controllers\koki\User_koki.php on line 53.
+ 1 APPPATH\Controllers\koki\User_koki.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: response', 'APPPATH\\Controllers\\koki\\User_koki.php', 53, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->show()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 12:32:44 --> Undefined variable: response
+in APPPATH\Controllers\koki\User_koki.php on line 53.
+ 1 APPPATH\Controllers\koki\User_koki.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: response', 'APPPATH\\Controllers\\koki\\User_koki.php', 53, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->show()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 12:38:11 --> syntax error, unexpected '}'
+in APPPATH\Controllers\koki\User_koki.php on line 53.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\koki\\User_koki.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\koki\\User_koki')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\koki\\User_koki')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\koki\\User_koki')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\koki\\User_koki', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -60,19 +60,22 @@
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"
             integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
         </script>
-
         
-        <form method="post" action="<?= base_url('cart/update')?>">
+        <form method="post" action="<?= base_url('cart/simpan')?>">
+            <td>
+                <input type="hidden" name="nama_pelanggan" placeholder="nama" value="<?= session()->get("LoggedUserData")['nama_user']?session()->get("LoggedUserData")['nama_user']:""; ?>">        
+                <?= session()->get("LoggedUserData")['nama_user']?session()->get("LoggedUserData")['nama_user']:""; ?>
+            </td>
+            <input type="text" name="no_meja" placeholder="no meja">
             <table class="table">
                 <thead class="table-dark">
                     <tr>
                         <th>no</th>
                         <th>nama</th>
+                        <th>notes</th>
                         <th>harga</th>
-                        <th>jumlah <input type="submit" value="Update"></th>
-                        <th>Notes</th>
+                        <th>jumlah</th>
                         <th>Sub total</th>
-                        <th>aksi</th>
                         <th rowspan="6">Total</th>
                     </tr>
                 </thead>
@@ -80,10 +83,8 @@
                     <!-- <input type="text" name="nama_pelanggan"> -->
                     <?php 
                         $x = 1;
-                        if($items): 
+                        if($items):
                         foreach($items as $item_menu):
-                            // var_dump($items);
-                            // die;
                     ?>
                     <tr>
                         <td><?= $x?></td>
@@ -91,14 +92,15 @@
                             <input type="hidden" name="id_menu[]" value="<?= $item_menu["id_menu"] ?>"><?= $item_menu['nama_menu'] ?>
                         </td>
                         <td>                                    
-                            <input type="hidden" id="harga-<?= $x ?>" value="<?= $item_menu["harga"] ?>">Rp. <?= $item_menu['harga'] ?>
+                            <input type="hidden" name="notes_pesanan[]" value="<?= $item_menu["note"] ?>"><?= $item_menu['note'] ?>
+                        </td>
+                        <td>                                    
+                            <input type="hidden" value="<?= $item_menu["harga"] ?>">Rp. <?= $item_menu['harga'] ?>
                         </td>
                         <td>
-                            <input type="number" min="1" value="<?= $item_menu['quantity'] ?>" style="width: 50px;" name="quantity[]">
+                            <input type="hidden" min="1" value="<?= $item_menu['quantity'] ?>" style="width: 50px;" name="quantity[]"><?= $item_menu['quantity'] ?>
                         </td>
-                        <td><input type="text" name="notes_pesanan[]" value="<?= $item_menu['note'] ?>"></td>
                         <td><input type="hidden" name="total_harga_per_menu[]" value="<?= $item_menu['harga'] * $item_menu['quantity'] ?>">Rp. <?= $item_menu['harga'] * $item_menu['quantity'] ?></td>
-                        <td><a href="<?= base_url('cart/remove').'/'.$item_menu['id_menu'] ?>" class="btn btn-danger">X</a></td>
                         <td colspan="5"><input type="hidden" name="total_list_pesanan" value="<?= $total ?>">Rp. <?= $total ?></td>
                     </tr>
                     <?php 
@@ -108,7 +110,7 @@
                     ?>
                 </tbody>
             </table>
+            <button type="submit">simpan</button>
         </form>
-        <a href="<?= base_url('cart/tagihan') ?>" class="btn btn-primary">Next</a>
     </body>
 </html>

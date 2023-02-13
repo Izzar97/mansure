@@ -10,7 +10,7 @@ class Menu extends BaseController
     public function index()
     {
         $products = new M_menu();
-        $data['products'] = $products->orderby('id_menu', 'DESC')->where('jenis_menu', 'Main course')->findAll();
+        $data['products'] = $products->orderby('id_menu', 'DESC')->where('jenis_menu', 'Main cours')->findAll();
         return view('menu/maincourse', $data);
     }
 

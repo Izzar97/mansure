@@ -20,4 +20,13 @@ class M_detailpesanan extends model
         return $this->db->table('detail_pesanan')->countAllResults();
     }
 
+    public function getRincian($id)
+    {
+         return $this->db->table('detail_pesanan')
+         ->join('menu','menu.id_menu=detail_pesanan.id_menu')
+         ->join('pesanan', 'pesanan.id_pesanan=detail_pesanan.id_pesanan')
+         ->where('pesanan.id_pesanan', $id)
+         ->get()->getResultArray();  
+    }
+
 }

@@ -9,7 +9,7 @@ include('menu.php');
                 <?php foreach ($products as $item) : ?>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
-                        <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="Carbonara" height="150" width="150">
+                        <img src="<?= "/uploads/" . $item['gambar']; ?>"  height="150" width="150">
                         <div class="menu-header" id="text_our_menu">
                             <div class="h2">
                                 <b><?= $item['nama_menu']; ?> </b>

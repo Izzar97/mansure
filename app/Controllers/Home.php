@@ -20,6 +20,7 @@ class Home extends BaseController
         $this->googleClient->setClientSecret("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");
         $this->googleClient->setRedirectUri("http://localhost:8080/login/loginWithGoogle");
         $this->googleClient->addScope("email");
+        $this->googleClient->addScope("profile");
     }
 
     public function index()

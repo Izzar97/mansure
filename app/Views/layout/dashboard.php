@@ -79,7 +79,20 @@ select {
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                    <form method="GET" action="" class="form-group">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="cari" placeholder="Mencari Data Berdasarkan Nama">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="Submit">CARI DATA</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                         <i class="fas fa-search"></i>
                     </a>
                     <div class="navbar-search-block">
@@ -97,8 +110,9 @@ select {
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('logout-pelayan') ?>" class="button" style="padding: 8px;">Logout <i
                             class="fas fa-sign-out-alt"></i></a>
@@ -310,6 +324,48 @@ select {
     <script src="<?= base_url('assets') ?>/dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?= base_url('assets') ?>/dist/js/pages/dashboard.js"></script>
+    <script>
+        $(function () {
+            $('.btn-click-detail').on('click',function(){
+                const id = $(this).data('id');
+                console.log(id);
+                $.ajax({
+                    url : "<?= base_url("dashboard/detail_pesanan") ?>",
+                    method : "GET",
+                    data: {id : id},
+                    dataType:"JSON",
+                    success:function(data){
+                        var html = "";
+                        let no = 1;
+                        if(data){
+                            console.log(data);
+                            if(data.data.length > 0)
+                            {
+                                data.data.forEach((element) => {
+                                    html += `<tr> 
+                                                <td>${no++}</td>
+                                                <td>${element.nama_menu}</td>
+                                                <td>${element.quantity}</td>
+                                                <td>${element.notes_pesanan}</td>
+                                            </tr>`;
+                                });
+                            }
+                            else{
+                                html += `<tr class="text-center text-dark">
+                                            <td colspan="4">Data Detail Pesanan Null</td>
+                                        </tr>`;
+                            }
+                            $("#rincian").modal("show");
+                            $("#detail").html(html);
+                        }else{
+                            console.log("Failed Response");
+                        }
+                    }
+                });
+
+            });
+        })
+    </script>
 </body>
 
 </html>

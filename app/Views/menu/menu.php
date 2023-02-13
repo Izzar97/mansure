@@ -62,7 +62,7 @@ include('navbar.php');
                 <label class="label">Sort by:</label>
                 <select id="filter" class="select-menu">
                     <option value="Pilih">Pilih</option>
-                    <option value="<?= base_url('menu') ?>">Main Course</option>
+                    <option value="<?= base_url('menu/maincourse') ?>">Main Course</option>
                     <option value="<?= base_url('menu/uncaanmansure') ?>" >Unca'an Mansure</option>
                     <option value="<?= base_url('menu/pasta') ?>" >Pasta</option>
                     <option value="<?= base_url('menu/snacks') ?>" >Snacks</option>

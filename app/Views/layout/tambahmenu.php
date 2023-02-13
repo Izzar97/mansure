@@ -81,7 +81,7 @@ include 'dashboard.php';
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Harga</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="harga" name="harga" value="Rp. "
+                                    <input type="int" class="form-control" id="harga" name="harga" value=""
                                         required>
                                 </div>
                                 <span class="col-sm-3">

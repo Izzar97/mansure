@@ -9,10 +9,20 @@ use App\Models\M_detailpesanan;
 
 class Keranjang extends BaseController
 {
+    // public function __construct() {
+    //     helper(['url', 'form']);
+    // }
+
     public function keranjang()
     {
-        $datas['items'] = array_values(session('cart'));
-        $datas['total'] = $this->total();
+        $array = session('cart');
+        if($array == null){
+            $datas['items'] = '';
+            $datas['total'] = 0;
+        } else{
+            $datas['items'] = array_values(session('cart'));
+            $datas['total'] = $this->total();
+        }
         return view('keranjang', $datas);
     }
 
@@ -26,11 +36,14 @@ class Keranjang extends BaseController
             'jenis_menu' => $menu['jenis_menu'],
             'harga' => $menu['harga'],
             'quantity' => 1,
-            'notes_pesanan' => 'kosong',
+            'note' => '',
         );
         $session = session();
+        $cart = array($item);
         if ($session->has('cart')) {
             $index = $this->exists($id_menu);
+            // var_dump($index);
+            // die;
             $cart = array_values(session('cart'));
             if ($index == -1) {
                 array_push($cart, $item);
@@ -39,9 +52,9 @@ class Keranjang extends BaseController
             }
             $session->set('cart', $cart);
         } else {
-            $cart = array($item);
             $session->set('cart', $cart);
         }
+        
         return $this->response->redirect(site_url('menu'));
     }
 
@@ -58,18 +71,12 @@ class Keranjang extends BaseController
     public function update($id_menu)
     {
         $cart = array_values(session('cart'));
-        // var_dump($cart);
-        // var_dump($_POST);
-        // print_r($cart);
-        // die();
         for ($i = 0; $i < count($cart); $i++) {
             $cart[$i]['quantity'] = $_POST['quantity'][$i];
+            $cart[$i]['note'] = $_POST['notes_pesanan'][$i];
         }
-        
         $session = session();
         $session->set('cart', $cart);
-        $notes = $this->request->getVar("notes");
-        $session->set('notes', $notes);
         return $this->response->redirect(site_url('keranjang-nih'));
     }
 
@@ -107,8 +114,8 @@ class Keranjang extends BaseController
         $request = [];
 
         $data = [
-            "no_meja" => "",
-            // "nama_pelanggan" => $this->request->getPost('nama_pelanggan'),
+            "no_meja" => $this->request->getPost('no_meja'),
+            "nama_pelanggan" => $this->request->getPost('nama_pelanggan'),
             "jml_pesanan" => count($items),
             "status_pesanan" => "menunggu",
             "tanggal" => date("Y-m-d H:i:s"),
@@ -123,7 +130,7 @@ class Keranjang extends BaseController
             $request[] = [
                 "id_menu" => $simpan["id_menu"][$i],
                 "quantity" => $simpan["quantity"][$i],
-                "notes_pesanan" => $simpan['notes_pesanan'][$i],
+                "notes_pesanan" => $simpan["notes_pesanan"][$i],
                 "total_harga_per_menu" => $simpan["total_harga_per_menu"][$i],
                 "id_pesanan" => $id_pesanan,
             ];
@@ -132,18 +139,30 @@ class Keranjang extends BaseController
         // dd($data);
         // dd($request);
         $detail->insertBatch($request);
-        // return redirect()->to('dashboard/tambah-user')->with('status', 'berhasil');
+        // return redirect()->to('h');
         
     }
 
-    // public function keranjang()
-    // {
-    //     return view('layout/v_kasir');
-    // }
+    public function tagihan(){
+        // $detail = new M_detailpesanan();
+        // $tagihan['detail'] = $detail->orderby('id_pesanan')->findAll();
+        // return view('tagihan', $tagihan);
 
-    // public function beli($id_menu)
-    // {
-    //     return view('layout/v_kasir');
-    // }
+        // $datas['items'] = array_values(session('cart'));
+        // $datas['total'] = $this->total();
+        // $cart = array_values(session('cart'));
+        // $session = session();
+        // $session->set('cart', $cart);
+        $array = session('cart');
+        if($array == null){
+            $datas['items'] = '';
+            $datas['total'] = 0;
+        } else{
+            $datas['items'] = array_values(session('cart'));
+            $datas['total'] = $this->total();
+        }
+        return view('tagihan', $datas);
+    }
+
 
 }
