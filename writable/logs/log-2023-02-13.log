@@ -1,0 +1,44 @@
+CRITICAL - 2023-02-13 06:24:13 --> Undefined index: nama_menu
+in APPPATH\Views\layout\v_koki.php on line 122.
+ 1 APPPATH\Views\layout\v_koki.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_menu', 'APPPATH\\Views\\layout\\v_koki.php', 122, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(38): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 06:25:50 --> Undefined index: jml_pesanan
+in APPPATH\Views\layout\v_koki.php on line 123.
+ 1 APPPATH\Views\layout\v_koki.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jml_pesanan', 'APPPATH\\Views\\layout\\v_koki.php', 123, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(38): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 06:28:13 --> Undefined index: nama_menu
+in APPPATH\Views\layout\v_koki.php on line 122.
+ 1 APPPATH\Views\layout\v_koki.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_menu', 'APPPATH\\Views\\layout\\v_koki.php', 122, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(38): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-13 06:44:02 --> Too few arguments to function App\Models\M_detailpesanan::getRincian(), 0 passed in C:\xampp\htdocs\mansure\app\Controllers\koki\User_koki.php on line 19 and exactly 1 expected
+in APPPATH\Models\M_detailpesanan.php on line 23.
+ 1 APPPATH\Controllers\koki\User_koki.php(19): App\Models\M_detailpesanan->getRincian()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

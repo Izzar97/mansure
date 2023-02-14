@@ -7,7 +7,7 @@ include 'dashboard.php';
 </style>
 
 <body>
-<form method="GET" action="" class="form-group">
+<!-- <form method="GET" action="" class="form-group">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="input-group mb-3">
@@ -18,7 +18,7 @@ include 'dashboard.php';
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
     <div class="content-wrapper">
         <!-- Main content -->
         <div class="container-fluid">
@@ -82,11 +82,11 @@ include 'dashboard.php';
                                             </button> -->
 
                                             <button type="button" class="btn btn-warning"
-                                                data-bs-toggle="modal" data-bs-target="#detail_<?= $item['no_meja'] ?>">
+                                                data-bs-toggle="modal" data-bs-target="#detail_<?= $item['id_pesanan'] ?>">
                                             </button>
 
                                             <!-- modal rincian -->
-                                            <div class="modal fade" id="detail_<?= $item['no_meja'] ?>" tabindex="-1" aria-hidden="true">
+                                            <div class="modal fade" id="detail_<?= $item['id_pesanan'] ?>" tabindex="-1" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -116,9 +116,18 @@ include 'dashboard.php';
                                                                     <!-- <tbody id="detail">
                                                                     </tbody> -->
                                                                     <tbody>
+                                                                        <?php 
+                                                                        $no = 1; 
+                                                                        foreach($detail as $items):
+                                                                            if($items['id_pesanan'] == $item['id_pesanan']):
+                                                                        ?>
                                                                         <tr>
-                                                                            <td><?= ?></td>
+                                                                            <td><?= $no?></td>
+                                                                            <td><?= $items['nama_menu']?></td>
+                                                                            <td><?= $items['quantity']?></td>
+                                                                            <td><?= $items['notes_pesanan']?></td>
                                                                         </tr>
+                                                                        <?php endif; $no++; endforeach ?>
                                                                     </tbody>
                                                                 </table>
                                                             </div>

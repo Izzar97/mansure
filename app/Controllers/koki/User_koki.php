@@ -15,8 +15,13 @@ class User_koki extends BaseController
     {
         $koki = new M_pesanan;
         $detail = new M_detailpesanan();
-        $data['koki'] = $koki->orderBy('id_pesanan')->findAll();
-        $data['detail'] = $detail->orderBy('id_pesanan')->findAll();
+        $data['koki'] = $koki->orderBy('no_meja')->findAll();
+         $data['detail'] = $detail->getRincian();
+         return view('layout/v_koki',$data);
+
+
+         
+        // $data['detail'] = $detail->orderBy('id_pesanan')->findAll();
 
         // $pager = \Config\Services::pager();
     	// $model = new ModelsSiswa();
@@ -35,7 +40,6 @@ class User_koki extends BaseController
         // $data['page'] = $this->request->getVar('page') ? $this->request->getVar('page') : 1;
         // $data['jumlah'] = $jumlah;
         
-        return view('layout/v_koki',$data);
     }
 
     // public function show()
