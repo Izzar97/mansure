@@ -51,8 +51,6 @@ $routes->set404Override();
 // });
 
 // $routes->get('login-halaman', 'Home::login_halaman');
-$routes->get('login/loginWithGoogle', 'Home::loginWithGoogle');
-$routes->get('logout', 'Home::logout');
 $routes->get('halaman-login-pelayan', 'Home::cek_login_pelayan');
 $routes->post('login-pelayan', 'Home::cek_login_pelayan');
 $routes->get('login', 'Home::login');
@@ -68,6 +66,7 @@ $routes->group('dashboard', function ($routes) {
     $routes->post('update-menu/(:num)', 'kasir\Menukasir::update/$1', ['filter'=>'pelayan']);
     $routes->get('delete/(:any)', 'kasir\Menukasir::delete/$1', ['filter'=>'pelayan']);
     $routes->get('koki', 'koki\User_koki::index', ['filter'=>'pelayan']);
+    $routes->post('koki/(:num)', 'koki\User_koki::status/$1', ['filter'=>'pelayan']);
     // ini yg js
     $routes->get('detail_pesanan', 'koki\User_koki::show', ['filter'=>'pelayan']);
     $routes->get('transaksi', 'koki\User_kasir::index', ['filter'=>'pelayan']);
@@ -78,18 +77,18 @@ $routes->group('dashboard', function ($routes) {
     $routes->get('hapus_user/(:any)', 'Login::hapus_user/$1', ['filter'=>'pelayan']);
 });
 
-$routes->get('/', 'Home::index' , ['filter'=>'pelanggan']);
+$routes->get('/', 'Home::index');
 
 $routes->group('menu', function ($routes) {
-    $routes->get('/', 'Menu::index', ['filter'=>'pelanggan']);
-    $routes->get('maincourse', 'Menu::index', ['filter'=>'pelanggan']);
-    $routes->get('uncaanmansure', 'Menu::uncaanmansure', ['filter'=>'pelanggan']);
-    $routes->get('beverages', 'Menu::beverages', ['filter'=>'pelanggan']);
-    $routes->get('pasta', 'Menu::pasta', ['filter'=>'pelanggan']);
-    $routes->get('sweetooth', 'Menu::sweetooth', ['filter'=>'pelanggan']);
-    $routes->get('snacks', 'Menu::snacks', ['filter'=>'pelanggan']);
+    $routes->get('/', 'Menu::index');
+    $routes->get('maincourse', 'Menu::index');
+    $routes->get('uncaanmansure', 'Menu::uncaanmansure');
+    $routes->get('beverages', 'Menu::beverages');
+    $routes->get('pasta', 'Menu::pasta');
+    $routes->get('sweetooth', 'Menu::sweetooth');
+    $routes->get('snacks', 'Menu::snacks');
 });
-$routes->get('aboutus', 'Home::aboutus', ['filter'=>'pelanggan']);
+$routes->get('aboutus', 'Home::aboutus');
 
 // keranjang nih
 $routes->get('keranjang-nih', 'Keranjang::keranjang');

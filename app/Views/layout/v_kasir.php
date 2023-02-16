@@ -49,50 +49,26 @@ include 'dashboard.php';
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php 
+                                    foreach($pesanan as $item):
+                                    ?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>001</td>
-                                        <td>12-12-2022</td>
-                                        <td>Okta</td>
-                                        <td>Selesai</td>
+                                        <td><?= $item['no_meja']?></td>
+                                        <td><?= $item['id_pesanan']?></td>
+                                        <td><?= $item['tanggal']?></td>
+                                        <td><?= $item['nama_pelanggan']?></td>
+                                        <td><?= $item['status_pesanan']?></td>
                                         <td>
                                             <button type="button" class="btn btn-warning fas fa-list-alt"
                                                 data-bs-toggle="modal" data-bs-target="#RincianPesanan">
                                             </button>
 
-                                            <!-- modal hapus -->
-                                            <div class="modal fade" id="RincianPesanan" tabindex="-1"
+                                            <!-- modal transaksi -->
+                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="RincianPesanan" tabindex="-1"
                                                 aria-labelledby="hapusmodal" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        <!-- <div class="modal-header">
-                                                        <label class="col-sm-2">Nama</label>
-                                                        <div class="col-sm-4">
-                                                            <input type="text" class="form-control" id="nama_pemesan"
-                                                                name="nama_pemesan">
-                                                        </div>
-
-                                                        <label class="col-sm-2">No. Meja</label>
-                                                        <div class="col-sm-2">
-                                                            <input type="text" class="form-control" id="no_meja"
-                                                                name="no_meja">
-                                                        </div>
-
-                                                    </div> -->
                                                         <div class="modal-body">
-                                                            <!-- <div class="table">
-                                                            <table class="table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th scope="col">No.</th>
-                                                                        <th scope="col">Nama Menu</th>
-                                                                        <th scope="col">Jumlah</th>
-                                                                        <th scope="col">Harga</th>
-                                                                        <th scope="col">Total</th>
-                                                                    </tr>
-                                                                </thead>
-                                                            </table>
-                                                        </div> -->
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Nama Pemesan</label>
                                                                 <div class="col-sm-4">
@@ -115,20 +91,6 @@ include 'dashboard.php';
                                                                 </textarea>
                                                                 </div>
                                                             </div>
-                                                            <!-- <div class="mb-1 row">
-                                                            <label class="col-sm-4">Jumlah</label>
-                                                            <div class="col-sm-8">
-                                                                <input type="text" name="jumlah" class="form-control"
-                                                                    value="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="mb-1 row">
-                                                            <label class="col-sm-4">Harga</label>
-                                                            <div class="col-sm-8">
-                                                                <input type="text" name="harga" class="form-control"
-                                                                    value="Rp. ">
-                                                            </div>
-                                                        </div> -->
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Total</label>
                                                                 <div class="col-sm-4">
@@ -136,12 +98,6 @@ include 'dashboard.php';
                                                                         value="Rp. ">
                                                                 </div>
                                                             </div>
-                                                            <!-- <div class="mb-1 row">
-                                                            <label class="col-sm-4"></label>
-                                                            <span class="col-sm-4">
-                                                                Input Jumlah Bayar
-                                                            </span>
-                                                        </div> -->
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Jumlah Bayar</label>
                                                                 <div class="col-sm-4">
@@ -160,9 +116,6 @@ include 'dashboard.php';
                                                                     <input type="text" name="kembali"
                                                                         class="form-control" value="Rp. ">
                                                                 </div>
-                                                                <!-- <span class="col-sm-4">
-                                                                ex: Rp. 50.000
-                                                            </span> -->
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
@@ -175,6 +128,7 @@ include 'dashboard.php';
                                             </div>
                                         </td>
                                     </tr>
+                                    <?php endforeach ?>
                                 </tbody>
                             </table>
                         </div>

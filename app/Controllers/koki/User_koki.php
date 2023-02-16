@@ -15,7 +15,7 @@ class User_koki extends BaseController
     {
         $koki = new M_pesanan;
         $detail = new M_detailpesanan();
-        $data['koki'] = $koki->orderBy('no_meja')->findAll();
+        $data['koki'] = $koki->findAll();
          $data['detail'] = $detail->getRincian();
          return view('layout/v_koki',$data);
 
@@ -69,4 +69,19 @@ class User_koki extends BaseController
     public function pencarian(){
         
     }
+
+
+    public function status($id_pesanan){
+        $koki = new M_pesanan();
+        $detail = new M_detailpesanan();
+        $data = [
+            'status_pesanan' => 'selesai',
+
+        ];
+        $koki->update($id_pesanan, $data);
+        return redirect()->to('/dashboard/koki');
+    }
+
+
+
 }

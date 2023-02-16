@@ -104,6 +104,7 @@ class Keranjang extends BaseController
 
     public function simpan()
     {
+        date_default_timezone_set('Asia/Jakarta');
         $pesanan = new M_pesanan();
         $detail = new M_detailpesanan();
 

@@ -227,7 +227,6 @@ p {
         </div>
         <div class="container-right">
             <h2><b>Login as</b></h2>
-            <?php echo $googleButton            ?>
             <button onclick="window.location='<?php echo site_url("halaman-login-pelayan"); ?>'">Employee</button>
         </div>
     </div>

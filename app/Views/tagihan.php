@@ -62,11 +62,8 @@
         </script>
         
         <form method="post" action="<?= base_url('cart/simpan')?>">
-            <td>
-                <input type="hidden" name="nama_pelanggan" placeholder="nama" value="<?= session()->get("LoggedUserData")['nama_user']?session()->get("LoggedUserData")['nama_user']:""; ?>">        
-                <?= session()->get("LoggedUserData")['nama_user']?session()->get("LoggedUserData")['nama_user']:""; ?>
-            </td>
             <input type="text" name="no_meja" placeholder="no meja">
+            <input type="text" name="nama_pelanggan" placeholder="nama pelanggan">
             <table class="table">
                 <thead class="table-dark">
                     <tr>

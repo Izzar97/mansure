@@ -86,23 +86,23 @@ include 'dashboard.php';
                                             </button>
 
                                             <!-- modal rincian -->
-                                            <div class="modal fade" id="detail_<?= $item['id_pesanan'] ?>" tabindex="-1" aria-hidden="true">
+                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" id="detail_<?= $item['id_pesanan'] ?>"  aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
+                                                    <form action="<?= base_url('dashboard/koki/' . $item['id_pesanan']) ?>" method="post">
                                                         <div class="modal-header">
                                                             <label class="col-sm-1.5">Nama</label>
                                                             <div class="col-sm-5">
-                                                                <input type="text" class="form-control"
-                                                                    id="nama_pemesan" name="nama_pemesan">
+                                                                <input type="text" class="form-control" value="<?= $item['nama_pelanggan']?>" disabled>
                                                             </div>
 
                                                             <label class="col-sm-1.5">No. Meja</label>
                                                             <div class="col-sm-2">
-                                                                <input type="text" class="form-control" id="no_meja"
-                                                                    name="no_meja">
+                                                                <input type="text" class="form-control" value="<?= $item['no_meja']?>" disabled>
                                                             </div>
                                                         </div>
                                                         <div class="modal-body">
+
                                                             <div class="table">
                                                                 <table class="table">
                                                                     <thead>
@@ -111,10 +111,12 @@ include 'dashboard.php';
                                                                             <th>Nama Menu</th>
                                                                             <th>Jumlah</th>
                                                                             <th>Notes</th>
+                                                                            <th>status</th>
                                                                         </tr>
                                                                     </thead>
                                                                     <!-- <tbody id="detail">
                                                                     </tbody> -->
+
                                                                     <tbody>
                                                                         <?php 
                                                                         $no = 1; 
@@ -126,6 +128,7 @@ include 'dashboard.php';
                                                                             <td><?= $items['nama_menu']?></td>
                                                                             <td><?= $items['quantity']?></td>
                                                                             <td><?= $items['notes_pesanan']?></td>
+                                                                            <td><?= $items['status_pesanan']?></td>
                                                                         </tr>
                                                                         <?php endif; $no++; endforeach ?>
                                                                     </tbody>
@@ -135,8 +138,9 @@ include 'dashboard.php';
                                                         <div class="modal-footer">
                                                             <a href="<?= base_url('dashboard/koki'); ?> "
                                                                 class="btn btn-secondary">Kembali</a>
-                                                            <a href="#" class="btn btn-success">Pesanan Selesai</a>
+                                                            <button type="submit" class="btn btn-warning">Pesanan Selesai</button>
                                                         </div>
+                                                    </form>
                                                     </div>
                                                 </div>
                                             </div>
