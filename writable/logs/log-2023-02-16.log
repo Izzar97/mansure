@@ -1,0 +1,48 @@
+CRITICAL - 2023-02-16 00:59:50 --> Undefined variable: total_daftar_menu
+in APPPATH\Views\layout\index.php on line 45.
+ 1 APPPATH\Views\layout\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: total_daftar_menu', 'APPPATH\\Views\\layout\\index.php', 45, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/index', [], true)
+ 5 APPPATH\Controllers\kasir\Menukasir.php(27): view('layout/index')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\kasir\Menukasir->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kasir\Menukasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 01:06:20 --> Undefined variable: total_daftar_menu
+in APPPATH\Views\layout\index.php on line 45.
+ 1 APPPATH\Views\layout\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: total_daftar_menu', 'APPPATH\\Views\\layout\\index.php', 45, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/index', [], true)
+ 5 APPPATH\Controllers\kasir\Menukasir.php(27): view('layout/index')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\kasir\Menukasir->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kasir\Menukasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 01:07:12 --> Undefined variable: total_daftar_menu
+in APPPATH\Views\layout\index.php on line 45.
+ 1 APPPATH\Views\layout\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: total_daftar_menu', 'APPPATH\\Views\\layout\\index.php', 45, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/index', [], true)
+ 5 APPPATH\Controllers\kasir\Menukasir.php(27): view('layout/index')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\kasir\Menukasir->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kasir\Menukasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-16 01:14:02 --> Undefined variable: total_daftar_menu
+in APPPATH\Views\layout\index.php on line 45.
+ 1 APPPATH\Views\layout\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: total_daftar_menu', 'APPPATH\\Views\\layout\\index.php', 45, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/index', [], true)
+ 5 APPPATH\Controllers\kasir\Menukasir.php(27): view('layout/index')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\kasir\Menukasir->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kasir\Menukasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

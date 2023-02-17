@@ -49,40 +49,49 @@ include 'dashboard.php';
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php 
-                                    foreach($pesanan as $item):
+                                    <?php
+                                    foreach ($pesanan as $item) :
                                     ?>
                                     <tr>
-                                        <td><?= $item['no_meja']?></td>
-                                        <td><?= $item['id_pesanan']?></td>
-                                        <td><?= $item['tanggal']?></td>
-                                        <td><?= $item['nama_pelanggan']?></td>
-                                        <td><?= $item['status_pesanan']?></td>
+                                        <td><?= $item['no_meja'] ?></td>
+                                        <td><?= $item['id_pesanan'] ?></td>
+                                        <td><?= $item['tanggal'] ?></td>
+                                        <td><?= $item['nama_pelanggan'] ?></td>
+                                        <td><?= $item['status_pesanan'] ?></td>
                                         <td>
                                             <button type="button" class="btn btn-warning fas fa-list-alt"
                                                 data-bs-toggle="modal" data-bs-target="#RincianPesanan">
                                             </button>
 
                                             <!-- modal transaksi -->
-                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="RincianPesanan" tabindex="-1"
-                                                aria-labelledby="hapusmodal" aria-hidden="true">
+                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false"
+                                                id="RincianPesanan" tabindex="-1" aria-labelledby="hapusmodal"
+                                                aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4>Form Pembayaran</h4>
+                                                        </div>
                                                         <div class="modal-body">
+                                                            <!-- <div class="mb-1 row">
+                                                                <label class="col-sm-4">Id Pesanan</label>
+                                                                <div class="col-sm-4">
+                                                                    <span> </span>
+                                                                </div>
+                                                            </div> -->
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Nama Pemesan</label>
                                                                 <div class="col-sm-4">
-                                                                    <input name="nama_menu" class="form-control"
-                                                                        value="">
+                                                                    <span><?= $item['nama_pelanggan'] ?></span>
 
                                                                 </div>
                                                                 <label class="col-sm-2">No. Meja</label>
                                                                 <div class="col-sm-2">
-                                                                    <input name="nama_menu" class="form-control"
-                                                                        value="">
+                                                                    <span><?= $item['no_meja'] ?></span>
 
                                                                 </div>
                                                             </div>
+
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Pesanan</label>
                                                                 <div class="col-sm-8">
@@ -94,8 +103,7 @@ include 'dashboard.php';
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Total</label>
                                                                 <div class="col-sm-4">
-                                                                    <input type="text" name="total" class="form-control"
-                                                                        value="Rp. ">
+                                                                    <span>Rp. 94000</span>
                                                                 </div>
                                                             </div>
                                                             <div class="mb-1 row">
@@ -113,8 +121,7 @@ include 'dashboard.php';
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Kembali</label>
                                                                 <div class="col-sm-4">
-                                                                    <input type="text" name="kembali"
-                                                                        class="form-control" value="Rp. ">
+                                                                    <span>Rp. 6000</span>
                                                                 </div>
                                                             </div>
                                                         </div>

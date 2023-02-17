@@ -74,9 +74,9 @@ hr {
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('/menu') ?>">Menu</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('/aboutus') ?>">About Us</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('/keranjang-nih') ?>">Cart</a>
                         </li>
@@ -87,13 +87,13 @@ hr {
         </nav>
         <br>
         <hr class="garis" />
-        <!-- <form method="post" action="<?= base_url('cart/update') ?>"> -->
+        <!-- <form method="post" action="<?= base_url('cart/update') ?>">
         <button type="button" style="float: right;" class="btn fas fa-shopping-cart" data-bs-toggle="modal"
             data-bs-target="#modalKeranjang">
-        </button>
+        </button> -->
 
         <!-- modal keranjang -->
-        <div class="modal fade" id="modalKeranjang" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+        <!-- <div class="modal fade" id="modalKeranjang" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -137,7 +137,7 @@ hr {
                     </div>
                 </div>
             </div>
-        </div>
+    </div>-->
 
         </form>
     </div>
