@@ -55,7 +55,19 @@ include('navbar.php');
 </head>
 
 <body>
+    <!-- <div class="filter">
+                            <form role="form" method="post" action="">
+                                <div class="form-group">
+                                    <label class="label"><i class="fas fa-filter"></i>Filter: </label>
+                                    <select id="filter" class="select-menu">
+                                        <option value="">Semua</option>
+                                        <option value="">Selesai</option>
+                                        <option value="">Sudah Bayar</option>
 
+                                    </select>
+                                </div>
+                            </form>
+                        </div> -->
     <div class="form">
         <form class="form-inline" role="form" method="post" action="" style="margin-right: 40px;">
             <div class="form-group">

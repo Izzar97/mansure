@@ -47,11 +47,11 @@ include 'dashboard.php';
                                 <div class="col-sm-6">
                                     <select class="form-control" id="jenis_menu" name="jenis_menu" required>
                                         <option selected>Pilih Jenis Menu</option>
-                                        <option value="Main course" >Main Course</option>
-                                        <option value="Unca'an" >Unca'an Mansure</option>
-                                        <option value="Pasta" >Pasta</option>
-                                        <option value="Snacks" >Snacks</option>
-                                        <option value="Sweet Tooth" >Sweet Tooth</option>
+                                        <option value="Main course">Main Course</option>
+                                        <option value="Unca'an">Unca'an Mansure</option>
+                                        <option value="Pasta">Pasta</option>
+                                        <option value="Snacks">Snacks</option>
+                                        <option value="Sweet Tooth">Sweet Tooth</option>
                                         <option value="Beverages">Beverages</option>
                                     </select>
                                 </div>
@@ -59,7 +59,7 @@ include 'dashboard.php';
                                     ex: Main Course
                                 </span>
                             </div>
-                           
+
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Jenis Beverages</label>
                                 <div class="col-sm-6">
@@ -81,11 +81,10 @@ include 'dashboard.php';
                             <div class="mb-1 row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Harga</label>
                                 <div class="col-sm-6">
-                                    <input type="int" class="form-control" id="harga" name="harga" value=""
-                                        required>
+                                    <input type="int" class="form-control" id="harga" name="harga" value="" required>
                                 </div>
                                 <span class="col-sm-3">
-                                    ex: Rp. 30.000
+                                    ex: Rp. 30000
                                 </span>
                             </div>
 

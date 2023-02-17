@@ -1,114 +1,95 @@
-
-
-<style>
-.form-inline {
-    float: right;
-    padding-top: 10px;
-    padding-right: 10px;
-}
-
-.select {
-    /* width: 100%; */
-    font-weight: 300;
-    margin-right: 30px;
-}
-
-.label {
-    font-weight: 500;
-    margin-bottom: auto;
-    margin-top: 30;
-
-}
-
-.page-menu {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-.container-page {
-    margin-top: 50px;
-}
-
-.h2 {
-    margin-bottom: 0px;
-}
-
-.menu-deskripsi {
-    margin-bottom: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-
-.menu-harga {
-    margin-bottom: 0px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.menu-item {
-    text-align: center;
-}
-</style>
-
-<head>
-    <title>Toko Mansure | Menu</title>
-</head>
+<?php
+include 'menu/navbar.php';
+?>
 
 <html>
-    <body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-        </script>
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
-        </script>
 
-        
-        <form method="post" action="<?= base_url('cart/update')?>">
-            <table class="table">
-                <thead class="table-dark">
-                    <tr>
-                        <th>no</th>
-                        <th>nama</th>
-                        <th>harga</th>
-                        <th>jumlah <input type="submit" value="Update"></th>
-                        <th>Notes</th>
-                        <th>Sub total</th>
-                        <th>aksi</th>
-                        <th rowspan="6">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <input type="text" name="nama_pelanggan"> -->
-                    <?php 
-                        $x = 1;
-                        if($items): 
-                        foreach($items as $item_menu):
-                            // var_dump($items);
-                            // die;
-                    ?>
-                    <tr>
-                        <td><?= $x?></td>
-                        <td>                                    
-                            <input type="hidden" name="id_menu[]" value="<?= $item_menu["id_menu"] ?>"><?= $item_menu['nama_menu'] ?>
-                        </td>
-                        <td>                                    
-                            <input type="hidden" id="harga-<?= $x ?>" value="<?= $item_menu["harga"] ?>">Rp. <?= $item_menu['harga'] ?>
-                        </td>
-                        <td>
-                            <input type="number" min="1" value="<?= $item_menu['quantity'] ?>" style="width: 50px;" name="quantity[]">
-                        </td>
-                        <td><input type="text" name="notes_pesanan[]" value="<?= $item_menu['note'] ?>"></td>
-                        <td><input type="hidden" name="total_harga_per_menu[]" value="<?= $item_menu['harga'] * $item_menu['quantity'] ?>">Rp. <?= $item_menu['harga'] * $item_menu['quantity'] ?></td>
-                        <td><a href="<?= base_url('cart/remove').'/'.$item_menu['id_menu'] ?>" class="btn btn-danger">X</a></td>
-                        <td colspan="5"><input type="hidden" name="total_list_pesanan" value="<?= $total ?>">Rp. <?= $total ?></td>
-                    </tr>
-                    <?php 
-                    $x++;
-                    endforeach;
-                    endif;
-                    ?>
-                </tbody>
-            </table>
-        </form>
-        <a href="<?= base_url('cart/tagihan') ?>" class="btn btn-primary">Next</a>
+<body>
+
+    <body>
+
+        <div class="card" style="margin-left: 40px; margin-right:40px;">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <b>Pesanan</b>
+                </h3>
+                <span>*Klik tombol Update setiap melakukan
+                    perubahan</span>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <form method="post" action="<?= base_url('cart/update') ?>">
+                    <div class="table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama Menu</th>
+                                    <th>Harga</th>
+                                    <th>Jumlah <input type="submit" value="Update"></th>
+                                    <th>Notes</th>
+                                    <th>Sub total</th>
+                                    <!-- <th>Total</th> -->
+                                    <th>Aksi</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <input type="text" name="nama_pelanggan"> -->
+                                <?php
+                                $x = 1;
+                                if ($items) :
+                                    foreach ($items as $item_menu) :
+                                        // var_dump($items);
+                                        // die;
+                                ?>
+                                <tr>
+                                    <td><?= $x ?></td>
+                                    <td>
+                                        <input type="hidden" name="id_menu[]"
+                                            value="<?= $item_menu["id_menu"] ?>"><?= $item_menu['nama_menu'] ?>
+                                    </td>
+                                    <td>
+                                        <input type="hidden" id="harga-<?= $x ?>" value="<?= $item_menu["harga"] ?>">Rp.
+                                        <?= $item_menu['harga'] ?>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="1" value="<?= $item_menu['quantity'] ?>"
+                                            style="width: 50px;" name="quantity[]">
+                                    </td>
+                                    <td><input type="text" name="notes_pesanan[]" value="<?= $item_menu['note'] ?>">
+                                    </td>
+                                    <td><input type="hidden" name="total_harga_per_menu[]"
+                                            value="<?= $item_menu['harga'] * $item_menu['quantity'] ?>">Rp.
+                                        <?= $item_menu['harga'] * $item_menu['quantity'] ?></td>
+                                    <!-- <td><input type="hidden" name="total_list_pesanan" value="<?= $total ?>">Rp.
+                                        <?= $total ?></td> -->
+                                    <td><a href="<?= base_url('cart/remove') . '/' . $item_menu['id_menu'] ?>"
+                                            class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
+                                </tr>
+                                <?php
+                                        $x++;
+                                    endforeach;
+                                endif;
+                                ?>
+                            </tbody>
+                            <tfoot>
+                                <td colspan="5"><b>Total Bayar</b></td>
+                                <td><input type="hidden" name="total_list_pesanan" value="<?= $total ?>"><b>Rp.
+                                        <?= $total ?></b></td>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer" style="float:rigt;">
+                <a href="<?= base_url('menu') ?>" class="btn btn-secondary">Kembali</a>
+                <a href="<?= base_url('cart/tagihan') ?>" class="btn btn-warning">Selanjutnya</a>
+            </div>
+
+
+        </div>
     </body>
+
 </html>

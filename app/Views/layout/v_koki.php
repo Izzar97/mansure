@@ -112,7 +112,6 @@ include 'dashboard.php';
                                                                     <table class="table">
                                                                         <thead>
                                                                             <tr>
-                                                                                <th>No.</th>
                                                                                 <th>Nama Menu</th>
                                                                                 <th>Jumlah</th>
                                                                                 <th>Notes</th>
@@ -124,19 +123,17 @@ include 'dashboard.php';
 
                                                                         <tbody>
                                                                             <?php
-                                                                                $no = 1;
                                                                                 foreach ($detail as $items) :
                                                                                     if ($items['id_pesanan'] == $item['id_pesanan']) :
                                                                                 ?>
                                                                             <tr>
-                                                                                <td><?= $no ?></td>
+
                                                                                 <td><?= $items['nama_menu'] ?></td>
                                                                                 <td><?= $items['quantity'] ?></td>
                                                                                 <td><?= $items['notes_pesanan'] ?></td>
                                                                                 <td><?= $items['status_pesanan'] ?></td>
                                                                             </tr>
                                                                             <?php endif;
-                                                                                    $no++;
                                                                                 endforeach ?>
                                                                         </tbody>
                                                                     </table>
