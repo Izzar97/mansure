@@ -53,11 +53,12 @@ include 'dashboard.php';
                                     foreach ($pesanan as $item) :
                                     ?>
                                     <tr>
+                                    <form action="<?= base_url('dashboard/transaksi/'.$item['id_pesanan']) ?>" method="post">
                                         <td><?= $item['no_meja'] ?></td>
                                         <td><?= $item['id_pesanan'] ?></td>
-                                        <td><?= $item['tanggal'] ?></td>
+                                        <td><?php echo date('d-m-y', strtotime($item['tanggal']))?></td>
                                         <td><?= $item['nama_pelanggan'] ?></td>
-                                        <td><?= $item['status_pesanan'] ?></td>
+                                        <td><input type="text" name="status_pesanan" value="<?= $item['status_pesanan']?>" hidden><?= $item['status_pesanan']?></td>
                                         <td>
                                             <button type="button" class="btn btn-warning fas fa-list-alt"
                                                 data-bs-toggle="modal" data-bs-target="#transaksi_<?= $item['id_pesanan']?>">
@@ -96,15 +97,20 @@ include 'dashboard.php';
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Pesanan</label>
                                                                 <div class="col-sm-8">
-                                                                    <textarea name="nama_menu" class="form-control"
-                                                                        value="- Nasi Mansure x 3 @23.000 = 69.000">
-                                                                </textarea>
+                                                                    <?php 
+                                                                    foreach($rincian as $items):
+                                                                    if($items['id_pesanan'] == $item['id_pesanan']):
+                                                                    ?>
+                                                                        <ul>
+                                                                            <li><?= $items['nama_menu']?> x <?= $items['quantity']?></li>
+                                                                        </ul>
+                                                                    <?php endif; endforeach; ?>
                                                                 </div>
                                                             </div>
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Total</label>
                                                                 <div class="col-sm-4">
-                                                                    <span>Rp. 94000</span>
+                                                                    <span>Rp.  <?= $item['total_harga_seluruh']?></span>
                                                                 </div>
                                                             </div>
                                                             <div class="mb-1 row">

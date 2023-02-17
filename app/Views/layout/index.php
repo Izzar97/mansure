@@ -12,7 +12,7 @@ include 'dashboard.php';
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3> 0</h3>
+                            <h3><?= $total_pesanan_baru; ?></h3>
                             <p>Pesanan Baru</p>
                         </div>
                         <div class="icon">
@@ -42,7 +42,7 @@ include 'dashboard.php';
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3></h3>
+                            <h3><?= $total_daftar_menu; ?></h3>
                             <p>Daftar Menu</p>
                         </div>
                         <div class="icon">

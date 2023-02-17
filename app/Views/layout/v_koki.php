@@ -69,7 +69,7 @@ include 'dashboard.php';
                                     foreach ($koki as $item) : ?>
                                     <tr>
                                         <td><?= $i ?></td>
-                                        <td><?= $item['tanggal'] ?></td>
+                                        <td><?php echo date('d-m-y', strtotime($item['tanggal']))?></td>
                                         <td><?= $item['no_meja'] ?></td>
                                         <td><?= $item['nama_pelanggan'] ?></td>
                                         <td><?= $item['jml_pesanan'] ?></td>
@@ -108,38 +108,37 @@ include 'dashboard.php';
                                                             </div>
                                                             <div class="modal-body">
 
-                                                            <div class="table">
-                                                                <table class="table">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th>No.</th>
-                                                                            <th>Nama Menu</th>
-                                                                            <th>Jumlah</th>
-                                                                            <th>Notes</th>
-                                                                            <th>status</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <!-- <tbody id="detail">
+                                                                <div class="table">
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Nama Menu</th>
+                                                                                <th>Jumlah</th>
+                                                                                <th>Notes</th>
+                                                                                <th>Status</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <!-- <tbody id="detail">
                                                                     </tbody> -->
 
-                                                                    <tbody>
-                                                                        <?php 
-                                                                        $no = 1; 
-                                                                        foreach($detail as $items):
-                                                                            if($items['id_pesanan'] == $item['id_pesanan']):
-                                                                        ?>
-                                                                        <tr>
-                                                                            <td><?= $no?></td>
-                                                                            <td><?= $items['nama_menu']?></td>
-                                                                            <td><?= $items['quantity']?></td>
-                                                                            <td><?= $items['notes_pesanan']?></td>
-                                                                            <td><?= $items['status_pesanan']?></td>
-                                                                        </tr>
-                                                                        <?php endif; $no++; endforeach ?>
-                                                                    </tbody>
-                                                                </table>
+                                                                        <tbody>
+                                                                            <?php
+                                                                                foreach ($detail as $items) :
+                                                                                    if ($items['id_pesanan'] == $item['id_pesanan']) :
+                                                                                ?>
+                                                                            <tr>
+
+                                                                                <td><?= $items['nama_menu'] ?></td>
+                                                                                <td><?= $items['quantity'] ?></td>
+                                                                                <td><?= $items['notes_pesanan'] ?></td>
+                                                                                <td><?= $items['status_pesanan'] ?></td>
+                                                                            </tr>
+                                                                            <?php endif;
+                                                                                endforeach ?>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
                                                             </div>
-                                                        </div>
                                                         <div class="modal-footer">
                                                             <a href="<?= base_url('dashboard/koki'); ?> "
                                                                 class="btn btn-secondary">Kembali</a>

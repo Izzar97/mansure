@@ -82,10 +82,11 @@ select {
                     <form method="GET" action="" class="form-group">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" name="cari" placeholder="Mencari Data Berdasarkan Nama">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="cari"
+                                        placeholder="Cari Data Berdasarkan Nama">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="Submit">CARI DATA</button>
+                                        <button class="btn btn-outline-secondary" type="Submit">Cari</button>
                                     </div>
                                 </div>
                             </div>
@@ -114,8 +115,8 @@ select {
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('logout-pelayan') ?>" class="button" style="padding: 8px;">Logout <i
-                            class="fas fa-sign-out-alt"></i></a>
+                    <a class="nav-link" href="<?= base_url('logout-pelayan') ?>" class="button"
+                        style="padding: 8px;">Logout <i class="fas fa-sign-out-alt"></i></a>
                 </li>
             </ul>
         </nav>
@@ -138,124 +139,124 @@ select {
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                        <?php if(session()->get('jabatan') == 'admin') {?>
-                            <li class="nav-item">
-                                <a href="<?= base_url('dashboard/') ?>" class="nav-link">
-                                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                                    <p>
-                                        Dashboard
-                                    </p>
-                                </a>
-                            </li>
-                        <?php } ?> 
+                        <?php if (session()->get('jabatan') == 'admin') { ?>
+                        <li class="nav-item">
+                            <a href="<?= base_url('dashboard/') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <?php } ?>
 
-                        <?php if(session()->get('jabatan') == 'chef') {?>
-                            <li class="nav-item">
-                                <a href="<?= base_url('dashboard/koki') ?>" class="nav-link">
-                                    <i class="nav-icon fas fa-utensils"></i>
-                                    <p>
-                                        Koki
-                                    </p>
-                                </a>
-                            </li>
-                        <?php }?>
+                        <?php if (session()->get('jabatan') == 'chef') { ?>
+                        <li class="nav-item">
+                            <a href="<?= base_url('dashboard/koki') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-utensils"></i>
+                                <p>
+                                    Koki
+                                </p>
+                            </a>
+                        </li>
+                        <?php } ?>
 
-                        <?php if(session()->get('jabatan') == 'admin') {?>
+                        <?php if (session()->get('jabatan') == 'admin') { ?>
 
-                            <li class="nav-item">
-                                <a href="<?= base_url('dashboard/home-kasir') ?>" class="nav-link">
-                                    <i class="nav-icon fas fa-list"></i>
-                                    <p>Daftar Menu</p>
-                                </a>
-                            </li>
-                        <?php }?>
+                        <li class="nav-item">
+                            <a href="<?= base_url('dashboard/home-kasir') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-list"></i>
+                                <p>Daftar Menu</p>
+                            </a>
+                        </li>
+                        <?php } ?>
 
-                        <?php if(session()->get('jabatan') == 'kasir') {?>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-cash-register"></i>
-                                    <p>
-                                        Kasir
-                                        <i class="fas fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('dashboard/transaksi') ?>" class="nav-link">
-                                            <i class="nav-icon fas fa-credit-card"></i>
-                                            <p>Transaksi</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('dashboard/laporan') ?>" class="nav-link">
-                                            <i class="nav-icon fas fa-file-alt"></i>
-                                            <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
-                                            <p>
-                                                Laporan
-                                                <!-- <span class="badge badge-info right">2</span> -->
-                                            </p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        <?php }?>
+                        <?php if (session()->get('jabatan') == 'kasir') { ?>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-cash-register"></i>
+                                <p>
+                                    Kasir
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('dashboard/transaksi') ?>" class="nav-link">
+                                        <i class="nav-icon fas fa-credit-card"></i>
+                                        <p>Transaksi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('dashboard/laporan') ?>" class="nav-link">
+                                        <i class="nav-icon fas fa-file-alt"></i>
+                                        <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
+                                        <p>
+                                            Laporan
+                                            <!-- <span class="badge badge-info right">2</span> -->
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <?php } ?>
 
                         <!-- ini fitur admin -->
-                        <?php if(session()->get('jabatan') == 'admin') {?>
-                            <li class="nav-item">
-                                <a href="<?= base_url('dashboard/koki') ?>" class="nav-link">
-                                    <i class="nav-icon fas fa-utensils"></i>
-                                    <p>
-                                        Koki
-                                    </p>
-                                </a>
-                            </li>
-                        <?php }?>
+                        <?php if (session()->get('jabatan') == 'admin') { ?>
+                        <li class="nav-item">
+                            <a href="<?= base_url('dashboard/koki') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-utensils"></i>
+                                <p>
+                                    Koki
+                                </p>
+                            </a>
+                        </li>
+                        <?php } ?>
 
-                        <?php if(session()->get('jabatan') == 'admin') {?>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-cash-register"></i>
-                                    <p>
-                                        Kasir
-                                        <i class="fas fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('dashboard/transaksi') ?>" class="nav-link">
-                                            <i class="nav-icon fas fa-credit-card"></i>
-                                            <p>Transaksi</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        <?php }?>
+                        <?php if (session()->get('jabatan') == 'admin') { ?>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-cash-register"></i>
+                                <p>
+                                    Kasir
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="<?= base_url('dashboard/transaksi') ?>" class="nav-link">
+                                        <i class="nav-icon fas fa-credit-card"></i>
+                                        <p>Transaksi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <?php } ?>
 
-                        <?php if(session()->get('jabatan') == 'admin') {?>
-                            <li class="nav-header">OTHERS</li>
-                            <li class="nav-item">
-                                <a href="<?= base_url('dashboard/laporan') ?>" class="nav-link">
-                                    <i class="nav-icon fas fa-file-alt"></i>
-                                    <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
-                                    <p>
-                                        Laporan
-                                        <!-- <span class="badge badge-info right">2</span> -->
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?= base_url('dashboard/tambah-user') ?>" class="nav-link">
-                                    <i class="nav-icon fas fa-user-plus"></i>
-                                    <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
-                                    <p>
-                                        Users
-                                        <!-- <span class="badge badge-info right">2</span> -->
-                                    </p>
-                                </a>
-                            </li>
+                        <?php if (session()->get('jabatan') == 'admin') { ?>
+                        <li class="nav-header">OTHERS</li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('dashboard/laporan') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-file-alt"></i>
+                                <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
+                                <p>
+                                    Laporan
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('dashboard/tambah-user') ?>" class="nav-link">
+                                <i class="nav-icon fas fa-user-plus"></i>
+                                <!-- <i class="fa-sharp fa-solid fa-file"></i> -->
+                                <p>
+                                    Users
+                                    <!-- <span class="badge badge-info right">2</span> -->
+                                </p>
+                            </a>
+                        </li>
                         <?php } ?>
                         <!-- <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -325,46 +326,46 @@ select {
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?= base_url('assets') ?>/dist/js/pages/dashboard.js"></script>
     <script>
-        $(function () {
-            $('.btn-click-detail').on('click',function(){
-                const id = $(this).data('id');
-                console.log(id);
-                $.ajax({
-                    url : "<?= base_url("dashboard/detail_pesanan") ?>",
-                    method : "GET",
-                    data: {id : id},
-                    dataType:"JSON",
-                    success:function(data){
-                        var html = "";
-                        let no = 1;
-                        if(data){
-                            console.log(data);
-                            if(data.data.length > 0)
-                            {
-                                data.data.forEach((element) => {
-                                    html += `<tr> 
+    $(function() {
+        $('.btn-click-detail').on('click', function() {
+            const id = $(this).data('id');
+            console.log(id);
+            $.ajax({
+                url: "<?= base_url("dashboard/detail_pesanan") ?>",
+                method: "GET",
+                data: {
+                    id: id
+                },
+                dataType: "JSON",
+                success: function(data) {
+                    var html = "";
+                    let no = 1;
+                    if (data) {
+                        console.log(data);
+                        if (data.data.length > 0) {
+                            data.data.forEach((element) => {
+                                html += `<tr> 
                                                 <td>${no++}</td>
                                                 <td>${element.nama_menu}</td>
                                                 <td>${element.quantity}</td>
                                                 <td>${element.notes_pesanan}</td>
                                             </tr>`;
-                                });
-                            }
-                            else{
-                                html += `<tr class="text-center text-dark">
+                            });
+                        } else {
+                            html += `<tr class="text-center text-dark">
                                             <td colspan="4">Data Detail Pesanan Null</td>
                                         </tr>`;
-                            }
-                            $("#rincian").modal("show");
-                            $("#detail").html(html);
-                        }else{
-                            console.log("Failed Response");
                         }
+                        $("#rincian").modal("show");
+                        $("#detail").html(html);
+                    } else {
+                        console.log("Failed Response");
                     }
-                });
-
+                }
             });
-        })
+
+        });
+    })
     </script>
 </body>
 

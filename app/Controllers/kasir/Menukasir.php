@@ -13,24 +13,13 @@ class Menukasir extends BaseController
         $this->M_menu = new M_menu();
     }
 
-    // public function dashboard()
-    // {
-    //     $data = array(
-    // 'total_pesanan_baru' => $this->M_menu->total_pesanan_baru(),
-    // 'total_pesanan_Selesai' => $this->M_menu->total_pesanan_Selesai(),
-    //     'total_daftar_menu' => $this->menu->total_daftar_menu(),
-    // );
-    // return view('layout/index', $data);
-    // }
     public function dashboard()
     {
-        // $coba = new M_menu();
         $data = array(
-        //     'total_pesanan_baru' => $coba->total_pesanan_baru(),
-        //     'total_pesanan_Selesai' => $coba->total_pesanan_Selesai(),
-            'total_daftar_menu' => $this->M_menu->total_daftar_menu()
+            'total_pesanan_baru' => $this->M_menu->total_pesanan_baru(),
+            //'total_pesanan_Selesai' => $this->M_menu->total_pesanan_Selesai(),
+            'total_daftar_menu' => $this->M_menu->total_daftar_menu(),
         );
-        // $data['coba'] = $coba->total_daftar_menu();
         return view('layout/index', $data);
     }
     // public function dashboard()
@@ -177,7 +166,7 @@ class Menukasir extends BaseController
         session()->remove('nama_user');
         session()->remove('jabatan');
 
-        session()->setFlashdata('pesan', 'berhasil keluar');
+        session()->setFlashdata('pesan', 'Anda Berhasil Keluar.');
         return redirect()->to(base_url('halaman-login-pelayan'));
     }
 }

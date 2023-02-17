@@ -22,7 +22,6 @@ class User_kasir extends BaseController
     public function bayar($id_pesanan){
         date_default_timezone_set('Asia/Jakarta');
         $pesanan = new M_pesanan();
-        $detail = new M_detailpesanan();
         $simpan = $this->request->getPost();
         $transaksi = new M_transaksi();
         
@@ -55,6 +54,10 @@ class User_kasir extends BaseController
 
     public function laporan()
     {
-        return view('layout/v_laporan');
+        $pesanan = new M_pesanan();
+        $transaksi = new M_transaksi();
+        $data['pesanan'] = $pesanan->orderby('id_pesanan')->where('status_pesanan', 'bayar')->findAll();
+        $data['transaksi'] = $transaksi->rincian();
+        return view('layout/v_laporan', $data);
     }
 }

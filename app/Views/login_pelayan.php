@@ -226,14 +226,15 @@ p {
             <img src="https://d1fdloi71mui9q.cloudfront.net/CkC5B6RQdO4LhYtECNCw_iPJoJ2krt3AvQh2v" alt="Logo"
                 class="img-circle elevation-3" style="opacity: .8">
         </div>
+
         <div class="container-right">
-        <?php
-    if(session()->getFlashdata('pesan')){
-        echo '<div class="alert" role="alert">';
-        echo session()->getFlashdata('pesan');
-        echo'</div>';
-    } 
-    ?>
+            <?php
+            if (session()->getFlashdata('pesan')) {
+                echo '<div class="alert alert-warning " role="alert">';
+                echo session()->getFlashdata('pesan');
+                echo '</div>';
+            }
+            ?>
             <form method="post" action="<?= base_url('login-pelayan') ?>">
 
                 <div class="input">

@@ -15,10 +15,10 @@ class M_menu extends model
         'nama_menu', 'jenis_menu', 'harga', 'gambar', 'status_stok_menu', 'deskripsi', 'jenis_beverages'
     ];
 
-    // public function total_pesanan_baru()
-    // {
-    //     return $this->db->table('menu')->countAllResults();
-    // }
+    public function total_pesanan_baru()
+    {
+        return $this->db->table('pesanan')->countAllResults();
+    }
     // public function total_pesanan_selesai()
     // {
     //     return $this->db->table('menu')->countAllResults();

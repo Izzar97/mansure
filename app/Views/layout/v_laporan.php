@@ -30,29 +30,25 @@ include 'dashboard.php';
                                     <tr>
                                         <th scope="col">No.</th>
                                         <th scope="col">Id Pesanan</th>
-                                        <th scope="col">Tgl Pesanan</th>
+                                        <th scope="col">Tgl Transaksi</th>
                                         <th scope="col">Nama Pemesan</th>
                                         <th scope="col">Status Bayar</th>
                                         <th scope="col">Total Bayar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php 
+                                    foreach($transaksi as $datas):
+                                    ?>
                                     <tr>
                                         <td>1</td>
-                                        <td>001</td>
-                                        <td>12-12-2022</td>
-                                        <td>Okta</td>
-                                        <td>Done</td>
-                                        <td>Rp. 50.000</td>
+                                        <td><?= $datas['id_pesanan']?></td>
+                                        <td><?= $datas['tanggal']?></td>
+                                        <td><?= $datas['nama_pelanggan']?></td>
+                                        <td><?= $datas['nama_pelanggan']?></td>
+                                        <td><?= $datas['jml_bayar']?></td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>002</td>
-                                        <td>18-12-2022</td>
-                                        <td>Nadia</td>
-                                        <td>Done</td>
-                                        <td>Rp. 150.000</td>
-                                    </tr>
+                                    <?php endforeach ?>
                                 </tbody>
                             </table>
                         </div>

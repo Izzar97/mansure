@@ -12,7 +12,7 @@ class M_pesanan extends model
     protected $primaryKey = 'id_pesanan';
     // protected $returnType = 'object';
     protected $allowedFields = [
-        'no_meja','nama_pelanggan','jml_pesanan','status_pesanan', 'tanggal','total_harga_seluruh'
+        'no_meja', 'nama_pelanggan', 'jml_pesanan', 'status_pesanan', 'tanggal', 'total_harga_seluruh'
     ];
 
     public function pesanan()
@@ -20,8 +20,8 @@ class M_pesanan extends model
         return $this->db->table('pesanan')->countAllResults();
     }
 
-    public function pencarian($kunci) {
+    public function pencarian($kunci)
+    {
         return $this->table('pesanan')->like('nama_pelanggan', $kunci);
     }
-
 }
