@@ -42,7 +42,7 @@ include 'dashboard.php';
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <!-- <h3>// $total_daftar_menu; ?></h3> -->
+                            <h3><?php $total_daftar_menu; ?></h3>
                             <p>Daftar Menu</p>
                         </div>
                         <div class="icon">

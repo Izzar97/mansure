@@ -1,0 +1,362 @@
+ERROR - 2023-02-17 10:24:53 --> Column 'jml_bayar' cannot be null
+CRITICAL - 2023-02-17 10:24:53 --> Column 'jml_bayar' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:24:53\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:24:53\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:24:53\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (:jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 10:25:16 --> Column 'jml_bayar' cannot be null
+CRITICAL - 2023-02-17 10:25:16 --> Column 'jml_bayar' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:25:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:25:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:25:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (:jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 10:25:48 --> Column 'jml_bayar' cannot be null
+CRITICAL - 2023-02-17 10:25:48 --> Column 'jml_bayar' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:25:48\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:25:48\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (NULL, \'2023-02-17 10:25:48\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`jml_bayar`, `tanggal`) VALUES (:jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 11:11:12 --> Argument 1 passed to CodeIgniter\BaseModel::doProtectFields() must be of the type array, int given, called in C:\xampp\htdocs\mansure\system\BaseModel.php on line 799
+in SYSTEMPATH\BaseModel.php on line 1131.
+ 1 SYSTEMPATH\BaseModel.php(799): CodeIgniter\BaseModel->doProtectFields(0)
+ 2 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\BaseModel->insertBatch([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 11:43:19 --> Column 'id_pesanan' cannot be null
+CRITICAL - 2023-02-17 11:43:19 --> Column 'id_pesanan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'2\', \'2023-02-17 11:43:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'2\', \'2023-02-17 11:43:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'2\', \'2023-02-17 11:43:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (:id_pesanan:, :jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 11:44:04 --> Column 'id_pesanan' cannot be null
+CRITICAL - 2023-02-17 11:44:04 --> Column 'id_pesanan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'2\', \'2023-02-17 11:44:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'2\', \'2023-02-17 11:44:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'2\', \'2023-02-17 11:44:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (:id_pesanan:, :jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 11:44:12 --> Column 'id_pesanan' cannot be null
+CRITICAL - 2023-02-17 11:44:12 --> Column 'id_pesanan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 11:44:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 11:44:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 11:44:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (:id_pesanan:, :jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 12:54:50 --> Column 'id_pesanan' cannot be null
+CRITICAL - 2023-02-17 12:54:50 --> Column 'id_pesanan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 12:54:50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 12:54:50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 12:54:50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (:id_pesanan:, :jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 12:55:16 --> Column 'id_pesanan' cannot be null
+CRITICAL - 2023-02-17 12:55:16 --> Column 'id_pesanan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 12:55:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 12:55:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'3\', \'2023-02-17 12:55:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (:id_pesanan:, :jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 13:02:33 --> Undefined index: id_pesanan
+in APPPATH\Controllers\koki\User_kasir.php on line 30.
+ 1 APPPATH\Controllers\koki\User_kasir.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_pesanan', 'APPPATH\\Controllers\\koki\\User_kasir.php', 30, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-17 13:09:18 --> Column 'id_pesanan' cannot be null
+CRITICAL - 2023-02-17 13:09:18 --> Column 'id_pesanan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'23\', \'2023-02-17 13:09:18\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'23\', \'2023-02-17 13:09:18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (NULL, \'23\', \'2023-02-17 13:09:18\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksi` (`id_pesanan`, `jml_bayar`, `tanggal`) VALUES (:id_pesanan:, :jml_bayar:, :tanggal:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\koki\User_kasir.php(36): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 13:29:18 --> Undefined index: status_pesanan
+in APPPATH\Controllers\koki\User_kasir.php on line 32.
+ 1 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_pesanan', 'APPPATH\\Controllers\\koki\\User_kasir.php', 32, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 13:30:11 --> Undefined index: status_pesanan
+in APPPATH\Controllers\koki\User_kasir.php on line 32.
+ 1 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_pesanan', 'APPPATH\\Controllers\\koki\\User_kasir.php', 32, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 13:30:23 --> Undefined index: status_pesanan
+in APPPATH\Controllers\koki\User_kasir.php on line 32.
+ 1 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_pesanan', 'APPPATH\\Controllers\\koki\\User_kasir.php', 32, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 13:34:02 --> Undefined index: status
+in APPPATH\Controllers\koki\User_kasir.php on line 32.
+ 1 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status', 'APPPATH\\Controllers\\koki\\User_kasir.php', 32, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:42:12 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\koki\User_kasir.php(42): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:47:21 --> Invalid argument supplied for foreach()
+in APPPATH\Controllers\koki\User_kasir.php on line 37.
+ 1 APPPATH\Controllers\koki\User_kasir.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Controllers\\koki\\User_kasir.php', 37, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:49:33 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(42): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:49:48 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(42): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:53:37 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(42): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:53:49 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(42): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:54:16 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(42): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 14:54:23 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(42): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 15:30:12 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(32): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 15:39:47 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(33): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 15:40:33 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\koki\User_kasir.php(33): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar(0)
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 15:47:59 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 846.
+ 1 SYSTEMPATH\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 20:17:24 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 846.
+ 1 SYSTEMPATH\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\koki\User_kasir.php(35): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->bayar('s1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 07:47:29 --> Call to undefined method App\Models\M_pesanan::and
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\koki\User_kasir.php(16): CodeIgniter\Model->__call('and', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 07:47:55 --> Call to undefined method App\Models\M_pesanan::and
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\koki\User_kasir.php(16): CodeIgniter\Model->__call('and', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 07:47:58 --> Call to undefined method App\Models\M_pesanan::and
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\koki\User_kasir.php(16): CodeIgniter\Model->__call('and', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-17 07:48:17 --> Call to undefined method App\Models\M_pesanan::and
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\koki\User_kasir.php(16): CodeIgniter\Model->__call('and', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

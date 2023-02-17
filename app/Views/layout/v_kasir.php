@@ -53,34 +53,33 @@ include 'dashboard.php';
                                     foreach($pesanan as $item):
                                     ?>
                                     <tr>
+                                    <form action="<?= base_url('dashboard/transaksi/'.$item['id_pesanan']) ?>" method="post">
                                         <td><?= $item['no_meja']?></td>
                                         <td><?= $item['id_pesanan']?></td>
-                                        <td><?= $item['tanggal']?></td>
+                                        <td><?php echo date('d-m-y', strtotime($item['tanggal']))?></td>
                                         <td><?= $item['nama_pelanggan']?></td>
-                                        <td><?= $item['status_pesanan']?></td>
+                                        <td><input type="text" name="status_pesanan" value="<?= $item['status_pesanan']?>" hidden><?= $item['status_pesanan']?></td>
                                         <td>
                                             <button type="button" class="btn btn-warning fas fa-list-alt"
-                                                data-bs-toggle="modal" data-bs-target="#RincianPesanan">
+                                                data-bs-toggle="modal" data-bs-target="#transaksi_<?= $item['id_pesanan']?>">
                                             </button>
 
                                             <!-- modal transaksi -->
-                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="RincianPesanan" tabindex="-1"
-                                                aria-labelledby="hapusmodal" aria-hidden="true">
+                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="transaksi_<?= $item['id_pesanan']?>" tabindex="-1"
+                                                 aria-hidden="true" role="dialog">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-body">
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Nama Pemesan</label>
                                                                 <div class="col-sm-4">
-                                                                    <input name="nama_menu" class="form-control"
-                                                                        value="">
-
+                                                                    <input class="form-control" value="<?= $item['nama_pelanggan']?>" disabled>
                                                                 </div>
+                                                                <input type="hidden" name="id_pesanan" value="<?= $item["id_pesanan"] ?>">
+                                                                <input type="hidden" name="status" value="<?= $item["status_pesanan"] ?>">
                                                                 <label class="col-sm-2">No. Meja</label>
                                                                 <div class="col-sm-2">
-                                                                    <input name="nama_menu" class="form-control"
-                                                                        value="">
-
+                                                                    <input class="form-control" value="<?= $item['no_meja']?>" disabled>
                                                                 </div>
                                                             </div>
                                                             <div class="mb-1 row">
@@ -94,15 +93,13 @@ include 'dashboard.php';
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Total</label>
                                                                 <div class="col-sm-4">
-                                                                    <input type="text" name="total" class="form-control"
-                                                                        value="Rp. ">
+                                                                    <input type="text" name="total" class="form-control" disabled value="Rp. <?= $item['total_harga_seluruh']?>">
                                                                 </div>
                                                             </div>
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Jumlah Bayar</label>
                                                                 <div class="col-sm-4">
-                                                                    <input type="text" name="total" class="form-control"
-                                                                        value="Rp. "
+                                                                    <input type="text" name="jml_bayar" class="form-control"
                                                                         placeholder="Masukkan Jumlah Bayar">
                                                                 </div>
                                                                 <span class="col-sm-4">
@@ -110,25 +107,26 @@ include 'dashboard.php';
                                                                 </span>
 
                                                             </div>
-                                                            <div class="mb-1 row">
+                                                            <!-- <div class="mb-1 row">
                                                                 <label class="col-sm-4">Kembali</label>
                                                                 <div class="col-sm-4">
                                                                     <input type="text" name="kembali"
                                                                         class="form-control" value="Rp. ">
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                         <div class="modal-footer">
                                                             <a href="<?= base_url('dashboard/transaksi'); ?> "
                                                                 class="btn btn-secondary">Kembali</a>
-                                                            <a href="#" class="btn btn-success">Sudah Bayar</a>
+                                                            <button type="submit" class="btn btn-success">Sudah Bayar</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
+                                    </form>
                                     </tr>
-                                    <?php endforeach ?>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

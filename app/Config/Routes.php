@@ -70,6 +70,7 @@ $routes->group('dashboard', function ($routes) {
     // ini yg js
     $routes->get('detail_pesanan', 'koki\User_koki::show', ['filter'=>'pelayan']);
     $routes->get('transaksi', 'koki\User_kasir::index', ['filter'=>'pelayan']);
+    $routes->post('transaksi/(:num)', 'koki\User_kasir::bayar/s1', ['filter'=>'pelayan']);
     $routes->get('laporan', 'koki\User_kasir::laporan', ['filter'=>'pelayan']);
     // bagian tambah user kasir&chef
     $routes->get('tambah-user', 'Login::tambahuser', ['filter'=>'pelayan']);

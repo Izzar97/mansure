@@ -71,7 +71,7 @@ include 'dashboard.php';
                                         <td><?= $i?></td>
                                         <td><?= $item['no_meja'] ?></td>
                                         <td><?= $item['nama_pelanggan']?></td>
-                                        <td><?= $item['tanggal']?></td>
+                                        <td><?php echo date('d-m-y', strtotime($item['tanggal']))?></td>
                                         <td><?= $item['jml_pesanan']?></td>
                                         <td><?= $item['status_pesanan']?></td>
                                         <td>
@@ -111,7 +111,6 @@ include 'dashboard.php';
                                                                             <th>Nama Menu</th>
                                                                             <th>Jumlah</th>
                                                                             <th>Notes</th>
-                                                                            <th>status</th>
                                                                         </tr>
                                                                     </thead>
                                                                     <!-- <tbody id="detail">
@@ -128,9 +127,8 @@ include 'dashboard.php';
                                                                             <td><?= $items['nama_menu']?></td>
                                                                             <td><?= $items['quantity']?></td>
                                                                             <td><?= $items['notes_pesanan']?></td>
-                                                                            <td><?= $items['status_pesanan']?></td>
                                                                         </tr>
-                                                                        <?php endif; $no++; endforeach ?>
+                                                                        <?php $no++; endif; endforeach; ?>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
