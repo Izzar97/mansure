@@ -57,17 +57,17 @@ include('navbar.php');
 <body>
 
     <div class="form">
-        <form class="form-inline" role="form" method="post" action="">
+        <form class="form-inline" role="form" method="post" action="" style="margin-right: 40px;">
             <div class="form-group">
                 <label class="label">Sort by:</label>
                 <select id="filter" class="select-menu">
                     <option value="Pilih">Pilih</option>
                     <option value="<?= base_url('menu/maincourse') ?>">Main Course</option>
-                    <option value="<?= base_url('menu/uncaanmansure') ?>" >Unca'an Mansure</option>
-                    <option value="<?= base_url('menu/pasta') ?>" >Pasta</option>
-                    <option value="<?= base_url('menu/snacks') ?>" >Snacks</option>
-                    <option value="<?= base_url('menu/sweetooth') ?>" >Sweet Tooth</option>
-                    <option value="<?= base_url('menu/beverages') ?>" >Beverages</option>
+                    <option value="<?= base_url('menu/uncaanmansure') ?>">Unca'an Mansure</option>
+                    <option value="<?= base_url('menu/pasta') ?>">Pasta</option>
+                    <option value="<?= base_url('menu/snacks') ?>">Snacks</option>
+                    <option value="<?= base_url('menu/sweetooth') ?>">Sweet Tooth</option>
+                    <option value="<?= base_url('menu/beverages') ?>">Beverages</option>
                 </select>
             </div>
         </form>

@@ -49,16 +49,15 @@ include 'dashboard.php';
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php 
-                                    foreach($pesanan as $item):
+                                    <?php
+                                    foreach ($pesanan as $item) :
                                     ?>
                                     <tr>
-                                    <form action="<?= base_url('dashboard/transaksi/'.$item['id_pesanan']) ?>" method="post">
-                                        <td><?= $item['no_meja']?></td>
-                                        <td><?= $item['id_pesanan']?></td>
-                                        <td><?php echo date('d-m-y', strtotime($item['tanggal']))?></td>
-                                        <td><?= $item['nama_pelanggan']?></td>
-                                        <td><input type="text" name="status_pesanan" value="<?= $item['status_pesanan']?>" hidden><?= $item['status_pesanan']?></td>
+                                        <td><?= $item['no_meja'] ?></td>
+                                        <td><?= $item['id_pesanan'] ?></td>
+                                        <td><?= $item['tanggal'] ?></td>
+                                        <td><?= $item['nama_pelanggan'] ?></td>
+                                        <td><?= $item['status_pesanan'] ?></td>
                                         <td>
                                             <button type="button" class="btn btn-warning fas fa-list-alt"
                                                 data-bs-toggle="modal" data-bs-target="#transaksi_<?= $item['id_pesanan']?>">
@@ -69,19 +68,31 @@ include 'dashboard.php';
                                                  aria-hidden="true" role="dialog">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4>Form Pembayaran</h4>
+                                                        </div>
                                                         <div class="modal-body">
+                                                            <!-- <div class="mb-1 row">
+                                                                <label class="col-sm-4">Id Pesanan</label>
+                                                                <div class="col-sm-4">
+                                                                    <span> </span>
+                                                                </div>
+                                                            </div> -->
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Nama Pemesan</label>
                                                                 <div class="col-sm-4">
-                                                                    <input class="form-control" value="<?= $item['nama_pelanggan']?>" disabled>
+                                                                    <span><?= $item['nama_pelanggan'] ?></span>
+
                                                                 </div>
                                                                 <input type="hidden" name="id_pesanan" value="<?= $item["id_pesanan"] ?>">
                                                                 <input type="hidden" name="status" value="<?= $item["status_pesanan"] ?>">
                                                                 <label class="col-sm-2">No. Meja</label>
                                                                 <div class="col-sm-2">
-                                                                    <input class="form-control" value="<?= $item['no_meja']?>" disabled>
+                                                                    <span><?= $item['no_meja'] ?></span>
+
                                                                 </div>
                                                             </div>
+
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Pesanan</label>
                                                                 <div class="col-sm-8">
@@ -93,7 +104,7 @@ include 'dashboard.php';
                                                             <div class="mb-1 row">
                                                                 <label class="col-sm-4">Total</label>
                                                                 <div class="col-sm-4">
-                                                                    <input type="text" name="total" class="form-control" disabled value="Rp. <?= $item['total_harga_seluruh']?>">
+                                                                    <span>Rp. 94000</span>
                                                                 </div>
                                                             </div>
                                                             <div class="mb-1 row">
@@ -110,8 +121,7 @@ include 'dashboard.php';
                                                             <!-- <div class="mb-1 row">
                                                                 <label class="col-sm-4">Kembali</label>
                                                                 <div class="col-sm-4">
-                                                                    <input type="text" name="kembali"
-                                                                        class="form-control" value="Rp. ">
+                                                                    <span>Rp. 6000</span>
                                                                 </div>
                                                             </div> -->
                                                         </div>
