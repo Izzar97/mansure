@@ -60,6 +60,7 @@ include 'dashboard.php';
                                         <td><?= $item['nama_pelanggan'] ?></td>
                                         <td><input type="text" name="status_pesanan" value="<?= $item['status_pesanan']?>" hidden><?= $item['status_pesanan']?></td>
                                         <td>
+
                                             <button type="button" class="btn btn-warning fas fa-list-alt"
                                                 data-bs-toggle="modal" data-bs-target="#transaksi_<?= $item['id_pesanan']?>">
                                             </button>
@@ -70,7 +71,7 @@ include 'dashboard.php';
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h4>Form Pembayaran</h4>
+                                                            <h4>Form Pembayaran </h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <!-- <div class="mb-1 row">
@@ -83,6 +84,11 @@ include 'dashboard.php';
                                                                 <label class="col-sm-4">Nama Pemesan</label>
                                                                 <div class="col-sm-4">
                                                                     <span><?= $item['nama_pelanggan'] ?></span>
+
+                                                                </div>
+                                                                <label class="col-sm-4">ID Pesanan</label>
+                                                                <div class="col-sm-4">
+                                                                    <span><?= $item['id_pesanan'] ?></span>
 
                                                                 </div>
                                                                 <input type="hidden" name="id_pesanan" value="<?= $item["id_pesanan"] ?>">
@@ -98,7 +104,7 @@ include 'dashboard.php';
                                                                 <label class="col-sm-4">Pesanan</label>
                                                                 <div class="col-sm-8">
                                                                     <?php 
-                                                                    foreach($rincian as $items):
+                                                                    foreach($detail_pesanan as $items):
                                                                     if($items['id_pesanan'] == $item['id_pesanan']):
                                                                     ?>
                                                                         <ul>
@@ -134,6 +140,7 @@ include 'dashboard.php';
                                                         <div class="modal-footer">
                                                             <a href="<?= base_url('dashboard/transaksi'); ?> "
                                                                 class="btn btn-secondary">Kembali</a>
+                                                            <!-- <button type="submit" class="btn btn-success" onclick="window.print()">Sudah Bayar</button> -->
                                                             <button type="submit" class="btn btn-success">Sudah Bayar</button>
                                                         </div>
                                                     </div>

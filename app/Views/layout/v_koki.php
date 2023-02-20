@@ -115,7 +115,6 @@ include 'dashboard.php';
                                                                                 <th>Nama Menu</th>
                                                                                 <th>Jumlah</th>
                                                                                 <th>Notes</th>
-                                                                                <th>Status</th>
                                                                             </tr>
                                                                         </thead>
                                                                         <!-- <tbody id="detail">
@@ -131,7 +130,6 @@ include 'dashboard.php';
                                                                                 <td><?= $items['nama_menu'] ?></td>
                                                                                 <td><?= $items['quantity'] ?></td>
                                                                                 <td><?= $items['notes_pesanan'] ?></td>
-                                                                                <td><?= $items['status_pesanan'] ?></td>
                                                                             </tr>
                                                                             <?php endif;
                                                                                 endforeach ?>

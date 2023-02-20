@@ -24,4 +24,5 @@ class M_pesanan extends model
     {
         return $this->table('pesanan')->like('nama_pelanggan', $kunci);
     }
+
 }

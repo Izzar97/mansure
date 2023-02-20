@@ -17,9 +17,9 @@ include 'dashboard.php';
                     <div class="card-body">
                         <form action="" method="post" class="form-inline">
                             <h4>Periode Tanggal
-                                <input type="date" name="tgl_awal" class="form-control ml-2" value="?= $tgl_awal; ?>">
+                                <input type="date" name="tgl_awal" class="form-control ml-2" value=" <?= date('Y-m-d')?> ">
                                 sd
-                                <input type="date" name="tgl_akhir" class="form-control mr-2" value="?= $tgl_akhir; ?>">
+                                <input type="date" name="tgl_akhir" class="form-control mr-2" value=" <?= date('Y-m-d')?> ">
                                 <button type="submit" name="filter_tgl" class="btn btn-dark">View</button>
                             </h4>
                         </form>
@@ -38,21 +38,23 @@ include 'dashboard.php';
                                 </thead>
                                 <tbody>
                                     <?php 
-                                    foreach($transaksi as $datas):
+                                    $no = 1;
+                                    foreach($transaksi as $data):
                                     ?>
                                     <tr>
-                                        <td>1</td>
-                                        <td><?= $datas['id_pesanan']?></td>
-                                        <td><?= $datas['tanggal']?></td>
-                                        <td><?= $datas['nama_pelanggan']?></td>
-                                        <td><?= $datas['nama_pelanggan']?></td>
-                                        <td><?= $datas['jml_bayar']?></td>
+                                        <td><?= $no ?></td>
+                                        <td><?= $data['id_pesanan']?></td>
+                                        <td><?= $data['tanggal_transaksi']?></td>
+                                        <td><?= $data['nama_pelanggan']?></td>
+                                        <td><?= $data['status_pesanan']?></td>
+                                        <td><?= $data['jml_bayar']?></td>
                                     </tr>
-                                    <?php endforeach ?>
+                                    <?php $no++; endforeach;  ?>
                                 </tbody>
                             </table>
                         </div>
-                        <button type="submit" name="export" class="btn btn-info" style="float: right;">Export</button>
+                        <a target="_blank" href="export-pdf" class="btn btn-success">Export PDF</a>
+                        <!-- <button type="submit" name="export" class="btn btn-info" style="float: right;">Export</button> -->
                     </div>
                 </div>
             </section>

@@ -70,12 +70,15 @@ $routes->group('dashboard', function ($routes) {
     // ini yg js
     $routes->get('detail_pesanan', 'koki\User_koki::show', ['filter'=>'pelayan']);
     $routes->get('transaksi', 'koki\User_kasir::index', ['filter'=>'pelayan']);
-    $routes->post('transaksi/(:num)', 'koki\User_kasir::bayar/s1', ['filter'=>'pelayan']);
+    $routes->get('struk/(:num)', 'koki\User_kasir::struk/$1', ['filter'=>'pelayan']);
+    $routes->post('transaksi/(:num)', 'koki\User_kasir::bayar/$1', ['filter'=>'pelayan']);
     $routes->get('laporan', 'koki\User_kasir::laporan', ['filter'=>'pelayan']);
+    $routes->get('export-pdf', 'koki\User_kasir::exportPDF', ['filter'=>'pelayan']);
     // bagian tambah user kasir&chef
     $routes->get('tambah-user', 'Login::tambahuser', ['filter'=>'pelayan']);
     $routes->post('daftaruser', 'Login::daftaruser', ['filter'=>'pelayan']);
     $routes->get('hapus_user/(:any)', 'Login::hapus_user/$1', ['filter'=>'pelayan']);
+    $routes->post('reset/(:num)', 'Login::reset/$1', ['filter'=>'pelayan']);
 });
 
 $routes->get('/', 'Home::index');

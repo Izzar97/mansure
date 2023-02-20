@@ -86,25 +86,56 @@ include 'dashboard.php';
                                         <td>
                                             <!-- <button type="button" class="btn btn-danger fas fa-trash-alt"></button> -->
                                             <button type="button" class="btn btn-danger fas fa-trash-alt"
-                                                data-bs-toggle="modal" data-bs-target="#hapus_<?= $item['id'] ?>">
+                                                data-bs-toggle="modal" data-bs-target="#hapus_<?= $item['id_user'] ?>">
+                                            </button>
+
+                                            <button type="button" class="btn btn-primary fas fa-trash-alt"
+                                                data-bs-toggle="modal" data-bs-target="#reset_<?= $item['id_user'] ?>">
                                             </button>
 
                                             <!-- modal hapus -->
-                                            <div class="modal fade" id="hapus_<?= $item['id'] ?>" tabindex="-1"
+                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="hapus_<?= $item['id_user'] ?>" tabindex="-1"
                                                 aria-labelledby="hapusmodal" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-body">
-                                                            <?php echo "Apakah Anda Yakin Ingin Menghapus " . $item['nama_user'] . "?"; ?>
+                                                            <?php echo "Apakah Anda Yakin Ingin Menghapus Akun " . $item['nama_user'] . "?"; ?>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <a href="<?= base_url('dashboard/tambah-user'); ?> "
                                                                 class="btn btn-secondary">Kembali</a>
-                                                            <a href="<?= base_url('dashboard/hapus_user')  . '/' . $item['id'] ?> "
+                                                            <a href="<?= base_url('dashboard/hapus_user')  . '/' . $item['id_user'] ?> "
                                                                 class="btn btn-danger">Hapus</a>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+
+                                            <!-- modal reset -->
+                                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="reset_<?= $item['id_user'] ?>" tabindex="-1"
+                                                aria-labelledby="hapusmodal" aria-hidden="true">
+                                                <form action="<?= base_url('dashboard/reset'.'/'.$item['id_user'])?>" method="post">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <div>
+                                                                <label>Password</label>
+                                                                <input type="password" class="form-control" name="password">
+                                                            </div>
+                                                            <!-- <div>
+                                                                <label>Konfirmasi Password</label>
+                                                                <input type="password" class="form-control" name="konfirmasi_password">
+                                                            </div> -->
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a href="<?= base_url('dashboard/tambah-user'); ?> "
+                                                                class="btn btn-secondary">Kembali</a>
+                                                            <button type="submit"
+                                                                class="btn btn-primary">Reset</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>

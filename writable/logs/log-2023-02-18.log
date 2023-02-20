@@ -1,0 +1,426 @@
+CRITICAL - 2023-02-18 05:29:58 --> Undefined index: jml_bayar
+in APPPATH\Views\layout\v_laporan.php on line 49.
+ 1 APPPATH\Views\layout\v_laporan.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jml_bayar', 'APPPATH\\Views\\layout\\v_laporan.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(61): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 05:33:21 --> Undefined variable: pesanan
+in APPPATH\Views\layout\v_laporan.php on line 41.
+ 1 APPPATH\Views\layout\v_laporan.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pesanan', 'APPPATH\\Views\\layout\\v_laporan.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(61): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 05:34:45 --> Undefined index: nama_pelanggan
+in APPPATH\Views\layout\v_laporan.php on line 47.
+ 1 APPPATH\Views\layout\v_laporan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_pelanggan', 'APPPATH\\Views\\layout\\v_laporan.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(60): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-18 05:43:24 --> Unknown column 'status_pesanan' in 'where clause'
+CRITICAL - 2023-02-18 05:43:24 --> Unknown column 'status_pesanan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `transaksi`
+WHERE `status_pesanan` = \'bayar\'
+ORDER BY `id_pesanan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `transaksi`
+WHERE `status_pesanan` = \'bayar\'
+ORDER BY `id_pesanan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `transaksi`
+WHERE `status_pesanan` = \'bayar\'
+ORDER BY `id_pesanan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transaksi`
+WHERE `status_pesanan` = :status_pesanan:
+ORDER BY `id_pesanan`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\koki\User_kasir.php(60): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 05:45:35 --> Undefined index: status_pesanan
+in APPPATH\Views\layout\v_laporan.php on line 49.
+ 1 APPPATH\Views\layout\v_laporan.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_pesanan', 'APPPATH\\Views\\layout\\v_laporan.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(62): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 06:45:49 --> Call to undefined method App\Models\M_pesanan::getDetail
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\koki\User_kasir.php(60): CodeIgniter\Model->__call('getDetail', [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 06:48:51 --> Undefined index: nama_pelanggan
+in APPPATH\Views\layout\v_laporan.php on line 48.
+ 1 APPPATH\Views\layout\v_laporan.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_pelanggan', 'APPPATH\\Views\\layout\\v_laporan.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(61): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-18 07:29:53 --> Unknown column 'use.id' in 'on clause'
+CRITICAL - 2023-02-18 07:29:53 --> Unknown column 'use.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `transaksi`
+JOIN `user` ON `use`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `transaksi`
+JOIN `user` ON `use`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `transaksi`
+JOIN `user` ON `use`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transaksi`
+JOIN `user` ON `use`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`', [], false)
+ 5 APPPATH\Models\M_transaksi.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\koki\User_kasir.php(59): App\Models\M_transaksi->getCoba()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-18 07:30:09 --> Unknown column 'detail_pesanan.id_pesanan' in 'on clause'
+CRITICAL - 2023-02-18 07:30:09 --> Unknown column 'detail_pesanan.id_pesanan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `transaksi`
+JOIN `user` ON `user`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `transaksi`
+JOIN `user` ON `user`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `transaksi`
+JOIN `user` ON `user`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transaksi`
+JOIN `user` ON `user`.`id`=`transaksi`.`id`
+JOIN `pesanan` ON `pesanan`.`id_pesanan`=`detail_pesanan`.`id_pesanan`', [], false)
+ 5 APPPATH\Models\M_transaksi.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\koki\User_kasir.php(59): App\Models\M_transaksi->getCoba()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:00:55 --> Undefined index: nama_pelanggan
+in APPPATH\Views\layout\v_laporan.php on line 48.
+ 1 APPPATH\Views\layout\v_laporan.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_pelanggan', 'APPPATH\\Views\\layout\\v_laporan.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(61): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:26:29 --> Undefined variable: item
+in APPPATH\Views\layout\v_koki.php on line 76.
+ 1 APPPATH\Views\layout\v_koki.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: item', 'APPPATH\\Views\\layout\\v_koki.php', 76, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(20): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:26:46 --> Undefined variable: item
+in APPPATH\Views\layout\v_koki.php on line 87.
+ 1 APPPATH\Views\layout\v_koki.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: item', 'APPPATH\\Views\\layout\\v_koki.php', 87, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(20): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:26:57 --> Undefined variable: item
+in APPPATH\Views\layout\v_koki.php on line 92.
+ 1 APPPATH\Views\layout\v_koki.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: item', 'APPPATH\\Views\\layout\\v_koki.php', 92, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(20): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:28:36 --> Undefined variable: koki
+in APPPATH\Views\layout\v_koki.php on line 69.
+ 1 APPPATH\Views\layout\v_koki.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: koki', 'APPPATH\\Views\\layout\\v_koki.php', 69, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_koki.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_koki', [], true)
+ 5 APPPATH\Controllers\koki\User_koki.php(20): view('layout/v_koki', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_koki->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_koki))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:29:33 --> Undefined variable: transaksi
+in APPPATH\Views\layout\v_laporan.php on line 42.
+ 1 APPPATH\Views\layout\v_laporan.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: transaksi', 'APPPATH\\Views\\layout\\v_laporan.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(60): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:29:56 --> Undefined variable: transaksii
+in APPPATH\Views\layout\v_laporan.php on line 42.
+ 1 APPPATH\Views\layout\v_laporan.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: transaksii', 'APPPATH\\Views\\layout\\v_laporan.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(60): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:30:21 --> Cannot use object of type stdClass as array
+in APPPATH\Views\layout\v_laporan.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 4 APPPATH\Controllers\koki\User_kasir.php(60): view('layout/v_laporan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:30:41 --> Undefined variable: transaksii
+in APPPATH\Views\layout\v_laporan.php on line 42.
+ 1 APPPATH\Views\layout\v_laporan.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: transaksii', 'APPPATH\\Views\\layout\\v_laporan.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_laporan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 5 APPPATH\Controllers\koki\User_kasir.php(60): view('layout/v_laporan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:30:57 --> Cannot use object of type stdClass as array
+in APPPATH\Views\layout\v_laporan.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 4 APPPATH\Controllers\koki\User_kasir.php(60): view('layout/v_laporan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:31:15 --> Cannot use object of type stdClass as array
+in APPPATH\Views\layout\v_laporan.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/v_laporan', [], true)
+ 4 APPPATH\Controllers\koki\User_kasir.php(60): view('layout/v_laporan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\koki\User_kasir->laporan()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\koki\User_kasir))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-18 08:45:56 --> Unknown column 'id' in 'order clause'
+CRITICAL - 2023-02-18 08:45:56 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user`
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+ORDER BY `id`', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(15): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->tambahuser()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-18 08:46:15 --> Unknown column 'id' in 'order clause'
+CRITICAL - 2023-02-18 08:46:15 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user`
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+ORDER BY `id`', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(15): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->tambahuser()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-18 08:46:49 --> Unknown column 'id' in 'order clause'
+CRITICAL - 2023-02-18 08:46:49 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user`
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+ORDER BY `id`', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Login.php(15): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->tambahuser()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:47:37 --> Undefined index: id
+in APPPATH\Views\layout\tambah_user.php on line 89.
+ 1 APPPATH\Views\layout\tambah_user.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'APPPATH\\Views\\layout\\tambah_user.php', 89, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\tambah_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/tambah_user', [], true)
+ 5 APPPATH\Controllers\Login.php(16): view('layout/tambah_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->tambahuser()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 08:48:12 --> Undefined index: id
+in APPPATH\Views\layout\tambah_user.php on line 93.
+ 1 APPPATH\Views\layout\tambah_user.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'APPPATH\\Views\\layout\\tambah_user.php', 93, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\tambah_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('layout/tambah_user', [], true)
+ 5 APPPATH\Controllers\Login.php(16): view('layout/tambah_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->tambahuser()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:31:21 --> Call to a member function hash_update() on array
+in APPPATH\Controllers\Login.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('12')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:31:50 --> Call to a member function update() on array
+in APPPATH\Controllers\Login.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('12')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:34:42 --> Call to a member function hash_update() on array
+in APPPATH\Controllers\Login.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('12')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:36:00 --> Call to a member function hash_update() on array
+in APPPATH\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('6')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:36:38 --> Call to a member function hash_update() on array
+in APPPATH\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('6')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:36:53 --> Call to a member function hash_update() on array
+in APPPATH\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('8')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:41:37 --> Call to a member function update() on array
+in APPPATH\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('12')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-18 09:45:49 --> Call to undefined method App\Models\M_login::hash_update
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Login.php(49): CodeIgniter\Model->__call('hash_update', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->reset('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

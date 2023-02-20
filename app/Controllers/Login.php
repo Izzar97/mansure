@@ -12,7 +12,7 @@ class Login extends BaseController
     public function tambahuser()
     {
         $users = new M_login();
-        $data['users'] = $users->orderby('id')->findAll();
+        $data['users'] = $users->orderby('id_user')->findAll();
         return view('layout/tambah_user', $data);
         $nama_user = 'nama_user';
     }
@@ -36,6 +36,16 @@ class Login extends BaseController
         $users = new M_login();
         $data['user'] = $users->delete($id);
 
+        return redirect()->to('dashboard/tambah-user');
+    }
+
+    public function reset($id_user){
+        $user = new M_login();
+
+        $data = [
+            'password' => $this->request->getPost('password'),
+        ];
+        $user->update($id_user, $data);
         return redirect()->to('dashboard/tambah-user');
     }
 }

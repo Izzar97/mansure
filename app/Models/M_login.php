@@ -9,12 +9,17 @@ class M_login extends model
 {
 
     protected $table = 'user';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_user';
     // protected $returnType = 'object';
     protected $allowedFields = [
-        'updated_at', 'created_at', 'nama_user', 'username', 'password', 'email', 'oauth_id', 'jabatan'
+        'created_at', 'nama_user', 'username', 'password', 'jabatan'
     ];
 
+
+    public function user()
+    {
+        return $this->db->table('user')->countAllResults();
+    }
 
     public function login($username, $password){
         return $this->db->table('user')->where([
