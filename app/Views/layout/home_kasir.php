@@ -24,9 +24,9 @@ include 'dashboard.php';
                                 <div class="form-group">
                                     <label class="label"><i class="fas fa-filter"></i>Filter: </label>
                                     <select id="filter" class="select-menu">
-                                        <option value="">Semua</option>
-                                        <option value="">Tersedia</option>
-                                        <option value="">Kosong</option>
+                                        <option value="semua">Semua</option>
+                                        <option value="tersedia">Tersedia</option>
+                                        <option value="kosong">Kosong</option>
 
                                     </select>
                                 </div>
@@ -52,7 +52,23 @@ include 'dashboard.php';
                                     <tr>
                                         <td><?= $i ?></td>
                                         <td><?= $item['nama_menu'] ?></td>
-                                        <td><?= $item['jenis_menu'] ?></td>
+                                        <td> 
+                                            <?php 
+                                            if($item['jenis_menu'] == '1'){
+                                                echo "Main Course";
+                                            } else if($item['jenis_menu'] == '2'){
+                                                echo "Unca'an Mansure";
+                                            } else if($item['jenis_menu'] == '3'){
+                                                echo "Pasta";
+                                            } else if($item['jenis_menu'] == '4'){
+                                                echo "Snacks";
+                                            } else if($item['jenis_menu'] == '5'){
+                                                echo "Sweet Tooth";
+                                            } else {
+                                                echo "Beverages";
+                                            }
+                                            ?>
+                                        </td>
                                         <td>Rp. <?= $item['harga'] ?></td>
                                         <td><?= $item['status_stok_menu'] ?></td>
                                         <td><?= $item['deskripsi'] ?></td>

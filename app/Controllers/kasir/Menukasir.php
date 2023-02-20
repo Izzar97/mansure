@@ -100,6 +100,7 @@ class Menukasir extends BaseController
             'status_stok_menu' => $this->request->getPost('status_stok_menu'),
             'deskripsi' => $this->request->getPost('deskripsi'),
             'jenis_beverages' => $this->request->getPost('jenis_beverages'),
+            'rekomendasi' => $this->request->getPost('rekomendasi'),
             'gambar' => $imageName,
         ];
         $product->save($data);
@@ -138,6 +139,7 @@ class Menukasir extends BaseController
             'status_stok_menu' => $this->request->getPost('status_stok_menu'),
             'deskripsi' => $this->request->getPost('deskripsi'),
             'jenis_beverages' => $this->request->getPost('jenis_beverages'),
+            'rekomendasi' => $this->request->getPost('rekomendasi'),
             'gambar' => $imageName,
         ];
         $products->update($id_menu, $data);

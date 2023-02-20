@@ -9,7 +9,7 @@ include('menu.php');
                 <!-- Coffee -->
                 <h3>Coffee</h3>
                 <?php foreach ($products as $item) : ?>
-                <?php if ($item['jenis_beverages'] == 'Coffee') : ?>
+                <?php if ($item['jenis_beverages'] == 1) : ?>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="espresso" height="150" width="150">
@@ -35,7 +35,7 @@ include('menu.php');
                 <h3> Ice Coffee Milk </h3>
                 <!--/ .menu-item -->
                 <?php foreach ($products as $item) : ?>
-                <?php if ($item['jenis_beverages'] == 'Coffee Milk') : ?>
+                <?php if ($item['jenis_beverages'] == 2) : ?>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="espresso" height="150" width="150">
@@ -60,7 +60,7 @@ include('menu.php');
                 <!-- Mansure Signature -->
                 <h3>Mansure Signature</h3>
                 <?php foreach ($products as $item) : ?>
-                <?php if ($item['jenis_beverages'] == 'Mansure Signature') : ?>
+                <?php if ($item['jenis_beverages'] == '3') : ?>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="espresso" height="150" width="150">
@@ -85,7 +85,7 @@ include('menu.php');
                 <!-- Tea -->
                 <h3>Tea</h3>
                 <?php foreach ($products as $item) : ?>
-                <?php if ($item['jenis_beverages'] == 'Tea') : ?>
+                <?php if ($item['jenis_beverages'] == '4') : ?>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="espresso" height="150" width="150">
@@ -110,7 +110,7 @@ include('menu.php');
                 <!-- Mojito -->
                 <h3>Mojito</h3>
                 <?php foreach ($products as $item) : ?>
-                <?php if ($item['jenis_beverages'] == 'Mojito') : ?>
+                <?php if ($item['jenis_beverages'] == 5) : ?>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="espresso" height="150" width="150">
@@ -135,7 +135,7 @@ include('menu.php');
                 <!-- Mineral -->
                 <h3>Mineral</h3>
                 <?php foreach ($products as $item) : ?>
-                <?php if ($item['jenis_beverages'] == 'Mineral') : ?>
+                <?php if ($item['jenis_beverages'] == '6') : ?>
                 <div class="col-12 col-lg-4">
                     <div class="menu-item">
                         <img src="<?= "/uploads/" . $item['gambar']; ?>" alt="espresso" height="150" width="150">

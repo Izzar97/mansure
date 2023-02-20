@@ -84,6 +84,19 @@ include 'dashboard.php';
                                 </div>
 
                                 <div class="mb-1 row">
+                                    <label for="exampleFormControlInput1" class="col-sm-2">Rekomendasi</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control" aria-label="Default select example"
+                                            id="rekomendasi" name="rekomendasi">
+                                            <option value="tersedia" <?php if ($product['rekomendasi'] == '1') : echo 'selected';
+                                                                        endif; ?>>Ya</option>
+                                            <option value="kosong" <?php if ($product['rekomendasi'] == '0') : echo 'selected';
+                                                                    endif; ?>>Tidak</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-1 row">
                                     <label for="exampleFormControlInput1" class="col-sm-2">Upload
                                         Gambar</label>
                                     <div class="col-sm-10">

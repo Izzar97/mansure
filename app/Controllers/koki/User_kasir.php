@@ -73,6 +73,7 @@ class User_kasir extends BaseController
     public function exportPDF(){
         $transaksi = new M_transaksi();
         $data['transaksi'] = $transaksi->getLaporan();
+        // $data['transaksi'] = $transaksi->sum('total_harga_seluruh')->as('totall');
         $view = view('v_pdf', $data);
         // instantiate and use the dompdf class
         $dompdf = new Dompdf();

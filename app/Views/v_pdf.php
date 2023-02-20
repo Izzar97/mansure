@@ -39,6 +39,7 @@
         </tbody>
         <tfoot>
             <!-- <td>Total pemasukkan :  <?php //echo $data['SUM(total_harga_seluruh)'];?></td> -->
+           <!-- // <td> $data['totall']</td> -->
         </tfoot>
     </table>
 </body>

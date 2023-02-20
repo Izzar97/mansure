@@ -47,12 +47,12 @@ include 'dashboard.php';
                                 <div class="col-sm-6">
                                     <select class="form-control" id="jenis_menu" name="jenis_menu" required>
                                         <option selected>Pilih Jenis Menu</option>
-                                        <option value="Main course">Main Course</option>
-                                        <option value="Unca'an">Unca'an Mansure</option>
-                                        <option value="Pasta">Pasta</option>
-                                        <option value="Snacks">Snacks</option>
-                                        <option value="Sweet Tooth">Sweet Tooth</option>
-                                        <option value="Beverages">Beverages</option>
+                                        <option value="1">Main Course</option>
+                                        <option value="2">Unca'an Mansure</option>
+                                        <option value="3">Pasta</option>
+                                        <option value="4">Snacks</option>
+                                        <option value="5">Sweet Tooth</option>
+                                        <option value="6">Beverages</option>
                                     </select>
                                 </div>
                                 <span class="col-sm-3">
@@ -65,12 +65,12 @@ include 'dashboard.php';
                                 <div class="col-sm-6">
                                     <select class="form-control" id="jenis_beverages" name="jenis_beverages">
                                         <option selected>Pilih Jenis Beverages</option>
-                                        <option value="Coffee">Coffee</option>
-                                        <option value="Coffee Milk">Coffee Milk</option>
-                                        <option value="Mansure Signature">Mansure Signature</option>
-                                        <option value="Tea">Tea</option>
-                                        <option value="Mojito">Mojito</option>
-                                        <option value="Mineral">Mineral</option>
+                                        <option value="1">Coffee</option>
+                                        <option value="2">Coffee Milk</option>
+                                        <option value="3">Mansure Signature</option>
+                                        <option value="4">Tea</option>
+                                        <option value="5">Mojito</option>
+                                        <option value="6">Mineral</option>
                                     </select>
                                 </div>
                                 <span class="col-sm-3">
@@ -112,6 +112,18 @@ include 'dashboard.php';
                                 <span class="col-sm-3">
                                     ex: Nasi Goreng dengan ikan bakar asoy
                                 </span>
+                            </div>
+
+                            <div class="mb-1 row">
+                                <label for="exampleFormControlInput1" class="col-sm-3">Rekomendasi</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" aria-label="Default select example"
+                                        id="rekomendasi" name="rekomendasi">
+                                        <option selected>Pilih Status Menu</option>
+                                        <option value="1">Ya</option>
+                                        <option value="0">Tidak</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="mb-1 row">

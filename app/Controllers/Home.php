@@ -18,7 +18,9 @@ class Home extends BaseController
 
     public function index()
     {
-        return view('home');
+        $products = new M_menu();
+        $data['products'] = $products->orderby('id_menu', 'DESC')->where('rekomendasi', '1')->findAll();
+        return view('home', $data);
     }
 
 
